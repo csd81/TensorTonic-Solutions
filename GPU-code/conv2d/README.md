@@ -124,4 +124,87 @@
 - A Python és a C++ teszt különböző véletlenszám-generátort használ (NumPy `RandomState` vs. `std::mt19937`), ezért a kimenetek nem bitre azonosak; mindkettő a saját CPU referenciájához képest 1e-3 alatt marad.
 - A futási idők futásonként néhány százalékot ingadoznak; a táblázat reprezentatív mérések eredménye.
 - Páros magméret nem támogatott: a `scipy.ndimage.convolve` origó-konvenciója páros méretnél eltér, ezért a kód páratlan K-t vár.
-- A 2D implementáció jelenleg csak a naiv globális memóriás kernelt tartalmazza; a shared memory-os csempézés a következő optimalizálási lépés.
+- A 10. szakaszban leírt mérési sorozat a naiv mellett a shared memory-os csempézett kernelt is tartalmazza (ld. `benchmark.py`).
+
+---
+
+## 10. Részletes mérési sorozat: naiv vs. shared memory-os csempézés
+
+A `benchmark.py` a kiírásban szereplő mérési protokollt valósítja meg, és a
+`conv2d.py`-ban található két kernelhez (`conv2d_global_kernel`,
+`conv2d_shared_kernel`) készít összehasonlító sorozatot.
+
+**Új fájlok**
+
+- `conv2d.py` — új `conv2d_shared_kernel`: a blokk a saját kimeneti
+  csempéjéhez tartozó bemenetet a halo cellákkal együtt egyszer tölti be a
+  megosztott memóriába, így a belső ciklusban nincs globális olvasás és
+  nincs határellenőrzés (a peremen kívüli elemek nullák).
+- `benchmark.py` — mérési sorozat: 512², 1024², 2048², 4096² képméret × 3×3,
+  5×5, 7×7, 15×15 mag, mindkét kernellel.
+- `benchmark_2d.csv` — a teljes mért adatsor.
+- `benchmark_2d.png` — kernel-idő és gyorsulás görbék.
+
+**Módszertan**
+
+- JIT bemelegítés (5 futás) minden konfigurációnál, a fordítási idő nem
+  számít bele.
+- A GPU kernel tiszta futásideje `cuda.event` párokkal mérve, 20 futás
+  mediánja és szórása.
+- A Host→Device és Device→Host másolás külön, `time.perf_counter()`-rel,
+  `cuda.synchronize()` mellett, 3 futás mediánja.
+- Numerikus ellenőrzés egy IEEE-754 float32 CPU referenciához
+  (`@njit(fastmath=False)`), `max |CPU − GPU|` és `np.allclose(atol=1e-3)`.
+- A konvolúció iránya (nem korreláció) aszimmetrikus magokkal is
+  ellenőrizve van a mérési sorozat előtt; a maximális eltérés a SciPy
+  referenciához k=15-re 7.3e-04 (float32 kerekítés).
+
+**Eredmények (kernel idő, 20 futás mediánja)**
+
+| Kép | Mag | CPU [ms] | Naiv [ms] | Shared [ms] | Shared/naiv | Max. hiba | Gyorsulás (naiv) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 512² | 3×3 | 5.02 | 0.220 | 0.256 | 1.16 | 4.58e-05 | 22.8× |
+| 512² | 5×5 | 10.83 | 0.455 | 0.455 | 1.00 | 4.58e-05 | 23.8× |
+| 512² | 7×7 | 20.48 | 0.738 | 0.710 | 0.96 | 4.58e-05 | 27.8× |
+| 512² | 15×15 | 90.89 | 2.687 | 2.402 | 0.89 | 4.58e-05 | 33.8× |
+| 1024² | 3×3 | 18.55 | 0.645 | 0.755 | 1.17 | 4.58e-05 | 28.8× |
+| 1024² | 5×5 | 42.99 | 1.454 | 1.454 | 1.00 | 6.10e-05 | 29.6× |
+| 1024² | 7×7 | 80.84 | 2.449 | 2.337 | 0.95 | 4.58e-05 | 33.0× |
+| 1024² | 15×15 | 364.82 | 10.249 | 8.780 | 0.86 | 6.10e-05 | 35.6× |
+| 2048² | 3×3 | 75.83 | 2.440 | 2.897 | 1.19 | 6.10e-05 | 31.1× |
+| 2048² | 5×5 | 170.91 | 5.734 | 5.724 | 1.00 | 4.58e-05 | 29.8× |
+| 2048² | 7×7 | 323.36 | 10.184 | 9.768 | 0.96 | 6.10e-05 | 31.8× |
+| 2048² | 15×15 | 1452.29 | 40.325 | 36.169 | 0.90 | 4.58e-05 | 36.0× |
+| 4096² | 3×3 | 302.68 | 10.146 | 11.930 | 1.18 | 6.10e-05 | 29.8× |
+| 4096² | 5×5 | 698.26 | 23.637 | 23.624 | 1.00 | 6.10e-05 | 29.5× |
+| 4096² | 7×7 | 1297.75 | 39.976 | 38.122 | 0.95 | 6.10e-05 | 32.5× |
+| 4096² | 15×15 | 5992.73 | 161.037 | 144.066 | 0.89 | 4.58e-05 | 37.2× |
+
+**Értékelés**
+
+- A shared memory-os csempézés csak a nagyobb magoknál ad érdemi
+  nyereséget: 15×15-nél 8–14%-kal kevesebb kernel-idő, 7×7-nél ~5%-kal.
+  Kis magoknál (3×3) viszont lassabb, mert a halo-többlet
+  (`(16+k−1)²/16² = 1.19×` már k=3-ra) és a csempe betöltésének fix költsége
+  nagyobb, mint a megspórolt globális olvasás.
+- A naiv kernel a cache-hierarchiának köszönhetően eleve jól teljesít: a
+  szomszédos szálak átfedő ablakai L1/L2 találatok. Mindkét változat
+  lényegében egy terhelés + egy FMA per MAC mintát futtat, ezért a
+  különbség kicsi; a szűk keresztmetszet nem a sávszélesség, hanem a
+  futásidejű magméret miatt nem unrollozható belső ciklus
+  (címzés + terhelés + FMA) és a soros akkumulátor-lánc.
+- A CPU→GPU gyorsulás kernel-időre 22–42×. A teljes end-to-end időben a
+  PCIe-s adatmozgatás is megjelenik (4096²-nél H2D ~9–17 ms, D2H ~10–13 ms),
+  ezért ott a gyorsulás kisebb: pl. 4096²/15×15 esetén 188.0 ms (naiv),
+  illetve 173.4 ms (shared) a 5992.7 ms CPU-hoz képest, azaz 31.9× / 34.6×;
+  4096²/3×3-nál viszont csak 9.7× / 8.9×, mert a másolás dominál.
+- További gyorsítás regiszter-blokkolással érhető el (több kimenet
+  szálanként, mozgó ablak a regiszterekben); ez a C++ portban
+  (`conv2d.cu`) már megvan, és ott 4096²/5×5-re 8.29 ms a kernel-idő a
+  Numba 22.99 ms-ával szemben.
+
+**Reprodukálás**
+
+```bash
+python3 benchmark.py   # -> benchmark_2d.csv, benchmark_2d.png
+```

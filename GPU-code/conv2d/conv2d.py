@@ -44,6 +44,65 @@ def conv2d_global_kernel(img_in, kernel, img_out, width, height, k_size):
     img_out[row, col] = acc
 
 
+@cuda.jit
+def conv2d_shared_kernel(img_in, kernel, img_out, width, height, k_size):
+  """Shared memory-os, csempézett 2D konvolúciós kernel (halo cellákkal).
+
+  Minden blokk a saját kimeneti csempéjéhez tartozó bemeneti régiót
+  (csempe + (k_size-1) széles halo) egyszer tölti be a megosztott memóriába,
+  így a globális memóriából minden pixel csak egyszer olvasódik be
+  blokkonként, a szűrőmag ismételt olvasásai pedig a gyors shared memóriából
+  történnek. A peremen kívüli elemeket nulla-kitöltéssel (zero-padding)
+  tároljuk, így a belső ciklusban már nincs szükség határellenőrzésre.
+  """
+  s_tile = cuda.shared.array(shape=0, dtype=float32)
+
+  tx = cuda.threadIdx.x
+  ty = cuda.threadIdx.y
+  bx = cuda.blockIdx.x
+  by = cuda.blockIdx.y
+  bw = cuda.blockDim.x
+  bh = cuda.blockDim.y
+
+  k_half = k_size // 2
+  tile_w = bw + k_size - 1
+
+  # A csempe bal felső sarka a globális koordináta-rendszerben (halo-val).
+  ox = bx * bw - k_half
+  oy = by * bh - k_half
+
+  # Csempe + halo betöltése, a peremen kívül nullákkal.
+  j = ty
+  while j < tile_w:
+    i = tx
+    while i < tile_w:
+      gx = ox + i
+      gy = oy + j
+      if 0 <= gx < width and 0 <= gy < height:
+        s_tile[j * tile_w + i] = img_in[gy, gx]
+      else:
+        s_tile[j * tile_w + i] = 0.0
+      i += bw
+    j += bh
+
+  cuda.syncthreads()
+
+  col = bx * bw + tx
+  row = by * bh + ty
+
+  if col < width and row < height:
+    acc = float32(0.0)
+    for ky in range(k_size):
+      for kx in range(k_size):
+        # A (row, col) kimenet (ky, kx) tapja a csempén belül a
+        # (ty + ky, tx + kx) pozíció; a szűrőmagot megfordítva olvassuk.
+        acc += (
+            s_tile[(ty + ky) * tile_w + (tx + kx)]
+            * kernel[k_size - 1 - ky, k_size - 1 - kx]
+        )
+    img_out[row, col] = acc
+
+
 # ==============================================================================
 # 2. TESZTFUTTATÁS ÉS TELJESÍTMÉNYMÉRÉS
 # ==============================================================================
