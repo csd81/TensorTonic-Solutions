@@ -1,0 +1,85 @@
+<p>
+  Write a GPU program that implements top-p (nucleus) sampling for LLM inference.
+</p>
+
+<p>
+  Top-p sampling is a text generation technique where you sample from the smallest set of tokens whose cumulative probability exceeds threshold p.
+  This balances randomness and quality better than pure top-k or greedy sampling.
+</p>
+
+<p>
+  Given logits (unnormalized scores) from a language model:
+  <ol>
+    <li>Convert logits to probabilities using softmax</li>
+    <li>Sort tokens by probability (descending); tokens with equal probability are ordered by increasing index</li>
+    <li>Find the smallest set where cumulative probability ≥ p (the "nucleus")</li>
+    <li>Renormalize the nucleus probabilities to sum to 1</li>
+    <li>Sample a token from the nucleus using the provided random seed, as defined below</li>
+  </ol>
+</p>
+
+<p>
+  The sample is deterministic, so every correct implementation returns the same token. Each token with index
+  <code>i</code> in <code>logits</code> gets a uniform number \(u_i \in (0, 1)\) from the seed and its index,
+  using the PCG hash <code>h</code> on unsigned 32-bit integers. All arithmetic wraps modulo \(2^{32}\), and
+  <code>seed</code> is reinterpreted as an unsigned 32-bit integer:
+</p>
+<pre>
+uint32 h(uint32 x) {
+    uint32 state = x * 747796405u + 2891336453u;
+    uint32 word  = ((state >> ((state >> 28u) + 4u)) ^ state) * 277803737u;
+    return (word >> 22u) ^ word;
+}
+
+u_i = (h(h(seed) + i) + 0.5) / 2^32
+</pre>
+<p>
+  The sampled token is the nucleus token with the largest \(q_i / (-\ln u_i)\), where \(q_i\) is its
+  renormalized probability. This "exponential race" picks token <code>i</code> with probability \(q_i\).
+  Renormalizing scales every score by the same factor, so it does not change which token wins.
+</p>
+
+<h2>Implementation Requirements</h2>
+<ul>
+  <li>Use only native features (external libraries are not permitted)</li>
+  <li>The <code>solve</code> function signature must remain unchanged</li>
+  <li>Ensure numerical stability when computing softmax</li>
+</ul>
+
+<h2>Example 1:</h2>
+<pre>
+Input:
+  logits = [1.0, 2.0, 3.0, 0.5]
+  p = 0.9
+  seed = 42
+
+Output:
+  sampled_token = 0
+
+  The nucleus is tokens 2, 1, 0 (cumulative probability 0.948 &ge; 0.9), and h(seed) = 1223963391:
+  token 2: q = 0.6652, u = 0.0049, q / -ln(u) = 0.1249
+  token 1: q = 0.2447, u = 0.2550, q / -ln(u) = 0.1791
+  token 0: q = 0.0900, u = 0.6485, q / -ln(u) = 0.2079  (largest)
+</pre>
+
+<h2>Example 2:</h2>
+<pre>
+Input:
+  logits = [10.0, 1.0, 1.0]
+  p = 0.5
+  seed = 123
+
+Output:
+  sampled_token = 0
+  (single token dominates the probability mass)
+</pre>
+
+<h2>Constraints</h2>
+<ul>
+  <li>3 &le; <code>vocab_size</code> &le; 50,000</li>
+  <li>-100.0 &le; <code>logits[i]</code> &le; 100.0</li>
+  <li>0.0 &lt; <code>p</code> &le; 1.0</li>
+  <li>0 &le; <code>sampled_token</code> &lt; vocab_size</li>
+
+  <li>Performance is measured with <code>vocab_size</code> = 50,000</li>
+</ul>
