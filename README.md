@@ -80,6 +80,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Subword Tokenization | Segment a word with greedy longest-match WordPiece tokenization against a supplied subword vocabulary. | https://www.tensortonic.com/problems/nlp-subword-tokenization |
 | Text Classification | Train a Laplace-smoothed Multinomial Naive Bayes text classifier and predict labels for test documents. | https://www.tensortonic.com/problems/nlp-text-classification |
 | Text Deduplication (MinHash) | Detect near-duplicate documents with token shingles, deterministic MinHash signatures, and a similarity threshold. | https://www.tensortonic.com/problems/nlp-text-deduplication-minhash |
+| Text Generation Sampling | Apply temperature scaling to control randomness, convert to probabilities via softmax, and optionally filter to keep only the top-k most likely tokens. | https://www.tensortonic.com/problems/nlp-text-generation-sampling |
 | Text Normalization | Normalize text by applying an ordered pipeline of lowercase, punctuation, whitespace, digit, and accent transformations. | https://www.tensortonic.com/problems/nlp-text-normalization |
 | TF-IDF | Build a vocabulary V sorted alphabetically and compute the TF-IDF score for every term in every document. | https://www.tensortonic.com/problems/nlp-tfidf |
 | Token Classification | In token classification, each token in a sequence is assigned a label from a predefined set. | https://www.tensortonic.com/problems/nlp-token-classification |
