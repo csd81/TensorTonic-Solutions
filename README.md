@@ -63,6 +63,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | FastText | Learn FastText-style word representations from tokenized documents and compose embeddings from character n-grams. | https://www.tensortonic.com/problems/nlp-fasttext |
 | GloVe | Build a vocabulary V sorted alphabetically, and construct a co-occurrence matrix X with 1/d distance weighting within window size w. | https://www.tensortonic.com/problems/nlp-glove |
 | Language Modeling | Build a Laplace-smoothed bigram language model from tokenized sentences and score supplied token sequences. | https://www.tensortonic.com/problems/nlp-language-modeling |
+| Masked Language Modeling | In masked language modeling, certain tokens in a sentence are replaced with a special [MASK] token. | https://www.tensortonic.com/problems/nlp-masked-language-modeling |
 | Named Entity Recognition | Tag tokenized sentences with dictionary-backed named entity labels while preserving sentence and token order. | https://www.tensortonic.com/problems/nlp-ner |
 | N-gram Language Model | Build a Laplace-smoothed n-gram language model from tokenized training sentences and score test sequences. | https://www.tensortonic.com/problems/nlp-ngram-language-model |
 | Padding and Truncation | Pad or truncate integer token sequences to a fixed length with configurable padding value and alignment direction. | https://www.tensortonic.com/problems/nlp-padding-truncation |
