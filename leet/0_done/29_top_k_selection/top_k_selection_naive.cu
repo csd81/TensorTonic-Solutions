@@ -1,3 +1,12 @@
+// Naive baseline: the challenge starter's kernel verbatim (renamed).
+//
+// Its fast path (k <= 256) launches BLOCK_SIZE*k floats of dynamic shared
+// memory without the >48 KB opt-in, so it fails to launch for k >= 49; at the
+// benchmark shape (k = 100) it produces no output (verified: "invalid
+// argument").  Only its k > 256 fallback runs, and that path sorts all N
+// values.  It is kept as the reference implementation that top_k_selection.cu
+// replaces.
+
 #include <cuda_runtime.h>
 #include <float.h>
 #include <algorithm>
