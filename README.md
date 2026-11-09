@@ -58,6 +58,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Regex Patterns for NLP | Implement Regex Patterns for NLP, and return the list of matched strings in order of appearance. | https://www.tensortonic.com/problems/nlp-regex-patterns |
 | Sentence Segmentation | Segment text into sentences with rule-based punctuation boundaries while preserving supported abbreviations. | https://www.tensortonic.com/problems/nlp-sentence-segmentation |
 | Stemming vs Lemmatization | Produce a rule-based stem and dictionary-backed lemma for a supplied word with deterministic fallback behavior. | https://www.tensortonic.com/problems/nlp-stemming-lemmatization |
+| Subword Tokenization | Segment a word with greedy longest-match WordPiece tokenization against a supplied subword vocabulary. | https://www.tensortonic.com/problems/nlp-subword-tokenization |
 | Text Normalization | Normalize text by applying an ordered pipeline of lowercase, punctuation, whitespace, digit, and accent transformations. | https://www.tensortonic.com/problems/nlp-text-normalization |
 | Tokenization | Tokenize raw text by scanning characters into words, punctuation marks, and supported special token forms. | https://www.tensortonic.com/problems/nlp-tokenization |
 | Vocabulary Building | Build a bounded token vocabulary from a corpus and encode every sentence as an integer sequence. | https://www.tensortonic.com/problems/nlp-vocabulary-building |
