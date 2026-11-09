@@ -58,6 +58,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Document Ranking | Score each document by combining term frequency saturation, inverse document frequency, and document length normalization. | https://www.tensortonic.com/problems/nlp-document-ranking-bm25 |
 | Edit Distance | Compute Levenshtein distance as the minimum insertions, deletions, and substitutions needed to transform one string into another. | https://www.tensortonic.com/problems/nlp-edit-distance |
 | Embedding Similarity | Rank candidate embeddings against a query using the selected similarity metric and return the top-k indices. | https://www.tensortonic.com/problems/nlp-embedding-similarity |
+| Evaluation Metrics (BLEU, ROUGE) | Compute corpus BLEU and ROUGE overlap metrics for generated text using the specified token and n-gram rules. | https://www.tensortonic.com/problems/nlp-evaluation-metrics-bleu-rouge |
 | FastText | Learn FastText-style word representations from tokenized documents and compose embeddings from character n-grams. | https://www.tensortonic.com/problems/nlp-fasttext |
 | GloVe | Build a vocabulary V sorted alphabetically, and construct a co-occurrence matrix X with 1/d distance weighting within window size w. | https://www.tensortonic.com/problems/nlp-glove |
 | N-gram Language Model | Build a Laplace-smoothed n-gram language model from tokenized training sentences and score test sequences. | https://www.tensortonic.com/problems/nlp-ngram-language-model |
