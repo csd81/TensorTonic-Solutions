@@ -65,6 +65,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Language Modeling | Build a Laplace-smoothed bigram language model from tokenized sentences and score supplied token sequences. | https://www.tensortonic.com/problems/nlp-language-modeling |
 | Masked Language Modeling | In masked language modeling, certain tokens in a sentence are replaced with a special [MASK] token. | https://www.tensortonic.com/problems/nlp-masked-language-modeling |
 | Named Entity Recognition | Tag tokenized sentences with dictionary-backed named entity labels while preserving sentence and token order. | https://www.tensortonic.com/problems/nlp-ner |
+| Next Sentence Prediction | Implement Next Sentence Prediction, and return True if the Jaccard similarity is greater than or equal to the given threshold, and False otherwise. | https://www.tensortonic.com/problems/nlp-next-sentence-prediction |
 | N-gram Language Model | Build a Laplace-smoothed n-gram language model from tokenized training sentences and score test sequences. | https://www.tensortonic.com/problems/nlp-ngram-language-model |
 | Padding and Truncation | Pad or truncate integer token sequences to a fixed length with configurable padding value and alignment direction. | https://www.tensortonic.com/problems/nlp-padding-truncation |
 | Perplexity Computation | Compute sequence perplexity from token IDs and precomputed next-token logits using stable log probabilities. | https://www.tensortonic.com/problems/nlp-perplexity-computation |
