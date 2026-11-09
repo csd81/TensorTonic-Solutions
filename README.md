@@ -72,6 +72,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Sentence Segmentation | Segment text into sentences with rule-based punctuation boundaries while preserving supported abbreviations. | https://www.tensortonic.com/problems/nlp-sentence-segmentation |
 | Stemming vs Lemmatization | Produce a rule-based stem and dictionary-backed lemma for a supplied word with deterministic fallback behavior. | https://www.tensortonic.com/problems/nlp-stemming-lemmatization |
 | Subword Tokenization | Segment a word with greedy longest-match WordPiece tokenization against a supplied subword vocabulary. | https://www.tensortonic.com/problems/nlp-subword-tokenization |
+| Text Classification | Train a Laplace-smoothed Multinomial Naive Bayes text classifier and predict labels for test documents. | https://www.tensortonic.com/problems/nlp-text-classification |
 | Text Deduplication (MinHash) | Detect near-duplicate documents with token shingles, deterministic MinHash signatures, and a similarity threshold. | https://www.tensortonic.com/problems/nlp-text-deduplication-minhash |
 | Text Normalization | Normalize text by applying an ordered pipeline of lowercase, punctuation, whitespace, digit, and accent transformations. | https://www.tensortonic.com/problems/nlp-text-normalization |
 | TF-IDF | Build a vocabulary V sorted alphabetically and compute the TF-IDF score for every term in every document. | https://www.tensortonic.com/problems/nlp-tfidf |
