@@ -54,6 +54,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Mean and Variance | Compute population mean and variance in CUDA with device-side reductions and synchronized scalar outputs. | https://www.tensortonic.com/problems/mean-variance |
 | Min of Array | Implement a multi-block CUDA minimum reduction that combines block-local minima into one scalar output. | https://www.tensortonic.com/problems/min-of-array |
 | Bag of Words | Build an alphabetical vocabulary and document-term count matrix from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-bag-of-words |
+| Document Ranking | Score each document by combining term frequency saturation, inverse document frequency, and document length normalization. | https://www.tensortonic.com/problems/nlp-document-ranking-bm25 |
 | Edit Distance | Compute Levenshtein distance as the minimum insertions, deletions, and substitutions needed to transform one string into another. | https://www.tensortonic.com/problems/nlp-edit-distance |
 | Embedding Similarity | Rank candidate embeddings against a query using the selected similarity metric and return the top-k indices. | https://www.tensortonic.com/problems/nlp-embedding-similarity |
 | Padding and Truncation | Pad or truncate integer token sequences to a fixed length with configurable padding value and alignment direction. | https://www.tensortonic.com/problems/nlp-padding-truncation |
