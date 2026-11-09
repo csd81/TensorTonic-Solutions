@@ -128,6 +128,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | LIMIT and OFFSET | Use SQL ORDER BY, LIMIT, and OFFSET to return the second through fourth highest-revenue sales with tie-breaking. | https://www.tensortonic.com/problems/sql-limit-offset |
 | Nested Aggregations | Use a SQL subquery or CTE to compute daily order totals, average daily revenue, and the busiest day. | https://www.tensortonic.com/problems/sql-nested-aggregations |
 | ORDER BY | Sort student exam results in SQL by descending score and ascending name for deterministic ties. | https://www.tensortonic.com/problems/sql-order-by |
+| Self Join | Use a SQL self join to pair users with their referrers while labeling organic signups without a referral. | https://www.tensortonic.com/problems/sql-self-join |
 | WHERE Clauses | Filter employees by department and salary with SQL WHERE conditions, returning only qualifying names and salaries. | https://www.tensortonic.com/problems/sql-where-clauses |
 | Sum of Array | Implement a multi-block CUDA sum reduction that combines partial block sums into one scalar output. | https://www.tensortonic.com/problems/sum-of-array |
 | Swish | Implement fused Swish or SiLU activation in CUDA with one thread per element and device exponential math. | https://www.tensortonic.com/problems/swish |
