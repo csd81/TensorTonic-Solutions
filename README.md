@@ -136,6 +136,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | ORDER BY | Sort student exam results in SQL by descending score and ascending name for deterministic ties. | https://www.tensortonic.com/problems/sql-order-by |
 | RANK and DENSE_RANK | Rank ML models within each dataset using SQL RANK and DENSE_RANK over descending accuracy. | https://www.tensortonic.com/problems/sql-rank-dense-rank |
 | ROW_NUMBER | Assign deterministic per-segment activity ranks with SQL ROW_NUMBER ordered by engagement score and username. | https://www.tensortonic.com/problems/sql-row-number |
+| Running Totals | Compute per-account running transaction totals with a partitioned SQL window ordered by date and transaction ID. | https://www.tensortonic.com/problems/sql-running-totals |
 | Self Join | Use a SQL self join to pair users with their referrers while labeling organic signups without a referral. | https://www.tensortonic.com/problems/sql-self-join |
 | WHERE Clauses | Filter employees by department and salary with SQL WHERE conditions, returning only qualifying names and salaries. | https://www.tensortonic.com/problems/sql-where-clauses |
 | Sum of Array | Implement a multi-block CUDA sum reduction that combines partial block sums into one scalar output. | https://www.tensortonic.com/problems/sum-of-array |
