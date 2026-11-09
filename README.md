@@ -55,6 +55,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Min of Array | Implement a multi-block CUDA minimum reduction that combines block-local minima into one scalar output. | https://www.tensortonic.com/problems/min-of-array |
 | Bag of Words | Build an alphabetical vocabulary and document-term count matrix from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-bag-of-words |
 | Byte Pair Encoding | Byte Pair Encoding (BPE) is a subword tokenization algorithm that iteratively merges the most frequent pair of adjacent symbols in a corpus. | https://www.tensortonic.com/problems/nlp-bpe-algorithm |
+| Greedy Sequence Tagging | Assign the highest-scoring tag independently at each token position from emission scores and ordered tag names. | https://www.tensortonic.com/problems/nlp-crf-layer |
 | Document Ranking | Score each document by combining term frequency saturation, inverse document frequency, and document length normalization. | https://www.tensortonic.com/problems/nlp-document-ranking-bm25 |
 | Edit Distance | Compute Levenshtein distance as the minimum insertions, deletions, and substitutions needed to transform one string into another. | https://www.tensortonic.com/problems/nlp-edit-distance |
 | Embedding Similarity | Rank candidate embeddings against a query using the selected similarity metric and return the top-k indices. | https://www.tensortonic.com/problems/nlp-embedding-similarity |
