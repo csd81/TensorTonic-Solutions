@@ -106,3 +106,17 @@ python3 softmax.py
 The Python script runs the correctness cases and the performance case. For
 best performance, pass Numba device arrays; host arrays incur per-kernel
 copies.
+
+## Naive baseline
+
+`softmax_naive.cu` is the same computation written as plainly as possible:
+a single GPU thread walking the one row three times (max, exp+sum, normalize) — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `softmax_naive.cu` | 51.668 ms | 1.00x |
+| `softmax.cu` (optimized) | 0.1577 ms | 328x |
+
+One thread cannot use the GPU at all; the optimized kernel is one warp per row with online softmax.

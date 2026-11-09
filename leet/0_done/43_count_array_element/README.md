@@ -112,3 +112,17 @@ python3 count_array_element.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`count_array_element_naive.cu` is the same computation written as plainly as possible:
+one thread per input element with an atomicAdd on a match — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `count_array_element_naive.cu` | 5.037 ms | 1.00x |
+| `count_array_element.cu` (optimized) | 4.629 ms | 1.09x |
+
+Both are read-bound at 400 MB; the optimized kernel merely reduces the atomic traffic with vector loads and one atomic per block.

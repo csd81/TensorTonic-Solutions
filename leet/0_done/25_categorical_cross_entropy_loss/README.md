@@ -126,3 +126,17 @@ python3 cross_entropy_loss.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`cross_entropy_loss_naive.cu` is the same computation written as plainly as possible:
+one thread per row doing a max pass and an exp-sum pass straight from global memory, then one atomicAdd of the row loss — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `cross_entropy_loss_naive.cu` | 3.7933 ms | 1.00x |
+| `cross_entropy_loss.cu` (optimized) | 0.4933 ms | 7.69x |
+
+The optimized kernel gives each row a warp and computes log-sum-exp in a single online pass over the row.

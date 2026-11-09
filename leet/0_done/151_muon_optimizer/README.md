@@ -158,3 +158,17 @@ python3 muon_optimizer.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`muon_optimizer_naive.cu` is the same computation written as plainly as possible:
+one thread per output element everywhere, with plain triple-loop GEMMs reading from global memory (no tiling, register blocking or symmetry) — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `muon_optimizer_naive.cu` | ~2,121 ms | 1.00x |
+| `muon_optimizer.cu` (optimized) | 31.986 ms | ~66x |
+
+The naive figure is approximate: it was measured once while the GPU was shared with other work and was not re-timed.

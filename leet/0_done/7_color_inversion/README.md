@@ -135,3 +135,17 @@ Note: the challenge's stated constraint `width * height ≤ 8,388,608` is
 smaller than the stated performance size `4096 × 5120 = 20,971,520` pixels.
 The implementation handles both (and anything up to the `int` range used for
 indexing).
+
+## Naive baseline
+
+`color_inversion_naive.cu` is the same computation written as plainly as possible:
+one thread per pixel doing three byte loads and three byte stores — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `color_inversion_naive.cu` | 2.070 ms | 1.00x |
+| `color_inversion.cu` (optimized) | 2.048 ms | 1.01x |
+
+Pure streaming: both forms move the same 160 MB, so the naive one is already at the wall.

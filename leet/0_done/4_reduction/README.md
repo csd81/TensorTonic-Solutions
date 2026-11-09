@@ -100,3 +100,17 @@ python3 reduction.py
 ```
 
 The Python script runs the correctness cases and the performance case.
+
+## Naive baseline
+
+`reduction_naive.cu` is the same computation written as plainly as possible:
+one thread per element with an atomicAdd straight into output[0] — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `reduction_naive.cu` | 9.8396 ms | 1.00x |
+| `reduction.cu` (optimized) | 0.2150 ms | 45.8x |
+
+Serialising every element through one atomic is the difference; the optimized kernel reduces per block and adds once per block.

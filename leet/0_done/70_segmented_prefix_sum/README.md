@@ -204,3 +204,17 @@ python3 segmented_prefix_sum.py
 The script runs the correctness cases and the two performance cases.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`segmented_prefix_sum_naive.cu` is the same computation written as plainly as possible:
+one thread per output element walking backwards through global memory to its segment start — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `segmented_prefix_sum_naive.cu` | ~2,824 ms | 1.00x |
+| `segmented_prefix_sum.cu` (optimized) | 8.032 ms | ~352x |
+
+The naive figure is approximate: it was measured once while the GPU was shared with other work and was not re-timed.

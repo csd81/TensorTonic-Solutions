@@ -129,3 +129,17 @@ python3 sorting.py
 The script runs the correctness cases and the performance case.  For best
 performance, pass Numba device arrays; host arrays incur copies to and from
 the device.
+
+## Naive baseline
+
+`sorting_naive.cu` is the same computation written as plainly as possible:
+one thread per output position computing its own rank by scanning all N elements (an O(N^2) rank sort) and writing through a scratch buffer — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `sorting_naive.cu` | ~14,637 ms | 1.00x |
+| `sorting.cu` (optimized) | 1.231 ms | ~11,900x |
+
+The naive figure is approximate: it was measured once while the GPU was shared with other work and was not re-timed.

@@ -155,3 +155,17 @@ python3 causal_depthwise_conv1d.py
 The script runs the correctness cases and the two performance cases.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`causal_depthwise_conv1d_naive.cu` is the same computation written as plainly as possible:
+one thread per output element reading its K taps directly from global memory with a causal guard — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `causal_depthwise_conv1d_naive.cu` | 14.426 ms | 1.00x |
+| `causal_depthwise_conv1d.cu` (optimized) | 7.287 ms | 1.98x |
+
+The optimized kernel gives each thread four channels and a whole tile of sequence positions, so every input is loaded once.

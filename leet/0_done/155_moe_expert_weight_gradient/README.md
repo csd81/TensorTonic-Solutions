@@ -148,3 +148,17 @@ python3 moe_expert_weight_gradient.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`moe_expert_weight_gradient_naive.cu` is the same computation written as plainly as possible:
+one thread per (expert, k, n) output element walking that expert's ragged token range directly in global memory — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `moe_expert_weight_gradient_naive.cu` | 350.233 ms | 1.00x |
+| `moe_expert_weight_gradient.cu` (optimized) | 33.328 ms | 10.5x |
+
+The optimized kernel uses a grouped 128x128 tiled GEMM with register blocking.

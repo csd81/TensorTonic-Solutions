@@ -114,3 +114,17 @@ python3 histogramming.py
 The script runs the correctness cases and the performance case.  For best
 performance, pass Numba device arrays; host arrays incur copies to and from
 the device.
+
+## Naive baseline
+
+`histogramming_naive.cu` is the same computation written as plainly as possible:
+one thread per input element with a single global atomicAdd into the histogram — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `histogramming_naive.cu` | 20.070 ms | 1.00x |
+| `histogramming.cu` (optimized) | 2.335 ms | 8.60x |
+
+Fifty million atomics into 256 bins is the cost; the optimized kernel accumulates in shared memory per block and flushes once per block.

@@ -161,3 +161,17 @@ python3 stream_compaction.py
 The Python script runs the correctness cases and the performance case.  Note
 that the output buffer must be zero-initialised before the call, exactly as
 the challenge states; the implementation writes only the selected elements.
+
+## Naive baseline
+
+`stream_compaction_naive.cu` is the same computation written as plainly as possible:
+a per-block serial count, a single-thread scan of the block counts and a serial per-block scatter of that block's positives — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `stream_compaction_naive.cu` | 46.189 ms | 1.00x |
+| `stream_compaction.cu` (optimized) | 4.457 ms | 10.4x |
+
+The optimized kernel is a single-pass decoupled-lookback scan with vectorised loads and a stable staged scatter.

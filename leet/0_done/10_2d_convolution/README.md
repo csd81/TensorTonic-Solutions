@@ -168,3 +168,17 @@ python3 convolution_2d.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`convolution_2d_naive.cu` is the same computation written as plainly as possible:
+one thread per output element reading every tap of the input and the kernel directly from global memory — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `convolution_2d_naive.cu` | 31.988 ms | 1.00x |
+| `convolution_2d.cu` (optimized) | 3.489 ms | 9.17x |
+
+The optimized kernel tiles the input through shared memory with a halo and vectorised kernel rows.

@@ -144,3 +144,17 @@ python3 multi_head_attention.py
 The Python script runs the correctness cases and the performance cases.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`multi_head_attention_naive.cu` is the same computation written as plainly as possible:
+one thread per output element, recomputing that head's N dot products twice from global memory — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `multi_head_attention_naive.cu` | ~7,240 ms | 1.00x |
+| `multi_head_attention.cu` (optimized) | 9.511 ms | ~761x |
+
+The naive figure is approximate: it was measured once while the GPU was shared with other work and was not re-timed.

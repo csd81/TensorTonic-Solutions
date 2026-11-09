@@ -175,3 +175,17 @@ python3 convolution_1d.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`convolution_1d_naive.cu` is the same computation written as plainly as possible:
+one thread per output element computing the K-tap dot product with plain global reads — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `convolution_1d_naive.cu` | 42.6117 ms | 1.00x |
+| `convolution_1d.cu` (optimized) | 3.2799 ms | 13.0x |
+
+The optimized kernel keeps a sliding window in registers so each input is loaded once, and vectorises the loads.

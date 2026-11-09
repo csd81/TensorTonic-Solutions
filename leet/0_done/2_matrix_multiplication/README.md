@@ -92,3 +92,17 @@ python3 matrix_multiplication.py
 ```
 
 The script runs the small correctness cases listed above.
+
+## Naive baseline
+
+`matrix_multiplication_naive.cu` is the same computation written as plainly as possible:
+one thread per element of C walking the whole K reduction with plain global-memory loads — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `matrix_multiplication_naive.cu` | ~17,200 ms | 1.00x |
+| `matrix_multiplication.cu` (optimized) | 561.9 ms | ~31x |
+
+The naive figure is approximate: it was measured once while the GPU was shared with other work and was not re-timed.

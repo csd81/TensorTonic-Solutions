@@ -110,3 +110,17 @@ python3 reverse_array.py
 The script runs the correctness cases and the performance case.  For best
 performance, pass Numba device arrays; host arrays incur copies to and from
 the device.
+
+## Naive baseline
+
+`reverse_array_naive.cu` is the same computation written as plainly as possible:
+one thread per mirror pair doing a scalar swap — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `reverse_array_naive.cu` | 2.442 ms | 1.00x |
+| `reverse_array.cu` (optimized) | 2.419 ms | 1.01x |
+
+Both are at the DRAM wall (200 MB at N = 25 M); vectorising the accesses does not help.

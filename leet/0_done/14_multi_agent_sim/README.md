@@ -144,3 +144,17 @@ python3 multi_agent_sim.py
 The script runs the correctness cases and the three performance cases.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`multi_agent_sim_naive.cu` is the same computation written as plainly as possible:
+one thread per agent scanning every other agent in global memory (a full O(N^2) sweep) — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `multi_agent_sim_naive.cu` | 2100.4 / 1948.5 / 1938.5 us | 1.00x |
+| `multi_agent_sim.cu` (optimized) | 277.1 / 106.0 / 88.3 us | 7.6 / 18.4 / 22.0x |
+
+Times are for position spreads of +/-50, +/-200 and +/-2000; the optimized kernel bins agents into a spatial hash so each one tests only its 3x3 cell neighbourhood.

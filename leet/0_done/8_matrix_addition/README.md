@@ -115,3 +115,17 @@ python3 matrix_addition.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`matrix_addition_naive.cu` is the same computation written as plainly as possible:
+one thread per element with a plain scalar add — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `matrix_addition_naive.cu` | 2.409 ms | 1.00x |
+| `matrix_addition.cu` (optimized) | 2.416 ms | 1.00x |
+
+Both are bandwidth-bound at the same 192 MiB of traffic; vectorising does not help on this GPU.

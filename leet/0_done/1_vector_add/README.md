@@ -91,3 +91,17 @@ python3 vector_add.py
 ```
 
 The Python script runs the correctness cases listed above.
+
+## Naive baseline
+
+`vector_add_naive.cu` is the same computation written as plainly as possible:
+one thread per element reading A and B from global memory and writing C — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `vector_add_naive.cu` | 3.594 ms | 1.00x |
+| `vector_add.cu` (optimized) | 3.578 ms | 1.00x |
+
+Both forms sit at the same DRAM wall: at N = 25 M the kernel moves 300 MB and nothing about the access pattern can change that.

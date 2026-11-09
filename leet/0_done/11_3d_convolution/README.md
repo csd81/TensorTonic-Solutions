@@ -179,3 +179,17 @@ python3 convolution_3d.py
 The Python script runs the correctness cases and the performance case.  For
 best performance, pass Numba device arrays; host arrays incur copies to and
 from the device.
+
+## Naive baseline
+
+`convolution_3d_naive.cu` is the same computation written as plainly as possible:
+one thread per output element reading the kd x kr x kc taps directly from global memory — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `convolution_3d_naive.cu` | 6.150 ms | 1.00x |
+| `convolution_3d.cu` (optimized) | 1.380 ms | 4.46x |
+
+The optimized kernel stages input rows in shared memory and reuses them across the depth dimension.

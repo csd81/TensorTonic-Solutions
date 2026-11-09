@@ -159,3 +159,17 @@ python3 kmeans_clustering.py
 The script runs the correctness cases and the performance case.  For best
 performance, pass Numba device arrays; host arrays incur copies to and from
 the device.
+
+## Naive baseline
+
+`kmeans_clustering_naive.cu` is the same computation written as plainly as possible:
+a host-driven iteration loop with one thread per point, global atomics into the cluster sums, a small update kernel and a blocking 4-byte convergence check per iteration — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `kmeans_clustering_naive.cu` | 0.8994 ms | 1.00x |
+| `kmeans_clustering.cu` (optimized) | 0.2533 ms | 3.55x |
+
+The optimized version runs the whole clustering in one cooperative launch with register accumulators.

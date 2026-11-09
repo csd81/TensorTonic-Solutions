@@ -100,3 +100,17 @@ python3 matrix_transpose.py
 ```
 
 The Python script runs the correctness cases and the performance case.
+
+## Naive baseline
+
+`matrix_transpose_naive.cu` is the same computation written as plainly as possible:
+one thread per output element computing its source index directly (one read, one write, no shared tile) — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `matrix_transpose_naive.cu` | 17.025 ms | 1.00x |
+| `matrix_transpose.cu` (optimized) | 5.022 ms | 3.39x |
+
+The optimized kernel tiles through shared memory so both the reads and the writes stay coalesced.

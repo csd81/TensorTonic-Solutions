@@ -181,3 +181,17 @@ python3 radix_sort.py
 The script runs the correctness cases and the performance case.  For best
 performance, pass Numba device arrays; host arrays incur copies to and from
 the device.
+
+## Naive baseline
+
+`radix_sort_naive.cu` is the same computation written as plainly as possible:
+a 4-bit LSD radix with 8 passes, global atomics for the histogram, a single-thread prefix over the block/digit matrix and a serial per-block rank — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `radix_sort_naive.cu` | ~2,776 ms | 1.00x |
+| `radix_sort.cu` (optimized) | 49.497 ms | ~56x |
+
+The naive figure is approximate: it was measured once while the GPU was shared with other work and was not re-timed.

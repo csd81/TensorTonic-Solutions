@@ -181,3 +181,17 @@ The Python script runs the correctness cases and the performance cases.  For
 best performance, pass Numba device arrays; host arrays incur per-kernel
 copies.  `d > 128` is rejected by both implementations (the challenge
 guarantees `d ≤ 128`).
+
+## Naive baseline
+
+`softmax_attention_naive.cu` is the same computation written as plainly as possible:
+one thread per output element, two passes over the N keys recomputing the scaled dot product from global memory each time — no shared-memory tiling, no vector types, no warp intrinsics and no
+fast-math.  It passes the same correctness cases as the optimized kernel
+(checked against a float64 CPU reference in the shared harness).
+
+| Implementation | Time | vs naive |
+|---|---:|---:|
+| `softmax_attention_naive.cu` | 60.822 ms | 1.00x |
+| `softmax_attention.cu` (optimized) | 0.1503 ms | 405x |
+
+The optimized kernel streams the keys once in a flash-attention style pass with the row state in registers.
