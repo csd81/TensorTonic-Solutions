@@ -18,7 +18,7 @@ import numpy as np
 from numba import cuda, float32, int32
 
 THREADS = 256
-ITEMS = 64
+ITEMS = 16
 BLOCK_ELEMS = THREADS * ITEMS
 NWARPS = THREADS // 32
 FULL = 0xFFFFFFFF
@@ -27,7 +27,6 @@ _agg = None
 _pre = None
 _status = None
 _cap = 0
-_epoch = 0
 
 
 @cuda.jit(cache=True)
@@ -38,7 +37,7 @@ def zero_kernel(a, n):
 
 
 @cuda.jit(cache=True)
-def scan_kernel(inp, out, agg, pre, status, n, base):
+def scan_kernel(inp, out, agg, pre, status, n):
     warp_tot = cuda.shared.array(shape=NWARPS, dtype=float32)
     warp_pre = cuda.shared.array(shape=NWARPS, dtype=float32)
     s_pre = cuda.shared.array(shape=1, dtype=float32)
@@ -90,27 +89,27 @@ def scan_kernel(inp, out, agg, pre, status, n, base):
             agg[0] = total
             pre[0] = total
             cuda.threadfence()
-            status[0] = base + 2
+            status[0] = 2
             s_pre[0] = float32(0.0)
         else:
             agg[block] = total
             cuda.threadfence()
-            status[block] = base + 1
+            status[block] = 1
             running = float32(0.0)
             i = block - 1
             while True:
                 st = cuda.atomic.add(status, i, 0)
-                if st < base + 1:
+                if st == 0:
                     continue
                 cuda.threadfence()
-                if st == base + 2:
+                if st == 2:
                     running = pre[i] + running
                     break
                 running = agg[i] + running
                 i -= 1
             pre[block] = running + total
             cuda.threadfence()
-            status[block] = base + 2
+            status[block] = 2
             s_pre[0] = running
     cuda.syncthreads()
 
@@ -122,15 +121,13 @@ def scan_kernel(inp, out, agg, pre, status, n, base):
 
 
 def _reserve(nblocks):
-    global _agg, _pre, _status, _cap, _epoch
+    global _agg, _pre, _status, _cap
     if nblocks <= _cap:
         return
     cap = nblocks + nblocks // 4 + 1024
     _agg = cuda.device_array(cap, dtype=np.float32)
     _pre = cuda.device_array(cap, dtype=np.float32)
     _status = cuda.device_array(cap, dtype=np.int32)
-    _epoch = 0
-    _status.copy_to_device(np.zeros(cap, dtype=np.int32))
     _cap = cap
 
 
@@ -145,9 +142,8 @@ def solve(input, output, N):
 
     nblocks = (N + BLOCK_ELEMS - 1) // BLOCK_ELEMS
     _reserve(nblocks)
-    global _epoch
-    _epoch += 1
-    scan_kernel[nblocks, THREADS](IN, OUT, _agg, _pre, _status, N, _epoch * 4)
+    zero_kernel[(nblocks + THREADS - 1) // THREADS, THREADS](_status, nblocks)
+    scan_kernel[nblocks, THREADS](IN, OUT, _agg, _pre, _status, N)
     cuda.synchronize()
 
 
