@@ -121,6 +121,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Sigmoid | Implement sigmoid activation in CUDA with one thread per element, device exponential math, and bounds-checked memory access. | https://www.tensortonic.com/problems/sigmoid |
 | Softmax | Implement numerically stable CUDA softmax over a vector using global maximum and normalization reductions. | https://www.tensortonic.com/problems/softmax |
 | Basic SELECT | Write a SQL SELECT query that aliases product names and calculates inventory value from unit price and stock quantity. | https://www.tensortonic.com/problems/sql-basic-select |
+| Cross Join | Generate every segment and metric combination with a SQL CROSS JOIN for a complete reporting grid. | https://www.tensortonic.com/problems/sql-cross-join |
 | DISTINCT Values | Return each customer and their distinct product count with SQL aggregation and deterministic sorting. | https://www.tensortonic.com/problems/sql-distinct-values |
 | INNER JOIN | Join employees to matching departments with SQL INNER JOIN and return employee name, salary, and department. | https://www.tensortonic.com/problems/sql-inner-join |
 | LAG and LEAD | Use SQL LAG to compare monthly revenue with the previous month and calculate month-over-month change. | https://www.tensortonic.com/problems/sql-lag-lead |
