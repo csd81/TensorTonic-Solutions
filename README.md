@@ -53,6 +53,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Mean Squared Error (MSE) | Compute mean squared error between predictions and targets by averaging their squared element-wise differences. | https://www.tensortonic.com/problems/mean-squared-error |
 | Mean and Variance | Compute population mean and variance in CUDA with device-side reductions and synchronized scalar outputs. | https://www.tensortonic.com/problems/mean-variance |
 | Min of Array | Implement a multi-block CUDA minimum reduction that combines block-local minima into one scalar output. | https://www.tensortonic.com/problems/min-of-array |
+| Regex Patterns for NLP | Implement Regex Patterns for NLP, and return the list of matched strings in order of appearance. | https://www.tensortonic.com/problems/nlp-regex-patterns |
 | Text Normalization | Normalize text by applying an ordered pipeline of lowercase, punctuation, whitespace, digit, and accent transformations. | https://www.tensortonic.com/problems/nlp-text-normalization |
 | Tokenization | Tokenize raw text by scanning characters into words, punctuation marks, and supported special token forms. | https://www.tensortonic.com/problems/nlp-tokenization |
 | Outer Product | Compute a vector outer product in CUDA with a two-dimensional grid, row-major output, and bounds-checked indexing. | https://www.tensortonic.com/problems/outer-product |
