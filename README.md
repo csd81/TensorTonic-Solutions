@@ -80,6 +80,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Text Deduplication (MinHash) | Detect near-duplicate documents with token shingles, deterministic MinHash signatures, and a similarity threshold. | https://www.tensortonic.com/problems/nlp-text-deduplication-minhash |
 | Text Normalization | Normalize text by applying an ordered pipeline of lowercase, punctuation, whitespace, digit, and accent transformations. | https://www.tensortonic.com/problems/nlp-text-normalization |
 | TF-IDF | Build a vocabulary V sorted alphabetically and compute the TF-IDF score for every term in every document. | https://www.tensortonic.com/problems/nlp-tfidf |
+| Token Classification | In token classification, each token in a sequence is assigned a label from a predefined set. | https://www.tensortonic.com/problems/nlp-token-classification |
 | Tokenization | Tokenize raw text by scanning characters into words, punctuation marks, and supported special token forms. | https://www.tensortonic.com/problems/nlp-tokenization |
 | Tokenizer Training | Build a subword vocabulary by iteratively merging the most frequent adjacent token pair. | https://www.tensortonic.com/problems/nlp-tokenizer-training-bpe |
 | Vocabulary Building | Build a bounded token vocabulary from a corpus and encode every sentence as an integer sequence. | https://www.tensortonic.com/problems/nlp-vocabulary-building |
