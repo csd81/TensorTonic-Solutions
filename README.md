@@ -134,6 +134,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Implement Cosine Similarity | Compute cosine similarity between NumPy vectors with explicit handling for zero-norm inputs. | https://www.tensortonic.com/problems/la-cosine-similarity |
 | Implement Dot Product | Compute the algebraic dot product and geometric angle relationship for two equal-length NumPy vectors. | https://www.tensortonic.com/problems/la-dot-product |
 | Implement Euclidean Distance | Compute Euclidean distance between equal-length NumPy vectors from the square root of summed squared differences. | https://www.tensortonic.com/problems/la-euclidean-distance |
+| Linear Combination | Compute a weighted linear combination of equal-length NumPy vectors using one aligned scalar coefficient per vector. | https://www.tensortonic.com/problems/la-linear-combination |
 | Mahalanobis Distance | Compute Mahalanobis distance between a point and a distribution using its mean and covariance matrix. | https://www.tensortonic.com/problems/la-mahalanobis |
 | Outer Product | Compute the NumPy outer product of two vectors as a matrix containing every pairwise element multiplication. | https://www.tensortonic.com/problems/la-outer-product |
 | PCA from Scratch | Implement PCA from scratch by centering data, decomposing covariance, and projecting onto leading components. | https://www.tensortonic.com/problems/la-pca-from-scratch |
