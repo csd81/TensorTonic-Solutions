@@ -247,6 +247,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Classify a Critical Point from the Hessian | Classify a stationary point as a minimum, maximum, or saddle from the eigenvalues of its Hessian. | https://www.tensortonic.com/problems/optim-critical-point-classification |
 | Gradient Clipping | Train a linear regression model using full-batch gradient descent under three different gradient clipping strategies, and compare their loss curves. | https://www.tensortonic.com/problems/optim-grad-clipping |
 | L-BFGS | Compare gradient descent and L-BFGS on identical MSE linear-regression data from zero-initialized weights. | https://www.tensortonic.com/problems/optim-lbfgs |
+| Learning Rate Sweep | Implement a learning rate sweep that trains a linear model on the given data with multiple learning rates and returns the loss curve for each. | https://www.tensortonic.com/problems/optim-lr-sweep |
 | Nesterov Momentum | Compare classical momentum and Nesterov momentum on a linear regression task (MSE loss), returning both loss curves. | https://www.tensortonic.com/problems/optim-nesterov |
 | Minimum of an Axis-Aligned Paraboloid | Compute the coordinates and objective value at the minimum of an axis-aligned convex paraboloid. | https://www.tensortonic.com/problems/optim-paraboloid-minimum |
 | Minimum of a Univariate Quadratic | Compute the minimizer and minimum value of a strictly convex univariate quadratic from its coefficients. | https://www.tensortonic.com/problems/optim-quadratic-minimum |
