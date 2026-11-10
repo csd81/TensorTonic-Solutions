@@ -44,6 +44,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Box Encode and Decode | Implement Faster-RCNN style box regression target encoding and decoding, using two arrays of axis-aligned boxes in xyxy format. | https://www.tensortonic.com/problems/cv-box-encode-decode |
 | Per-Channel Mean and Std | Compute population means and standard deviations for every channel across a batch of images in NHWC layout. | https://www.tensortonic.com/problems/cv-channel-statistics |
 | Complete IoU Loss | Compute Complete IoU loss for aligned boxes using overlap, center-distance, and aspect-ratio penalties. | https://www.tensortonic.com/problems/cv-ciou-loss |
+| CLIP Cosine Retrieval | Rank corpus embeddings for each CLIP-style query by stable cosine similarity, including safe handling of zero vectors. | https://www.tensortonic.com/problems/cv-clip-cosine-retrieval |
 | Multichannel 2D Convolution | Implement multichannel two-dimensional cross-correlation with output filters, optional bias, stride, and padding. | https://www.tensortonic.com/problems/cv-conv2d-multichannel |
 | 2D Transposed Convolution | Implement two-dimensional transposed convolution matching PyTorch output layout, stride, padding, and optional bias. | https://www.tensortonic.com/problems/cv-conv2d-transpose |
 | CutMix Augmentation | Apply deterministic CutMix by pasting a supplied image region and mixing labels according to the retained pixel area. | https://www.tensortonic.com/problems/cv-cutmix |
