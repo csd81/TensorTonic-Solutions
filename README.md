@@ -152,6 +152,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Discounted Returns | Compute reverse-time discounted returns from a reward sequence using a configurable discount factor and terminal bootstrap. | https://www.tensortonic.com/problems/rl-discounted-returns |
 | Epsilon-Greedy Action Selection | Choose actions with epsilon-greedy exploration, deterministic greedy tie handling, and controlled random sampling. | https://www.tensortonic.com/problems/rl-epsilon-greedy-action-selection |
 | Expected SARSA | Apply Expected SARSA updates using the epsilon-greedy expectation over next-state action values. | https://www.tensortonic.com/problems/rl-expected-sarsa |
+| GRPO Group-Relative Advantage | Normalize rewards within each GRPO group using its mean and standard deviation, including zero-variance handling. | https://www.tensortonic.com/problems/rl-grpo-group-relative-advantage |
 | LinUCB Contextual Bandit | LinUCB extends the UCB algorithm to contextual bandits by assuming the expected reward of each arm is a linear function of the context. | https://www.tensortonic.com/problems/rl-linucb-contextual-bandit |
 | Monte Carlo Policy Evaluation | Estimate policy state values from complete sampled returns without requiring an environment transition model. | https://www.tensortonic.com/problems/rl-monte-carlo-policy-evaluation |
 | Policy Iteration | Policy iteration solves a finite Markov Decision Process by alternating two steps until the greedy policy stops changing. | https://www.tensortonic.com/problems/rl-policy-iteration |
