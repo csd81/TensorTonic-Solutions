@@ -30,6 +30,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Encode AlphaGo Zero Board History | Encode the current board and up to seven earlier boards from the current player's perspective. | https://www.tensortonic.com/problems/alphago-l02-encode-board-history |
 | Compute the Policy and Value Heads | Compute AlphaGo Zero policy logits and bounded value predictions from shared PyTorch board features. | https://www.tensortonic.com/problems/alphago-l02-policy-value-heads |
 | Apply an AlphaGo Residual Block | Apply an AlphaGo Zero residual block in PyTorch with two padded convolutions, channel normalization, ReLU, and a skip connection. | https://www.tensortonic.com/problems/alphago-l02-residual-block |
+| Initialize Legal MCTS Edge Statistics | A newly expanded search node receives one edge for every action, but only legal actions receive prior mass. | https://www.tensortonic.com/problems/alphago-l03-initialize-edge-statistics |
 | Run Deterministic Neural-Guided MCTS | Run deterministic AlphaGo Zero search over a finite two-player game tree using neural priors, values, PUCT, and backup. | https://www.tensortonic.com/problems/alphago-l05-neural-guided-mcts |
 | Argmax | Implement a parallel CUDA argmax reduction that returns the lowest index when multiple elements share the maximum. | https://www.tensortonic.com/problems/argmax |
 | Argmin | Implement a parallel CUDA argmin reduction that returns the lowest index when multiple elements share the minimum. | https://www.tensortonic.com/problems/argmin |
