@@ -158,6 +158,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Policy Iteration | Policy iteration solves a finite Markov Decision Process by alternating two steps until the greedy policy stops changing. | https://www.tensortonic.com/problems/rl-policy-iteration |
 | Q-Learning Update | Apply the off-policy Q-learning update using the maximum next-state action value and terminal handling. | https://www.tensortonic.com/problems/rl-q-learning-update |
 | PPO with Reference-Policy KL | Compute a PPO policy objective with reference-policy KL regularization for stable RLHF optimization. | https://www.tensortonic.com/problems/rl-rlhf-ppo-kl-loss |
+| RLOO (REINFORCE Leave-One-Out) | RLOO (REINFORCE Leave-One-Out) is a policy gradient variance-reduction trick used in modern RLHF. | https://www.tensortonic.com/problems/rl-rloo-reinforce-leave-one-out |
 | SARSA Update | Apply the on-policy SARSA temporal-difference update from the current transition and next selected action. | https://www.tensortonic.com/problems/rl-sarsa-update |
 | Softmax (Boltzmann) Exploration | Convert action values into a numerically stable Boltzmann exploration distribution controlled by temperature. | https://www.tensortonic.com/problems/rl-softmax-exploration |
 | TD(0) Value Update | Apply one TD(0) state-value update using immediate reward, discounted next-state value, and learning rate. | https://www.tensortonic.com/problems/rl-td-zero-update |
