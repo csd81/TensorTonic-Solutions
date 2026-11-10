@@ -35,6 +35,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Select an Action with PUCT | Select the lowest-index legal action maximizing the PUCT value and prior-weighted exploration score. | https://www.tensortonic.com/problems/alphago-l03-puct-selection |
 | Implement the AlphaGo Policy-Value Loss | Combine AlphaGo policy cross-entropy, value regression, and L2 regularization into one PyTorch training objective. | https://www.tensortonic.com/problems/alphago-l04-policy-value-loss |
 | Run Deterministic Neural-Guided MCTS | Run deterministic AlphaGo Zero search over a finite two-player game tree using neural priors, values, PUCT, and backup. | https://www.tensortonic.com/problems/alphago-l05-neural-guided-mcts |
+| Sample a Recent Self-Play Replay Batch | Sample deterministic training positions from a recent window of self-play games while preserving game and position order. | https://www.tensortonic.com/problems/alphago-l05-recent-replay-sampling |
 | Argmax | Implement a parallel CUDA argmax reduction that returns the lowest index when multiple elements share the maximum. | https://www.tensortonic.com/problems/argmax |
 | Argmin | Implement a parallel CUDA argmin reduction that returns the lowest index when multiple elements share the minimum. | https://www.tensortonic.com/problems/argmin |
 | Train a Tiny Micrograd MLP | Train a supplied scalar-output MLP with manual reverse-mode differentiation and deterministic gradient descent. | https://www.tensortonic.com/problems/autograd-l08-train-tiny-micrograd-mlp |
