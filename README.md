@@ -195,6 +195,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Setting Index | Set a named pandas DataFrame column as the index and report the resulting records and index metadata. | https://www.tensortonic.com/problems/pandas-setting-index |
 | Unstack Long to Wide | Implement Unstack Long to Wide, and return a dict of lists representing the wide-format DataFrame. | https://www.tensortonic.com/problems/pandas-unstack-long-to-wide |
 | PCA Projection | Project centered observations onto supplied principal components to produce lower-dimensional features. | https://www.tensortonic.com/problems/pca-projection |
+| A/B Test Significance | Perform a two-proportion z-test to determine if the treatment conversion rate is significantly different from the control. | https://www.tensortonic.com/problems/probstat-ab-test-significance |
 | ANOVA F-Statistic | Perform a one-way ANOVA across multiple numeric groups to test whether any population means differ. | https://www.tensortonic.com/problems/probstat-anova-f-test |
 | Basic Probability Rules | Compute union, complement, and exclusive-event probabilities from two event probabilities and their intersection. | https://www.tensortonic.com/problems/probstat-basic-probability-rules |
 | Bayes' Theorem | Compute a posterior probability from a prior, likelihood, and false-positive rate using Bayes' theorem. | https://www.tensortonic.com/problems/probstat-bayes-theorem |
