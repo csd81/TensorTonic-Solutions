@@ -197,6 +197,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Min of Array | Implement a multi-block CUDA minimum reduction that combines block-local minima into one scalar output. | https://www.tensortonic.com/problems/min-of-array |
 | Averaged Perceptron | Implement an averaged perceptron for binary classification with online mistake updates and mean weights across training steps. | https://www.tensortonic.com/problems/ml-averaged-perceptron |
 | Decision Tree Classifier (CART) | Implement a CART decision tree classifier with Gini impurity splits, depth limits, and majority-class leaf predictions. | https://www.tensortonic.com/problems/ml-cart-classifier |
+| Decision Tree Regressor | Implement a CART regression tree with MSE reduction splits, stopping criteria, and mean-value leaf predictions. | https://www.tensortonic.com/problems/ml-cart-regressor |
 | Distance Metrics | Compute Euclidean, Manhattan, cosine, Chebyshev, and Minkowski distances between numeric vectors. | https://www.tensortonic.com/problems/ml-distance-metrics |
 | Feature Scaling | Implement column-wise min-max scaling and z-score standardization while handling constant features safely. | https://www.tensortonic.com/problems/ml-feature-scaling |
 | Gaussian Naive Bayes | Implement Gaussian Naive Bayes with class priors, per-feature Gaussian likelihoods, and log-probability predictions. | https://www.tensortonic.com/problems/ml-gaussian-naive-bayes |
