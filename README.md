@@ -149,6 +149,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Bellman Expectation Equation | The Bellman expectation equation is the cornerstone of policy evaluation in reinforcement learning. | https://www.tensortonic.com/problems/rl-bellman-expectation-equation |
 | Bellman Optimality Equation | Apply one Bellman optimality backup by maximizing expected immediate reward plus discounted next-state value. | https://www.tensortonic.com/problems/rl-bellman-optimality-equation |
 | Discounted Returns | Compute reverse-time discounted returns from a reward sequence using a configurable discount factor and terminal bootstrap. | https://www.tensortonic.com/problems/rl-discounted-returns |
+| Monte Carlo Policy Evaluation | Estimate policy state values from complete sampled returns without requiring an environment transition model. | https://www.tensortonic.com/problems/rl-monte-carlo-policy-evaluation |
 | Policy Iteration | Policy iteration solves a finite Markov Decision Process by alternating two steps until the greedy policy stops changing. | https://www.tensortonic.com/problems/rl-policy-iteration |
 | Value Iteration | Run value iteration to convergence for a finite MDP, then extract the greedy optimal policy with stable tie handling. | https://www.tensortonic.com/problems/rl-value-iteration |
 | RMS Normalization | Implement row-wise RMS normalization in CUDA with sum-of-squares reduction, numerical stability, and learnable scaling. | https://www.tensortonic.com/problems/rms-norm |
