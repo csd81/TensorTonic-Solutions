@@ -139,6 +139,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Hadamard Product | Compute elementwise multiplication between two same-shaped NumPy matrices to produce their Hadamard product. | https://www.tensortonic.com/problems/la-hadamard-product |
 | Least Squares Solution | Solve a full-column-rank least-squares system and return the coefficient vector minimizing residual norm. | https://www.tensortonic.com/problems/la-least-squares |
 | Linear Combination | Compute a weighted linear combination of equal-length NumPy vectors using one aligned scalar coefficient per vector. | https://www.tensortonic.com/problems/la-linear-combination |
+| Low-Rank Approximation | Construct the best rank-k matrix approximation from truncated singular values and singular vectors. | https://www.tensortonic.com/problems/la-low-rank-approx |
 | LU Decomposition | Factor a square matrix into lower and upper triangular matrices using the specified no-pivot LU procedure. | https://www.tensortonic.com/problems/la-lu-decomposition |
 | Mahalanobis Distance | Compute Mahalanobis distance between a point and a distribution using its mean and covariance matrix. | https://www.tensortonic.com/problems/la-mahalanobis |
 | Matrix Determinant | Compute the determinant of a square NumPy matrix as a scalar measure of invertibility and volume scaling. | https://www.tensortonic.com/problems/la-matrix-determinant |
