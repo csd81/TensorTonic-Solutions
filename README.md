@@ -246,6 +246,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Convexity Certificate via the Hessian | Certify convexity of a twice-differentiable objective by checking whether its Hessian is positive semidefinite. | https://www.tensortonic.com/problems/optim-convexity-certificate |
 | Cosine Annealing with Warm Restarts | Train with cosine-annealed learning rates that periodically restart at the configured maximum value. | https://www.tensortonic.com/problems/optim-cosine-restarts |
 | Classify a Critical Point from the Hessian | Classify a stationary point as a minimum, maximum, or saddle from the eigenvalues of its Hessian. | https://www.tensortonic.com/problems/optim-critical-point-classification |
+| Dropout from Scratch | Train a two-layer NumPy classifier with inverted dropout and report held-out accuracy after every epoch. | https://www.tensortonic.com/problems/optim-dropout |
 | Gradient Accumulation | Implement mini-batch SGD with and without gradient accumulation on a linear regression task, and compare the training dynamics. | https://www.tensortonic.com/problems/optim-grad-accum |
 | Gradient Clipping | Train a linear regression model using full-batch gradient descent under three different gradient clipping strategies, and compare their loss curves. | https://www.tensortonic.com/problems/optim-grad-clipping |
 | Lasso Regression using ISTA | Return the weight trajectory showing how ISTA drives weights toward a sparse solution. | https://www.tensortonic.com/problems/optim-lasso-ista |
