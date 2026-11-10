@@ -204,6 +204,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Compute Pearson Correlation Matrix | Compute the complete Pearson correlation matrix across dataset features with stable handling of numeric inputs. | https://www.tensortonic.com/problems/probstat-pearson-correlation |
 | Percentiles / Quantiles | Compute requested data percentiles with linear interpolation using NumPy-compatible quantile semantics. | https://www.tensortonic.com/problems/probstat-percentiles |
 | Permutations and Combinations | Compute factorial, permutation, and combination counts for supplied nonnegative integers. | https://www.tensortonic.com/problems/probstat-permutations-combinations |
+| Poisson Distribution | Compute Poisson probabilities, cumulative mass through a cutoff, and the probability of zero events. | https://www.tensortonic.com/problems/probstat-poisson-distribution |
 | Sample Variance & Standard Deviation | Compute unbiased sample variance and standard deviation with Bessel correction for a numeric sample. | https://www.tensortonic.com/problems/probstat-sample-var-std |
 | Skewness and Kurtosis | Compute sample skewness and excess kurtosis, then classify the distribution's asymmetry and tail shape. | https://www.tensortonic.com/problems/probstat-skewness-kurtosis |
 | ReLU | Implement ReLU activation in CUDA with one thread per element, bounds checks, and branch-efficient rectification. | https://www.tensortonic.com/problems/relu |
