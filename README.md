@@ -210,6 +210,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Gaussian Mixture Models (EM) | Implement a diagonal-covariance Gaussian Mixture Model using EM updates for responsibilities, means, variances, and mixture weights. | https://www.tensortonic.com/problems/ml-gmm |
 | Missing Value Imputation | Impute missing numeric values with column-wise mean, median, or most-frequent statistics while preserving observed values. | https://www.tensortonic.com/problems/ml-imputation |
 | Isolation Forest | Implement Isolation Forest anomaly detection with random partition trees and path-length based anomaly scores. | https://www.tensortonic.com/problems/ml-isolation-forest |
+| K-Means Clustering | Implement K-means clustering with nearest-centroid assignments, centroid updates, convergence checks, and stable labels. | https://www.tensortonic.com/problems/ml-kmeans |
 | K-Means++ Initialization | Implement K-means++ initialization by sampling centroids according to squared distance from the nearest chosen center. | https://www.tensortonic.com/problems/ml-kmeans-plusplus |
 | KNN Classifier | Implement K-nearest neighbors classification using Euclidean distance, majority voting, and deterministic tie-breaking. | https://www.tensortonic.com/problems/ml-knn-classifier |
 | Lasso Regression | Implement Lasso regression with gradient descent, an L1 subgradient penalty on weights, and an unregularized bias. | https://www.tensortonic.com/problems/ml-lasso-regression |
