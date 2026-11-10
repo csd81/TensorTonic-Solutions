@@ -33,6 +33,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Back Up an MCTS Simulation Path | Back up a leaf value through an MCTS path, alternating player perspective and updating visit, value, and mean statistics. | https://www.tensortonic.com/problems/alphago-l03-backup-mcts-path |
 | Initialize Legal MCTS Edge Statistics | A newly expanded search node receives one edge for every action, but only legal actions receive prior mass. | https://www.tensortonic.com/problems/alphago-l03-initialize-edge-statistics |
 | Select an Action with PUCT | Select the lowest-index legal action maximizing the PUCT value and prior-weighted exploration score. | https://www.tensortonic.com/problems/alphago-l03-puct-selection |
+| Implement the AlphaGo Policy-Value Loss | Combine AlphaGo policy cross-entropy, value regression, and L2 regularization into one PyTorch training objective. | https://www.tensortonic.com/problems/alphago-l04-policy-value-loss |
 | Run Deterministic Neural-Guided MCTS | Run deterministic AlphaGo Zero search over a finite two-player game tree using neural priors, values, PUCT, and backup. | https://www.tensortonic.com/problems/alphago-l05-neural-guided-mcts |
 | Argmax | Implement a parallel CUDA argmax reduction that returns the lowest index when multiple elements share the maximum. | https://www.tensortonic.com/problems/argmax |
 | Argmin | Implement a parallel CUDA argmin reduction that returns the lowest index when multiple elements share the minimum. | https://www.tensortonic.com/problems/argmin |
