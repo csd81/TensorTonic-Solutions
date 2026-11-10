@@ -45,6 +45,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Complete IoU Loss | Compute Complete IoU loss for aligned boxes using overlap, center-distance, and aspect-ratio penalties. | https://www.tensortonic.com/problems/cv-ciou-loss |
 | Multichannel 2D Convolution | Implement multichannel two-dimensional cross-correlation with output filters, optional bias, stride, and padding. | https://www.tensortonic.com/problems/cv-conv2d-multichannel |
 | 2D Transposed Convolution | Implement two-dimensional transposed convolution matching PyTorch output layout, stride, padding, and optional bias. | https://www.tensortonic.com/problems/cv-conv2d-transpose |
+| CutMix Augmentation | Apply deterministic CutMix by pasting a supplied image region and mixing labels according to the retained pixel area. | https://www.tensortonic.com/problems/cv-cutmix |
 | Depthwise Separable Convolution | Factor image convolution into per-channel spatial filters and a pointwise convolution that mixes output channels. | https://www.tensortonic.com/problems/cv-depthwise-separable-conv |
 | Dice Loss | Compute binary segmentation Dice loss from probability and target masks with the specified smoothing term. | https://www.tensortonic.com/problems/cv-dice-loss |
 | Dilated 2D Convolution | Implement a 2D dilated cross-correlation (no kernel flip) on a single multi-channel image. | https://www.tensortonic.com/problems/cv-dilated-conv2d |
