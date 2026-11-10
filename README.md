@@ -144,6 +144,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Matrix-Vector Multiply | Multiply a NumPy matrix by a compatible vector, producing one row-wise dot product per output element. | https://www.tensortonic.com/problems/la-matrix-vector-multiply |
 | Outer Product | Compute the NumPy outer product of two vectors as a matrix containing every pairwise element multiplication. | https://www.tensortonic.com/problems/la-outer-product |
 | PCA from Scratch | Implement PCA from scratch by centering data, decomposing covariance, and projecting onto leading components. | https://www.tensortonic.com/problems/la-pca-from-scratch |
+| RBF Kernel Matrix | Compute the pairwise radial-basis-function kernel matrix from sample vectors and a positive bandwidth. | https://www.tensortonic.com/problems/la-rbf-kernel |
 | Scaled Dot-Product Attention | Implement the scaled dot-product attention mechanism from the Transformer architecture. | https://www.tensortonic.com/problems/la-scaled-attention |
 | Vector Norms | Compute L1, L2, and infinity norms for a one-dimensional NumPy vector and return them in a float64 array. | https://www.tensortonic.com/problems/la-vector-norms |
 | Whitening Transform | Center and whiten a data matrix so the transformed features have zero mean and identity covariance. | https://www.tensortonic.com/problems/la-whitening |
