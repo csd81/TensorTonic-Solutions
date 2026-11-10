@@ -45,6 +45,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Multichannel 2D Convolution | Implement multichannel two-dimensional cross-correlation with output filters, optional bias, stride, and padding. | https://www.tensortonic.com/problems/cv-conv2d-multichannel |
 | 2D Transposed Convolution | Implement two-dimensional transposed convolution matching PyTorch output layout, stride, padding, and optional bias. | https://www.tensortonic.com/problems/cv-conv2d-transpose |
 | Depthwise Separable Convolution | Factor image convolution into per-channel spatial filters and a pointwise convolution that mixes output channels. | https://www.tensortonic.com/problems/cv-depthwise-separable-conv |
+| Dice Loss | Compute binary segmentation Dice loss from probability and target masks with the specified smoothing term. | https://www.tensortonic.com/problems/cv-dice-loss |
 | Dilated 2D Convolution | Implement a 2D dilated cross-correlation (no kernel flip) on a single multi-channel image. | https://www.tensortonic.com/problems/cv-dilated-conv2d |
 | Sigmoid Focal Loss | Implement mean binary sigmoid focal loss from raw logits with alpha balancing, gamma modulation, and stable probabilities. | https://www.tensortonic.com/problems/cv-focal-loss |
 | FPN Top-Down Fusion | Fuse multiscale feature maps through top-down nearest-neighbor upsampling and aligned lateral addition. | https://www.tensortonic.com/problems/cv-fpn-fusion |
