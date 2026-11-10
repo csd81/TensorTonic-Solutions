@@ -29,6 +29,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Forward-Mode Autodiff with Dual Numbers | Implement forward-mode automatic differentiation with dual numbers carrying both values and derivatives. | https://www.tensortonic.com/problems/calculus-dual-number-autodiff |
 | Jacobian of a Neural Network Layer | Implement Jacobian of a Neural Network Layer, and compute both analytically and via finite differences. | https://www.tensortonic.com/problems/calculus-jacobian-layer |
 | Lagrange Multipliers: Regularization as Constrained Optimization | Show that L2 regularization and constrained optimization (bounding the weight norm) produce the same solution. | https://www.tensortonic.com/problems/calculus-lagrange-regularization |
+| Learning Rate Stability & Convergence Bounds | Derive the maximum stable learning rate for a quadratic objective and classify convergence from the chosen rate. | https://www.tensortonic.com/problems/calculus-lr-stability |
 | Softmax + Cross-Entropy Gradient | Compute the softmax probabilities, the cross-entropy loss, and the gradient two ways. | https://www.tensortonic.com/problems/calculus-softmax-ce-gradient |
 | 1D Convolution | Implement 1D cross-correlation in CUDA with one thread per output element and register accumulation over the kernel. | https://www.tensortonic.com/problems/conv-1d |
 | 2D Convolution | Implement 2D cross-correlation in CUDA with a two-dimensional grid, row-major indexing, and per-output accumulation. | https://www.tensortonic.com/problems/conv-2d |
