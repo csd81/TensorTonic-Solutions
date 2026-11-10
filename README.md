@@ -174,6 +174,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Vocabulary Building | Build a bounded token vocabulary from a corpus and encode every sentence as an integer sequence. | https://www.tensortonic.com/problems/nlp-vocabulary-building |
 | Word2Vec | Train Skip-gram with Negative Sampling word embeddings from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-word2vec |
 | L-BFGS | Compare gradient descent and L-BFGS on identical MSE linear-regression data from zero-initialized weights. | https://www.tensortonic.com/problems/optim-lbfgs |
+| Optimizer Showdown | Implement and compare three optimizers on binary classification using logistic regression with mini-batch training. | https://www.tensortonic.com/problems/optim-showdown |
 | Outer Product | Compute a vector outer product in CUDA with a two-dimensional grid, row-major output, and bounds-checked indexing. | https://www.tensortonic.com/problems/outer-product |
 | Aggregation Functions | Implement Aggregation Functions, and return a dict mapping each function name to a dict of group label to aggregated value. | https://www.tensortonic.com/problems/pandas-aggregation-functions |
 | Apply Custom Transforms | Apply a named transformation to one pandas column and store the result in a new derived column. | https://www.tensortonic.com/problems/pandas-apply-custom-functions |
