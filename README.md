@@ -247,6 +247,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Cosine Annealing with Warm Restarts | Train with cosine-annealed learning rates that periodically restart at the configured maximum value. | https://www.tensortonic.com/problems/optim-cosine-restarts |
 | Classify a Critical Point from the Hessian | Classify a stationary point as a minimum, maximum, or saddle from the eigenvalues of its Hessian. | https://www.tensortonic.com/problems/optim-critical-point-classification |
 | Gradient Clipping | Train a linear regression model using full-batch gradient descent under three different gradient clipping strategies, and compare their loss curves. | https://www.tensortonic.com/problems/optim-grad-clipping |
+| Lasso Regression using ISTA | Return the weight trajectory showing how ISTA drives weights toward a sparse solution. | https://www.tensortonic.com/problems/optim-lasso-ista |
 | L-BFGS | Compare gradient descent and L-BFGS on identical MSE linear-regression data from zero-initialized weights. | https://www.tensortonic.com/problems/optim-lbfgs |
 | Linear Warmup | Train with a learning rate that increases linearly during warmup and remains constant for later gradient steps. | https://www.tensortonic.com/problems/optim-linear-warmup |
 | Learning Rate Sweep | Implement a learning rate sweep that trains a linear model on the given data with multiple learning rates and returns the loss curve for each. | https://www.tensortonic.com/problems/optim-lr-sweep |
