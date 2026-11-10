@@ -238,6 +238,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Vocabulary Building | Build a bounded token vocabulary from a corpus and encode every sentence as an integer sequence. | https://www.tensortonic.com/problems/nlp-vocabulary-building |
 | Word2Vec | Train Skip-gram with Negative Sampling word embeddings from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-word2vec |
 | Batch vs Stochastic vs Mini-Batch GD | Compare how different batch sizes affect gradient descent on linear regression, and return a list of loss curves (one per batch size). | https://www.tensortonic.com/problems/optim-batch-vs-sgd |
+| Classical Momentum | Implement vanilla gradient descent and momentum-based gradient descent to minimize the MSE loss of a linear model, and return both loss curves. | https://www.tensortonic.com/problems/optim-classical-momentum |
 | Convex Polytope Membership | Test whether a query point satisfies every linear inequality defining a convex polytope. | https://www.tensortonic.com/problems/optim-convex-set-membership |
 | Convexity Certificate via the Hessian | Certify convexity of a twice-differentiable objective by checking whether its Hessian is positive semidefinite. | https://www.tensortonic.com/problems/optim-convexity-certificate |
 | Classify a Critical Point from the Hessian | Classify a stationary point as a minimum, maximum, or saddle from the eigenvalues of its Hessian. | https://www.tensortonic.com/problems/optim-critical-point-classification |
