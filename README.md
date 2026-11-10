@@ -78,6 +78,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Tiny U-Net Forward Pass | Assemble a time-conditioned U-Net from scratch with residual blocks, downsampling, upsampling and skip connections. | https://www.tensortonic.com/problems/diffusion-l03-tiny-unet-forward |
 | GAN Training Step | Implement a single forward-pass training step for a Generative Adversarial Network (GAN). | https://www.tensortonic.com/problems/dl-gan-training |
 | LSTM Cell | Implement a Long Short-Term Memory (LSTM) cell that processes a sequence using four gates: forget, input, output, and a candidate cell state. | https://www.tensortonic.com/problems/dl-lstm-cell |
+| Multi-Head Attention | Implement NumPy multi-head attention with QKV projections, optional masking, stable softmax, and output projection. | https://www.tensortonic.com/problems/dl-multi-head-attention |
 | Vision Transformer Patch Embedding | Convert an image into non-overlapping Vision Transformer patch embeddings with a learned linear projection. | https://www.tensortonic.com/problems/dl-vision-transformer |
 | Implement Dot Product | Implement the dot product of equal-length numeric vectors by summing element-wise products without library shortcuts. | https://www.tensortonic.com/problems/dot-product |
 | Dropout | Implement inverted dropout in CUDA using a supplied binary mask and scaling retained elements by the keep probability. | https://www.tensortonic.com/problems/dropout |
