@@ -239,6 +239,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Word2Vec | Train Skip-gram with Negative Sampling word embeddings from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-word2vec |
 | Gradient Clipping | Train a linear regression model using full-batch gradient descent under three different gradient clipping strategies, and compare their loss curves. | https://www.tensortonic.com/problems/optim-grad-clipping |
 | L-BFGS | Compare gradient descent and L-BFGS on identical MSE linear-regression data from zero-initialized weights. | https://www.tensortonic.com/problems/optim-lbfgs |
+| Minimum of an Axis-Aligned Paraboloid | Compute the coordinates and objective value at the minimum of an axis-aligned convex paraboloid. | https://www.tensortonic.com/problems/optim-paraboloid-minimum |
 | Minimum of a Univariate Quadratic | Compute the minimizer and minimum value of a strictly convex univariate quadratic from its coefficients. | https://www.tensortonic.com/problems/optim-quadratic-minimum |
 | Optimizer Showdown | Implement and compare three optimizers on binary classification using logistic regression with mini-batch training. | https://www.tensortonic.com/problems/optim-showdown |
 | Outer Product | Compute a vector outer product in CUDA with a two-dimensional grid, row-major output, and bounds-checked indexing. | https://www.tensortonic.com/problems/outer-product |
