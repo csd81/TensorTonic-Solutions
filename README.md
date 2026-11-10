@@ -203,6 +203,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Conditional Probability | Compute both directional conditional probabilities from two event probabilities and their intersection. | https://www.tensortonic.com/problems/probstat-conditional-probability |
 | Correlation Significance Test | Compute Pearson correlation and test whether the observed relationship differs significantly from zero. | https://www.tensortonic.com/problems/probstat-correlation-significance |
 | Discrete Moments | Given the values and probabilities of a discrete random variable, compute its first two moments, variance, and standard deviation. | https://www.tensortonic.com/problems/probstat-discrete-moments |
+| Exponential Distribution | Compute the PDF, CDF, survival probability, mean, and variance of an exponential distribution. | https://www.tensortonic.com/problems/probstat-exponential-distribution |
 | Independence Testing | Determine whether two events are independent from their marginal probabilities and intersection probability. | https://www.tensortonic.com/problems/probstat-independence-testing |
 | Mean, Median, Mode | Compute mean, median, and a deterministically selected mode for a one-dimensional numeric sample. | https://www.tensortonic.com/problems/probstat-mean-median-mode |
 | Maximum Likelihood Estimation | Estimate the maximum-likelihood mean and standard deviation for observations from a normal distribution. | https://www.tensortonic.com/problems/probstat-mle-normal |
