@@ -237,6 +237,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Tokenizer Training | Build a subword vocabulary by iteratively merging the most frequent adjacent token pair. | https://www.tensortonic.com/problems/nlp-tokenizer-training-bpe |
 | Vocabulary Building | Build a bounded token vocabulary from a corpus and encode every sentence as an integer sequence. | https://www.tensortonic.com/problems/nlp-vocabulary-building |
 | Word2Vec | Train Skip-gram with Negative Sampling word embeddings from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-word2vec |
+| Convex Polytope Membership | Test whether a query point satisfies every linear inequality defining a convex polytope. | https://www.tensortonic.com/problems/optim-convex-set-membership |
 | Convexity Certificate via the Hessian | Certify convexity of a twice-differentiable objective by checking whether its Hessian is positive semidefinite. | https://www.tensortonic.com/problems/optim-convexity-certificate |
 | Gradient Clipping | Train a linear regression model using full-batch gradient descent under three different gradient clipping strategies, and compare their loss curves. | https://www.tensortonic.com/problems/optim-grad-clipping |
 | L-BFGS | Compare gradient descent and L-BFGS on identical MSE linear-regression data from zero-initialized weights. | https://www.tensortonic.com/problems/optim-lbfgs |
