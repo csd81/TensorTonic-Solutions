@@ -153,6 +153,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Outer Product | Compute the NumPy outer product of two vectors as a matrix containing every pairwise element multiplication. | https://www.tensortonic.com/problems/la-outer-product |
 | PCA from Scratch | Implement PCA from scratch by centering data, decomposing covariance, and projecting onto leading components. | https://www.tensortonic.com/problems/la-pca-from-scratch |
 | Moore-Penrose Pseudoinverse | Compute the Moore-Penrose pseudoinverse of rectangular or singular matrices using singular-value decomposition. | https://www.tensortonic.com/problems/la-pseudoinverse |
+| QR Decomposition | Compute its QR decomposition: factor A into an orthogonal matrix Q and an upper triangular matrix R. | https://www.tensortonic.com/problems/la-qr-decomposition |
 | RBF Kernel Matrix | Compute the pairwise radial-basis-function kernel matrix from sample vectors and a positive bandwidth. | https://www.tensortonic.com/problems/la-rbf-kernel |
 | Scaled Dot-Product Attention | Implement the scaled dot-product attention mechanism from the Transformer architecture. | https://www.tensortonic.com/problems/la-scaled-attention |
 | Solve Linear System | Solve an invertible square linear system for the unique vector satisfying the matrix equation. | https://www.tensortonic.com/problems/la-solve-linear-system |
