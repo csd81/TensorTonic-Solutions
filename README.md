@@ -23,6 +23,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 |---|---|---|
 | Implement Adam Optimizer Step | Implement one vectorized Adam optimizer step in NumPy with first and second moments, bias correction, and elementwise parameter updates. | https://www.tensortonic.com/problems/adam-optimizer |
 | Find a Go Group and Its Liberties | Trace the orthogonally connected stones containing one occupied board point and collect every distinct empty intersection adjacent to that group. | https://www.tensortonic.com/problems/alphago-l01-group-liberties |
+| Build the Legal Go Action Mask | Evaluate every intersection action under occupancy, capture, suicide, and positional-superko rules, then append pass at the final action index. | https://www.tensortonic.com/problems/alphago-l01-legal-action-mask |
 | Score a Terminal Position with Tromp-Taylor Rules | Score a terminal Go board with Tromp-Taylor area rules by counting stones and empty regions controlled by each player. | https://www.tensortonic.com/problems/alphago-l01-tromp-taylor-result |
 | Run Deterministic Neural-Guided MCTS | Run deterministic AlphaGo Zero search over a finite two-player game tree using neural priors, values, PUCT, and backup. | https://www.tensortonic.com/problems/alphago-l05-neural-guided-mcts |
 | Argmax | Implement a parallel CUDA argmax reduction that returns the lowest index when multiple elements share the maximum. | https://www.tensortonic.com/problems/argmax |
