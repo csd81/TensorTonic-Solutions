@@ -50,6 +50,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Image Normalize | Normalize each image channel by its supplied mean and standard deviation to produce standardized vision-model inputs. | https://www.tensortonic.com/problems/cv-image-normalize |
 | Pairwise IoU | Compute the complete pairwise intersection-over-union matrix between two sets of axis-aligned boxes. | https://www.tensortonic.com/problems/cv-iou-pairwise |
 | Max Pool 2D | Apply two-dimensional max pooling to an image with a configurable window and stride, without padding. | https://www.tensortonic.com/problems/cv-max-pool-2d |
+| Non-Maximum Suppression | Implement greedy non-maximum suppression matching torchvision selection order and strict IoU threshold behavior. | https://www.tensortonic.com/problems/cv-nms |
 | RGB to Grayscale | Convert an RGB image to grayscale with luminance-weighted color channels for classical computer vision preprocessing. | https://www.tensortonic.com/problems/cv-rgb-to-grayscale |
 | Sobel Edge Detection | Apply horizontal and vertical Sobel filters to a grayscale image with one-pixel zero padding and return edge gradients. | https://www.tensortonic.com/problems/cv-sobel-edges |
 | Zero Pad and Center Crop | Zero-pad a two-dimensional grayscale image on every side, then extract a centered crop with the requested dimensions. | https://www.tensortonic.com/problems/cv-zero-pad-and-center-crop |
