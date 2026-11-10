@@ -204,6 +204,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Correlation Significance Test | Compute Pearson correlation and test whether the observed relationship differs significantly from zero. | https://www.tensortonic.com/problems/probstat-correlation-significance |
 | Independence Testing | Determine whether two events are independent from their marginal probabilities and intersection probability. | https://www.tensortonic.com/problems/probstat-independence-testing |
 | Mean, Median, Mode | Compute mean, median, and a deterministically selected mode for a one-dimensional numeric sample. | https://www.tensortonic.com/problems/probstat-mean-median-mode |
+| Maximum Likelihood Estimation | Estimate the maximum-likelihood mean and standard deviation for observations from a normal distribution. | https://www.tensortonic.com/problems/probstat-mle-normal |
 | Monte Carlo Pi Estimation | Estimate pi by sampling points in a unit square and measuring the fraction inside the quarter circle. | https://www.tensortonic.com/problems/probstat-monte-carlo-pi |
 | Compute Pearson Correlation Matrix | Compute the complete Pearson correlation matrix across dataset features with stable handling of numeric inputs. | https://www.tensortonic.com/problems/probstat-pearson-correlation |
 | Percentiles / Quantiles | Compute requested data percentiles with linear interpolation using NumPy-compatible quantile semantics. | https://www.tensortonic.com/problems/probstat-percentiles |
