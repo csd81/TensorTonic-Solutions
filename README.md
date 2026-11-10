@@ -137,6 +137,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Implement Euclidean Distance | Compute Euclidean distance between equal-length NumPy vectors from the square root of summed squared differences. | https://www.tensortonic.com/problems/la-euclidean-distance |
 | Gram-Schmidt Orthogonalization | Given k linearly independent vectors in R^n, the Gram-Schmidt process builds an orthonormal basis that spans exactly the same space. | https://www.tensortonic.com/problems/la-gram-schmidt |
 | Hadamard Product | Compute elementwise multiplication between two same-shaped NumPy matrices to produce their Hadamard product. | https://www.tensortonic.com/problems/la-hadamard-product |
+| Least Squares Solution | Solve a full-column-rank least-squares system and return the coefficient vector minimizing residual norm. | https://www.tensortonic.com/problems/la-least-squares |
 | Linear Combination | Compute a weighted linear combination of equal-length NumPy vectors using one aligned scalar coefficient per vector. | https://www.tensortonic.com/problems/la-linear-combination |
 | Mahalanobis Distance | Compute Mahalanobis distance between a point and a distribution using its mean and covariance matrix. | https://www.tensortonic.com/problems/la-mahalanobis |
 | Matrix Determinant | Compute the determinant of a square NumPy matrix as a scalar measure of invertibility and volume scaling. | https://www.tensortonic.com/problems/la-matrix-determinant |
