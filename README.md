@@ -29,6 +29,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Backpropagation Through a Computation Graph | Run forward evaluation and reverse-mode backpropagation through a supplied scalar computation graph. | https://www.tensortonic.com/problems/calculus-backprop-graph |
 | Forward-Mode Autodiff with Dual Numbers | Implement forward-mode automatic differentiation with dual numbers carrying both values and derivatives. | https://www.tensortonic.com/problems/calculus-dual-number-autodiff |
 | Gradient of Multivariate Gaussian Log-PDF | Compute the gradient of a multivariate Gaussian log density with respect to its mean vector. | https://www.tensortonic.com/problems/calculus-gaussian-mean-gradient |
+| Gradient Descent on a Non-Convex Loss | Run gradient descent on a nonconvex scalar loss and report the optimization path and final stationary behavior. | https://www.tensortonic.com/problems/calculus-gd-nonconvex |
 | Gradient Clipping: Global Norm Rescaling | Compute the global gradient norm, rescale all gradients if the norm exceeds the threshold. | https://www.tensortonic.com/problems/calculus-gradient-clipping |
 | Jacobian of a Neural Network Layer | Implement Jacobian of a Neural Network Layer, and compute both analytically and via finite differences. | https://www.tensortonic.com/problems/calculus-jacobian-layer |
 | JVP and VJP for a 2-Layer Network | Compute Jacobian-vector and vector-Jacobian products through a two-layer ReLU network without forming the full Jacobian. | https://www.tensortonic.com/problems/calculus-jvp-vjp |
