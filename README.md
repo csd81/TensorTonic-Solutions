@@ -202,6 +202,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Gaussian Mixture Models (EM) | Implement a diagonal-covariance Gaussian Mixture Model using EM updates for responsibilities, means, variances, and mixture weights. | https://www.tensortonic.com/problems/ml-gmm |
 | KNN Classifier | Implement K-nearest neighbors classification using Euclidean distance, majority voting, and deterministic tie-breaking. | https://www.tensortonic.com/problems/ml-knn-classifier |
 | Lasso Regression | Implement Lasso regression with gradient descent, an L1 subgradient penalty on weights, and an unregularized bias. | https://www.tensortonic.com/problems/ml-lasso-regression |
+| Linear Discriminant Analysis | Implement Linear Discriminant Analysis for classification using class means, priors, and a shared covariance matrix. | https://www.tensortonic.com/problems/ml-lda-classify |
 | Linear Regression from Scratch | Train linear regression from scratch with mean squared error gradients for weights and bias. | https://www.tensortonic.com/problems/ml-linear-regression-from-scratch |
 | Logistic Regression from Scratch | Train binary logistic regression from scratch using sigmoid probabilities, cross-entropy gradients, and gradient descent. | https://www.tensortonic.com/problems/ml-logistic-regression |
 | PCA from Scratch | Implement PCA by centering data, eigendecomposing the covariance matrix, and projecting onto the leading components. | https://www.tensortonic.com/problems/ml-pca |
