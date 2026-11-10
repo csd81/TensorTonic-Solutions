@@ -50,6 +50,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Sigmoid Focal Loss | Implement mean binary sigmoid focal loss from raw logits with alpha balancing, gamma modulation, and stable probabilities. | https://www.tensortonic.com/problems/cv-focal-loss |
 | FPN Top-Down Fusion | Fuse multiscale feature maps through top-down nearest-neighbor upsampling and aligned lateral addition. | https://www.tensortonic.com/problems/cv-fpn-fusion |
 | Gaussian Blur 2D | Build a normalized separable Gaussian kernel and apply it to a grayscale image with the specified padding behavior. | https://www.tensortonic.com/problems/cv-gaussian-blur |
+| Generalized IoU Loss | Compute mean Generalized IoU loss for aligned predicted and target boxes, including the smallest enclosing-box penalty. | https://www.tensortonic.com/problems/cv-giou-loss |
 | Image Normalize | Normalize each image channel by its supplied mean and standard deviation to produce standardized vision-model inputs. | https://www.tensortonic.com/problems/cv-image-normalize |
 | Pairwise IoU | Compute the complete pairwise intersection-over-union matrix between two sets of axis-aligned boxes. | https://www.tensortonic.com/problems/cv-iou-pairwise |
 | Max Pool 2D | Apply two-dimensional max pooling to an image with a configurable window and stride, without padding. | https://www.tensortonic.com/problems/cv-max-pool-2d |
