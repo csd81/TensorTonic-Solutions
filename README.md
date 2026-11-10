@@ -135,6 +135,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Implement Dot Product | Compute the algebraic dot product and geometric angle relationship for two equal-length NumPy vectors. | https://www.tensortonic.com/problems/la-dot-product |
 | Implement Euclidean Distance | Compute Euclidean distance between equal-length NumPy vectors from the square root of summed squared differences. | https://www.tensortonic.com/problems/la-euclidean-distance |
 | Mahalanobis Distance | Compute Mahalanobis distance between a point and a distribution using its mean and covariance matrix. | https://www.tensortonic.com/problems/la-mahalanobis |
+| Outer Product | Compute the NumPy outer product of two vectors as a matrix containing every pairwise element multiplication. | https://www.tensortonic.com/problems/la-outer-product |
 | PCA from Scratch | Implement PCA from scratch by centering data, decomposing covariance, and projecting onto leading components. | https://www.tensortonic.com/problems/la-pca-from-scratch |
 | Scaled Dot-Product Attention | Implement the scaled dot-product attention mechanism from the Transformer architecture. | https://www.tensortonic.com/problems/la-scaled-attention |
 | Vector Norms | Compute L1, L2, and infinity norms for a one-dimensional NumPy vector and return them in a float64 array. | https://www.tensortonic.com/problems/la-vector-norms |
