@@ -140,6 +140,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Mahalanobis Distance | Compute Mahalanobis distance between a point and a distribution using its mean and covariance matrix. | https://www.tensortonic.com/problems/la-mahalanobis |
 | Matrix Determinant | Compute the determinant of a square NumPy matrix as a scalar measure of invertibility and volume scaling. | https://www.tensortonic.com/problems/la-matrix-determinant |
 | Matrix Multiply | Multiply compatible NumPy matrices and preserve the dtype produced by NumPy type-promotion rules. | https://www.tensortonic.com/problems/la-matrix-multiply |
+| Matrix Rank | Compute the rank of a rectangular NumPy matrix from its number of linearly independent directions. | https://www.tensortonic.com/problems/la-matrix-rank |
 | Matrix Trace | Compute the trace of a square NumPy matrix by summing its main-diagonal elements with numeric dtype support. | https://www.tensortonic.com/problems/la-matrix-trace |
 | Matrix Transpose | Transpose a rectangular NumPy matrix by swapping its row and column axes without changing element values. | https://www.tensortonic.com/problems/la-matrix-transpose |
 | Matrix-Vector Multiply | Multiply a NumPy matrix by a compatible vector, producing one row-wise dot product per output element. | https://www.tensortonic.com/problems/la-matrix-vector-multiply |
