@@ -220,6 +220,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Logistic Regression from Scratch | Train binary logistic regression from scratch using sigmoid probabilities, cross-entropy gradients, and gradient descent. | https://www.tensortonic.com/problems/ml-logistic-regression |
 | PCA from Scratch | Implement PCA by centering data, eigendecomposing the covariance matrix, and projecting onto the leading components. | https://www.tensortonic.com/problems/ml-pca |
 | Permutation Feature Importance | Measure permutation feature importance by shuffling each feature and comparing the accuracy drop against a baseline. | https://www.tensortonic.com/problems/ml-perm-importance |
+| Precision-Recall Curve & Average Precision | Build a precision-recall curve and compute average precision from ranked binary-classification scores. | https://www.tensortonic.com/problems/ml-precision-recall-ap |
 | Random Forest from Scratch | Implement a random forest classifier with bootstrap sampling, random feature subsets at each CART split, and majority voting. | https://www.tensortonic.com/problems/ml-random-forest |
 | Regression Metrics | Compute MSE, MAE, and R-squared from scratch, including constant-target handling and rounded metric output. | https://www.tensortonic.com/problems/ml-regression-metrics |
 | Ridge Regression | Train Ridge regression with gradient descent, L2-regularized weights, and an unregularized bias term. | https://www.tensortonic.com/problems/ml-ridge-regression |
