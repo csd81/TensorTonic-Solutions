@@ -36,6 +36,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | GELU | Implement exact GELU activation in CUDA with one thread per element and the device error-function intrinsic. | https://www.tensortonic.com/problems/cuda-gelu |
 | Leaky ReLU | Implement Leaky ReLU activation in CUDA with one thread per element, bounds checks, and a configurable negative slope. | https://www.tensortonic.com/problems/cuda-leaky-relu |
 | Matrix Transpose | Implement matrix transpose in CUDA with a two-dimensional launch grid, row-major buffers, and bounds-checked writes. | https://www.tensortonic.com/problems/cuda-matrix-transpose |
+| 2D Sinusoidal Positional Embedding | Build the 2D sin-cos positional embedding used by ViT-MAE, DINOv2, and similar models. | https://www.tensortonic.com/problems/cv-2d-sincos-pos-embed |
 | Adaptive Average Pool 2D | Implement adaptive two-dimensional average pooling with variable, possibly overlapping regions for arbitrary output sizes. | https://www.tensortonic.com/problems/cv-adaptive-avg-pool-2d |
 | Anchor Box Generation | Generate axis-aligned anchor boxes for a feature map of shape (feature h, feature w) at stride s. | https://www.tensortonic.com/problems/cv-anchor-generation |
 | Average Pool 2D | Apply two-dimensional average pooling to an image with the requested kernel and stride, without padding. | https://www.tensortonic.com/problems/cv-avg-pool-2d |
