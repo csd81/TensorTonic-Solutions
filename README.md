@@ -66,6 +66,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Sobel Edge Detection | Apply horizontal and vertical Sobel filters to a grayscale image with one-pixel zero padding and return edge gradients. | https://www.tensortonic.com/problems/cv-sobel-edges |
 | Soft Non-Maximum Suppression | Apply Gaussian Soft-NMS by repeatedly selecting the strongest box and decaying overlapping box scores by IoU. | https://www.tensortonic.com/problems/cv-soft-nms |
 | Top-K Classification Accuracy | Given logits of shape (N, K) and integer targets of shape (N,) with each target in [0, K), compute the top-k classification accuracy. | https://www.tensortonic.com/problems/cv-topk-accuracy |
+| ViT Multi-Head Self-Attention | Implement Vision Transformer multi-head self-attention with combined QKV projection, scaled softmax, and output projection. | https://www.tensortonic.com/problems/cv-vit-attention-block |
 | Zero Pad and Center Crop | Zero-pad a two-dimensional grayscale image on every side, then extract a centered crop with the requested dimensions. | https://www.tensortonic.com/problems/cv-zero-pad-and-center-crop |
 | Implement Dot Product | Implement the dot product of equal-length numeric vectors by summing element-wise products without library shortcuts. | https://www.tensortonic.com/problems/dot-product |
 | Dropout | Implement inverted dropout in CUDA using a supplied binary mask and scaling retained elements by the keep probability. | https://www.tensortonic.com/problems/dropout |
