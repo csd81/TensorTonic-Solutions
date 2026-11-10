@@ -25,6 +25,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Run Deterministic Neural-Guided MCTS | Run deterministic AlphaGo Zero search over a finite two-player game tree using neural priors, values, PUCT, and backup. | https://www.tensortonic.com/problems/alphago-l05-neural-guided-mcts |
 | Argmax | Implement a parallel CUDA argmax reduction that returns the lowest index when multiple elements share the maximum. | https://www.tensortonic.com/problems/argmax |
 | Argmin | Implement a parallel CUDA argmin reduction that returns the lowest index when multiple elements share the minimum. | https://www.tensortonic.com/problems/argmin |
+| Train a Tiny Micrograd MLP | Train a supplied scalar-output MLP with manual reverse-mode differentiation and deterministic gradient descent. | https://www.tensortonic.com/problems/autograd-l08-train-tiny-micrograd-mlp |
 | Backpropagation Through a Computation Graph | Run forward evaluation and reverse-mode backpropagation through a supplied scalar computation graph. | https://www.tensortonic.com/problems/calculus-backprop-graph |
 | Forward-Mode Autodiff with Dual Numbers | Implement forward-mode automatic differentiation with dual numbers carrying both values and derivatives. | https://www.tensortonic.com/problems/calculus-dual-number-autodiff |
 | Jacobian of a Neural Network Layer | Implement Jacobian of a Neural Network Layer, and compute both analytically and via finite differences. | https://www.tensortonic.com/problems/calculus-jacobian-layer |
