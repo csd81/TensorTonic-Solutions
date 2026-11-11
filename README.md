@@ -74,6 +74,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Binomial Probability Mass Function | Compute binomial probability mass and cumulative probabilities from trial count, success probability, and outcome. | https://www.tensortonic.com/problems/binomial-pmf-cdf |
 | BLEU Score | Calculate a BLEU translation score from candidate and reference tokens using clipped n-gram precision and brevity penalty. | https://www.tensortonic.com/problems/bleu-score |
 | Implement BM25 Ranking Score | Implement BM25 document ranking with term frequency saturation, inverse document frequency, and length normalization. | https://www.tensortonic.com/problems/bm25 |
+| Bootstrap Mean & Confidence Interval | Estimate a sample mean and confidence interval through reproducible bootstrap resampling of numeric observations. | https://www.tensortonic.com/problems/bootstrap-mean |
 | Continuity of Activation Functions | Classify continuity and nondifferentiable points for common activation functions at supplied scalar inputs. | https://www.tensortonic.com/problems/calculus-activation-continuity |
 | Derivatives of Common Activation Functions | Compute the analytical derivative of four activation functions: Sigmoid, Tanh, ReLU, and Swish. | https://www.tensortonic.com/problems/calculus-activation-derivatives |
 | Backpropagation Through a Computation Graph | Run forward evaluation and reverse-mode backpropagation through a supplied scalar computation graph. | https://www.tensortonic.com/problems/calculus-backprop-graph |
