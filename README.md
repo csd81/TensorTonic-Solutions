@@ -145,6 +145,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Zero Pad and Center Crop | Zero-pad a two-dimensional grayscale image on every side, then extract a centered crop with the requested dimensions. | https://www.tensortonic.com/problems/cv-zero-pad-and-center-crop |
 | Tiny U-Net Forward Pass | Assemble a time-conditioned U-Net from scratch with residual blocks, downsampling, upsampling and skip connections. | https://www.tensortonic.com/problems/diffusion-l03-tiny-unet-forward |
 | Activation Functions | Implement ReLU, sigmoid, tanh, Leaky ReLU, GELU, and Swish with their analytical derivatives. | https://www.tensortonic.com/problems/dl-activation-functions |
+| Computational Graph & Autograd | Build a minimal autograd engine that performs forward and backward passes on a computational graph. | https://www.tensortonic.com/problems/dl-autograd |
 | Backpropagation (Single Hidden Layer) | Backpropagate MSE loss through a one-hidden-layer NumPy network to compute gradients for every weight and bias. | https://www.tensortonic.com/problems/dl-backpropagation |
 | Batch Normalization | Implement batch normalization for training and inference, including batch statistics and running-statistic updates. | https://www.tensortonic.com/problems/dl-batch-normalization |
 | Transformer Decoder Block | Implement a NumPy Transformer decoder block with masked self-attention, cross-attention, and feed-forward layers. | https://www.tensortonic.com/problems/dl-decoder-block |
