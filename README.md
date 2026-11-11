@@ -520,6 +520,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Tile and Diff | Tile a 2-D array vertically and return the tiled result alongside its row-wise finite differences, packed as a (2, m·reps, n) float64 array. | https://www.tensortonic.com/problems/numpy-tile-diff |
 | Winsorize | Winsorization clips extreme values in each column to percentile-based bounds, a standard technique for suppressing outliers in ML preprocessing. | https://www.tensortonic.com/problems/numpy-winsorize |
 | Zeros and Ones | Create a two-dimensional float64 NumPy array of a requested shape filled entirely with zeros or ones. | https://www.tensortonic.com/problems/numpy-zeros-ones |
+| One-Hot Encoding (Multi-class) | Convert multiclass integer labels into a NumPy one-hot matrix with one active column per sample. | https://www.tensortonic.com/problems/one-hot-encoding |
 | AdaGrad | Implement the AdaGrad (Adaptive Gradient) optimizer for linear regression with MSE loss using full-batch gradient descent. | https://www.tensortonic.com/problems/optim-adagrad |
 | Adam Optimizer | Implement the Adam optimizer to train a linear regression model using mean squared error (MSE) loss with full-batch gradient descent. | https://www.tensortonic.com/problems/optim-adam |
 | AdamW (Decoupled Weight Decay) | Implement both Adam with L2 regularization and AdamW (decoupled weight decay) to optimize weights for linear regression with MSE loss. | https://www.tensortonic.com/problems/optim-adamw |
