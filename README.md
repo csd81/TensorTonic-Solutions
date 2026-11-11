@@ -454,6 +454,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | t-SNE Affinity Matrix | Compute the symmetric t-SNE affinity matrix using pairwise distances, perplexity-matched bandwidths, and conditional probabilities. | https://www.tensortonic.com/problems/ml-tsne |
 | Monitoring Metrics Selection | Compute the required monitoring metrics for classification, regression, or ranking prediction results. | https://www.tensortonic.com/problems/monitoring-metrics-selection |
 | Morphological Erosion and Dilation | Apply binary-image erosion and dilation with a structuring element and explicit neighborhood boundaries. | https://www.tensortonic.com/problems/morphological-operations |
+| Implement Nadam (Nesterov + Adam) | Implement one Nadam optimizer step in NumPy by combining Adam moments with Nesterov momentum. | https://www.tensortonic.com/problems/nadam-optimizer |
 | Naive Bayes Log-Likelihood (Bernoulli) | Compute Bernoulli Naive Bayes log-likelihoods from binary features, class priors, and feature probabilities. | https://www.tensortonic.com/problems/naive-bayes-bernoulli |
 | Bag of Words | Build an alphabetical vocabulary and document-term count matrix from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-bag-of-words |
 | Beam Search Decoding | Decode token sequences with beam search over supplied next-token probabilities, cumulative scores, and stable tie handling. | https://www.tensortonic.com/problems/nlp-beam-search-decoding |
