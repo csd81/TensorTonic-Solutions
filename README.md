@@ -149,6 +149,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Dropout | Apply inverted dropout from a supplied binary mask during training and preserve the input unchanged during evaluation. | https://www.tensortonic.com/problems/dl-dropout |
 | Transformer Encoder Block | Implement a NumPy Transformer encoder block with self-attention, residual connections, normalization, and feed-forward layers. | https://www.tensortonic.com/problems/dl-encoder-block |
 | GAN Training Step | Implement a single forward-pass training step for a Generative Adversarial Network (GAN). | https://www.tensortonic.com/problems/dl-gan-training |
+| Loss Functions | Implement MSE, binary cross-entropy, categorical cross-entropy, and Huber losses from supplied predictions and targets. | https://www.tensortonic.com/problems/dl-loss-functions |
 | LSTM Cell | Implement a Long Short-Term Memory (LSTM) cell that processes a sequence using four gates: forget, input, output, and a candidate cell state. | https://www.tensortonic.com/problems/dl-lstm-cell |
 | Multi-Head Attention | Implement NumPy multi-head attention with QKV projections, optional masking, stable softmax, and output projection. | https://www.tensortonic.com/problems/dl-multi-head-attention |
 | Perceptron | Train a binary perceptron from zero-initialized weights using ordered samples, step predictions, and error-correction updates. | https://www.tensortonic.com/problems/dl-perceptron |
