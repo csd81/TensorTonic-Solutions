@@ -512,6 +512,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Optimizer Showdown | Implement and compare three optimizers on binary classification using logistic regression with mini-batch training. | https://www.tensortonic.com/problems/optim-showdown |
 | Vanilla Gradient Descent | Implement vanilla gradient descent to minimize a two-variable function from a given starting point, returning the full optimization trajectory. | https://www.tensortonic.com/problems/optim-vanilla-gd |
 | Outer Product | Compute a vector outer product in CUDA with a two-dimensional grid, row-major output, and bounds-checked indexing. | https://www.tensortonic.com/problems/outer-product |
+| Pad Sequences | Pad or truncate variable-length token ID sequences in NumPy with configurable maximum length and padding values. | https://www.tensortonic.com/problems/pad-sequences |
 | Aggregation Functions | Implement Aggregation Functions, and return a dict mapping each function name to a dict of group label to aggregated value. | https://www.tensortonic.com/problems/pandas-aggregation-functions |
 | Apply Custom Transforms | Apply a named transformation to one pandas column and store the result in a new derived column. | https://www.tensortonic.com/problems/pandas-apply-custom-functions |
 | Boolean Indexing | Filter pandas rows by a numeric column threshold and return the matching records with their original column order. | https://www.tensortonic.com/problems/pandas-boolean-indexing |
