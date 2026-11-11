@@ -479,6 +479,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Batch Normalization | Normalize each feature across the batch, then scale and shift using learnable parameters. | https://www.tensortonic.com/problems/pytorch-batch-normalization |
 | Beam Search Decoding | Beam search is a heuristic search algorithm used in sequence generation tasks such as machine translation, text generation, and speech recognition. | https://www.tensortonic.com/problems/pytorch-beam-search |
 | Simple Neural Network | Implement a class SimpleNet subclassing nn.Module with two linear layers and ReLU between them. | https://www.tensortonic.com/problems/pytorch-build-simple-nn-from-scratch |
+| Conv2d from Scratch | Implement a PyTorch Conv2d module from tensor operations with configurable channels, kernel, stride, padding, and bias. | https://www.tensortonic.com/problems/pytorch-conv2d-from-scratch |
 | Custom Dataset Class | Implement a PyTorch Dataset over row records with indexed feature tensors and labels. | https://www.tensortonic.com/problems/pytorch-custom-dataclass |
 | Custom Linear Layer | Implement a custom linear layer that computes the affine transformation without using any built-in linear layer. | https://www.tensortonic.com/problems/pytorch-custom-linear-layer |
 | Dropout from Scratch | Implement PyTorch inverted dropout from a supplied mask during training while returning inputs unchanged in evaluation mode. | https://www.tensortonic.com/problems/pytorch-dropout-from-scratch |
