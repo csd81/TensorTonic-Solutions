@@ -154,6 +154,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Spatial Self-Attention Block | Implement the multi-head self-attention block that lets every pixel of a diffusion U-Net feature map look at every other pixel. | https://www.tensortonic.com/problems/diffusion-l03-spatial-self-attention |
 | Time-Conditioned Residual Block | Build the GroupNorm, SiLU and convolution residual block that injects a timestep embedding into a diffusion U-Net. | https://www.tensortonic.com/problems/diffusion-l03-time-conditioned-residual-block |
 | Tiny U-Net Forward Pass | Assemble a time-conditioned U-Net from scratch with residual blocks, downsampling, upsampling and skip connections. | https://www.tensortonic.com/problems/diffusion-l03-tiny-unet-forward |
+| Noise Prediction Loss | Compute the DDPM simple training loss by noising a batch, running a toy denoiser and measuring its noise prediction error. | https://www.tensortonic.com/problems/diffusion-l04-noise-prediction-loss |
 | Activation Functions | Implement ReLU, sigmoid, tanh, Leaky ReLU, GELU, and Swish with their analytical derivatives. | https://www.tensortonic.com/problems/dl-activation-functions |
 | Autoencoder Forward Pass | Implement a NumPy autoencoder forward pass through an encoder bottleneck and decoder reconstruction network. | https://www.tensortonic.com/problems/dl-autoencoder |
 | Computational Graph & Autograd | Build a minimal autograd engine that performs forward and backward passes on a computational graph. | https://www.tensortonic.com/problems/dl-autograd |
