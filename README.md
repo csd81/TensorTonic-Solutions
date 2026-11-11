@@ -143,6 +143,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | ViT Multi-Head Self-Attention | Implement Vision Transformer multi-head self-attention with combined QKV projection, scaled softmax, and output projection. | https://www.tensortonic.com/problems/cv-vit-attention-block |
 | Window Partition and Reverse | Partition BHWC feature maps into row-major Swin Transformer windows and reconstruct the original tensor exactly. | https://www.tensortonic.com/problems/cv-window-partition |
 | Zero Pad and Center Crop | Zero-pad a two-dimensional grayscale image on every side, then extract a centered crop with the requested dimensions. | https://www.tensortonic.com/problems/cv-zero-pad-and-center-crop |
+| Reparameterized Gaussian Sample | Draw Gaussian samples with the reparameterization trick, writing each sample as a deterministic function of noise. | https://www.tensortonic.com/problems/diffusion-l01-reparameterized-gaussian-sample |
 | Tiny U-Net Forward Pass | Assemble a time-conditioned U-Net from scratch with residual blocks, downsampling, upsampling and skip connections. | https://www.tensortonic.com/problems/diffusion-l03-tiny-unet-forward |
 | Activation Functions | Implement ReLU, sigmoid, tanh, Leaky ReLU, GELU, and Swish with their analytical derivatives. | https://www.tensortonic.com/problems/dl-activation-functions |
 | Autoencoder Forward Pass | Implement a NumPy autoencoder forward pass through an encoder bottleneck and decoder reconstruction network. | https://www.tensortonic.com/problems/dl-autoencoder |

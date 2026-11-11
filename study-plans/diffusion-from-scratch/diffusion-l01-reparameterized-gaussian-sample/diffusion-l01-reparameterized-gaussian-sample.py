@@ -1,0 +1,8 @@
+import numpy as np
+
+def reparameterized_sample(mean: np.ndarray, log_variance: np.ndarray, noise: np.ndarray) -> np.ndarray:
+    """
+    Returns the reparameterized samples as a float64 array with the broadcast shape of the inputs.
+    """
+    std = np.exp(0.5 * log_variance)
+    return (mean + std * noise).astype(np.float64, copy=False)
