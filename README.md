@@ -169,6 +169,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Pooling Layers | Implement channelwise two-dimensional max and average pooling with configurable kernel and stride. | https://www.tensortonic.com/problems/dl-pooling-layers |
 | Rotary Position Embedding (RoPE) | Implement Rotary Position Embedding (RoPE), which encodes position by rotating pairs of dimensions in the embedding vector. | https://www.tensortonic.com/problems/dl-positional-encoding |
 | ResNet Residual Block | Build a NumPy ResNet block with padded convolutions, a skip connection, and ReLU after the residual addition. | https://www.tensortonic.com/problems/dl-resnet-block |
+| Scaled Dot-Product Attention | Implement scaled dot-product attention, the fundamental building block of all Transformer architectures. | https://www.tensortonic.com/problems/dl-scaled-dot-product-attention |
 | Sequence-to-Sequence Forward Pass | Implement the forward pass of a sequence-to-sequence (seq2seq) model using a simple RNN for both the encoder and decoder. | https://www.tensortonic.com/problems/dl-sequence-to-sequence |
 | Squeeze-and-Excitation Block | Implement a Squeeze-and-Excitation (SE) block that adaptively recalibrates channel-wise feature responses. | https://www.tensortonic.com/problems/dl-squeeze-excitation |
 | Transposed Convolution | Implement transposed convolution from scratch as the learned spatial upsampling operation used by decoder networks. | https://www.tensortonic.com/problems/dl-transposed-convolution |
