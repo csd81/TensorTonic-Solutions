@@ -365,6 +365,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Tokenizer Training | Build a subword vocabulary by iteratively merging the most frequent adjacent token pair. | https://www.tensortonic.com/problems/nlp-tokenizer-training-bpe |
 | Vocabulary Building | Build a bounded token vocabulary from a corpus and encode every sentence as an integer sequence. | https://www.tensortonic.com/problems/nlp-vocabulary-building |
 | Word2Vec | Train Skip-gram with Negative Sampling word embeddings from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-word2vec |
+| Arange and Linspace | Generate a one-dimensional NumPy sequence using either step-based arange or count-based linspace semantics. | https://www.tensortonic.com/problems/numpy-arange-linspace |
 | Create Arrays from Lists | Convert a rectangular Python list of lists into a two-dimensional NumPy float64 array. | https://www.tensortonic.com/problems/numpy-create-array |
 | Zeros and Ones | Create a two-dimensional float64 NumPy array of a requested shape filled entirely with zeros or ones. | https://www.tensortonic.com/problems/numpy-zeros-ones |
 | AdaGrad | Implement the AdaGrad (Adaptive Gradient) optimizer for linear regression with MSE loss using full-batch gradient descent. | https://www.tensortonic.com/problems/optim-adagrad |
