@@ -161,6 +161,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Classifier-Free Guidance | Combine conditional and unconditional diffusion predictions with classifier-free guidance and optional std rescaling. | https://www.tensortonic.com/problems/diffusion-l05-classifier-free-guidance |
 | DDIM Step | Implement one DDIM update with eta-controlled stochasticity, optional clipping of the predicted clean sample, and step skipping. | https://www.tensortonic.com/problems/diffusion-l05-ddim-step |
 | DDPM Ancestral Step | Implement one DDPM reverse step that turns predicted noise into the posterior mean and adds scaled fresh noise. | https://www.tensortonic.com/problems/diffusion-l05-ddpm-ancestral-step |
+| Karras Euler Sampler | Build the Karras et al. noise schedule and run Euler or Heun sampling of the probability flow ODE with an exact denoiser. | https://www.tensortonic.com/problems/diffusion-l05-karras-euler-sampler |
 | Activation Functions | Implement ReLU, sigmoid, tanh, Leaky ReLU, GELU, and Swish with their analytical derivatives. | https://www.tensortonic.com/problems/dl-activation-functions |
 | Autoencoder Forward Pass | Implement a NumPy autoencoder forward pass through an encoder bottleneck and decoder reconstruction network. | https://www.tensortonic.com/problems/dl-autoencoder |
 | Computational Graph & Autograd | Build a minimal autograd engine that performs forward and backward passes on a computational graph. | https://www.tensortonic.com/problems/dl-autograd |
