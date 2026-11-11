@@ -221,6 +221,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | PRNG Key Splitting | Generate reproducible per-layer dropout masks in JAX from one seed by splitting PRNG keys explicitly and never reusing a key. | https://www.tensortonic.com/problems/jax-l01-prng-key-splitting |
 | Beam Search Step | Write one beam search step in JAX that adds log probs, takes the top beams over all candidates and reorders histories and caches. | https://www.tensortonic.com/problems/jax-l08-beam-search-step |
 | Ring All-Reduce with ppermute | Implement ring all-reduce in JAX as reduce-scatter then all-gather with lax.ppermute inside shard_map, matching psum exactly on 8 devices. | https://www.tensortonic.com/problems/jax-l09-ring-all-reduce |
+| Tensor-Parallel MLP | Run a tensor-parallel two-layer MLP in JAX with shard_map, splitting the first weight by columns and the second by rows, joined by psum. | https://www.tensortonic.com/problems/jax-l09-tensor-parallel-mlp |
 | L1 Normalization | Implement CUDA L1 vector normalization by reducing absolute values and dividing each element by the resulting norm. | https://www.tensortonic.com/problems/l1-normalize |
 | L2 Normalization | Implement CUDA L2 vector normalization by reducing squared values and dividing each element by the resulting norm. | https://www.tensortonic.com/problems/l2-normalize |
 | Cholesky Decomposition | Factor a symmetric positive-definite NumPy matrix into a lower-triangular matrix and its transpose. | https://www.tensortonic.com/problems/la-cholesky |
