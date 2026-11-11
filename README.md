@@ -67,6 +67,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Apply One Full SGD Training Step | Run one complete training step for a tanh neuron over a batch by deriving every gradient manually with tensor arithmetic. | https://www.tensortonic.com/problems/autograd-l08-sgd-training-step |
 | Calculate Squared-Error Loss Gradients | Calculate the summed squared-error loss and its derivative with respect to every prediction. | https://www.tensortonic.com/problems/autograd-l08-squared-error-loss-gradients |
 | Train a Tiny Micrograd MLP | Train a supplied scalar-output MLP with manual reverse-mode differentiation and deterministic gradient descent. | https://www.tensortonic.com/problems/autograd-l08-train-tiny-micrograd-mlp |
+| Baseline Predictor | Predict collaborative-filtering ratings from the global mean plus user and item rating biases. | https://www.tensortonic.com/problems/baseline-predictor |
 | Bernoulli Probability Mass Function & Moments | Compute the Bernoulli probability mass function, expected value, and variance for a valid success probability. | https://www.tensortonic.com/problems/bernoulli-pmf |
 | Bigram Probabilities (Add-1 Smoothing) | Estimate bigram probabilities from token sequences using add-one smoothing over a fixed vocabulary. | https://www.tensortonic.com/problems/bigram-probabilities |
 | Binomial Probability Mass Function | Compute binomial probability mass and cumulative probabilities from trial count, success probability, and outcome. | https://www.tensortonic.com/problems/binomial-pmf-cdf |
@@ -103,6 +104,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Taylor Approximation of a Loss Landscape | Build first-order (linear) and second-order (quadratic) Taylor approximations of a loss function at a given point. | https://www.tensortonic.com/problems/calculus-taylor-approximation |
 | Hessian Tensor of a Vector-Valued Function | Compute the full Hessian tensor for a three-output polynomial function of three scalar variables. | https://www.tensortonic.com/problems/calculus-vector-valued-hessian |
 | Implement Causal Masking for Attention | Create a causal attention mask that blocks each token from attending to future positions in a sequence. | https://www.tensortonic.com/problems/causal-masking |
+| Compute Confusion Matrix with Normalization | Build a multiclass confusion matrix and optionally normalize counts by true-class rows or predicted-class columns. | https://www.tensortonic.com/problems/confusion-matrix-norm |
 | 1D Convolution | Implement 1D cross-correlation in CUDA with one thread per output element and register accumulation over the kernel. | https://www.tensortonic.com/problems/conv-1d |
 | 2D Convolution | Implement 2D cross-correlation in CUDA with a two-dimensional grid, row-major indexing, and per-output accumulation. | https://www.tensortonic.com/problems/conv-2d |
 | 3D Convolution | Implement naive 3D cross-correlation in CUDA with a three-dimensional launch grid and row-major flattened indexing. | https://www.tensortonic.com/problems/conv-3d |
