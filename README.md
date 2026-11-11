@@ -159,6 +159,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Posterior Mean and Variance | Compute the mean, variance and clipped log variance of the DDPM forward posterior q(x_{t-1} \| x_t, x_0) for a batch. | https://www.tensortonic.com/problems/diffusion-l04-posterior-mean-variance |
 | Prediction Parameterization | Convert a diffusion model output between the epsilon, x0 and v parameterizations using each sample's noise level. | https://www.tensortonic.com/problems/diffusion-l04-prediction-parameterization |
 | Classifier-Free Guidance | Combine conditional and unconditional diffusion predictions with classifier-free guidance and optional std rescaling. | https://www.tensortonic.com/problems/diffusion-l05-classifier-free-guidance |
+| DDIM Step | Implement one DDIM update with eta-controlled stochasticity, optional clipping of the predicted clean sample, and step skipping. | https://www.tensortonic.com/problems/diffusion-l05-ddim-step |
 | DDPM Ancestral Step | Implement one DDPM reverse step that turns predicted noise into the posterior mean and adds scaled fresh noise. | https://www.tensortonic.com/problems/diffusion-l05-ddpm-ancestral-step |
 | Activation Functions | Implement ReLU, sigmoid, tanh, Leaky ReLU, GELU, and Swish with their analytical derivatives. | https://www.tensortonic.com/problems/dl-activation-functions |
 | Autoencoder Forward Pass | Implement a NumPy autoencoder forward pass through an encoder bottleneck and decoder reconstruction network. | https://www.tensortonic.com/problems/dl-autoencoder |
