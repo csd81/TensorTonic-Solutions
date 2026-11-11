@@ -21,6 +21,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 
 | Problem | Description | Link |
 |---|---|---|
+| A/B Test on Conversion Rates | Compare two conversion rates with a two-proportion z-test, returning the lift, z, p-value, confidence interval and decision. | https://www.tensortonic.com/problems/ab-test-conversion-rates |
 | Implement Adam Optimizer Step | Implement one vectorized Adam optimizer step in NumPy with first and second moments, bias correction, and elementwise parameter updates. | https://www.tensortonic.com/problems/adam-optimizer |
 | Find a Go Group and Its Liberties | Trace the orthogonally connected stones containing one occupied board point and collect every distinct empty intersection adjacent to that group. | https://www.tensortonic.com/problems/alphago-l01-group-liberties |
 | Build the Legal Go Action Mask | Evaluate every intersection action under occupancy, capture, suicide, and positional-superko rules, then append pass at the final action index. | https://www.tensortonic.com/problems/alphago-l01-legal-action-mask |
