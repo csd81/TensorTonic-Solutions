@@ -150,6 +150,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Batch Normalization | Implement batch normalization for training and inference, including batch statistics and running-statistic updates. | https://www.tensortonic.com/problems/dl-batch-normalization |
 | 2D Convolution from Scratch | Implement multichannel two-dimensional cross-correlation from scratch with multiple filters, stride, padding, and bias. | https://www.tensortonic.com/problems/dl-convolution-operation |
 | Transformer Decoder Block | Implement a NumPy Transformer decoder block with masked self-attention, cross-attention, and feed-forward layers. | https://www.tensortonic.com/problems/dl-decoder-block |
+| Depthwise Separable Convolution | Implement NumPy depthwise spatial convolution followed by pointwise channel mixing and optional bias. | https://www.tensortonic.com/problems/dl-depthwise-separable-convolution |
 | Dropout | Apply inverted dropout from a supplied binary mask during training and preserve the input unchanged during evaluation. | https://www.tensortonic.com/problems/dl-dropout |
 | Transformer Encoder Block | Implement a NumPy Transformer encoder block with self-attention, residual connections, normalization, and feed-forward layers. | https://www.tensortonic.com/problems/dl-encoder-block |
 | Multi-Layer Perceptron (Forward Pass) | Implement the forward pass of a multi-layer perceptron (MLP) with arbitrary depth and width. | https://www.tensortonic.com/problems/dl-forward-pass |
