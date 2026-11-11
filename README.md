@@ -365,6 +365,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Tokenizer Training | Build a subword vocabulary by iteratively merging the most frequent adjacent token pair. | https://www.tensortonic.com/problems/nlp-tokenizer-training-bpe |
 | Vocabulary Building | Build a bounded token vocabulary from a corpus and encode every sentence as an integer sequence. | https://www.tensortonic.com/problems/nlp-vocabulary-building |
 | Word2Vec | Train Skip-gram with Negative Sampling word embeddings from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-word2vec |
+| Create Arrays from Lists | Convert a rectangular Python list of lists into a two-dimensional NumPy float64 array. | https://www.tensortonic.com/problems/numpy-create-array |
 | AdaGrad | Implement the AdaGrad (Adaptive Gradient) optimizer for linear regression with MSE loss using full-batch gradient descent. | https://www.tensortonic.com/problems/optim-adagrad |
 | Adam Optimizer | Implement the Adam optimizer to train a linear regression model using mean squared error (MSE) loss with full-batch gradient descent. | https://www.tensortonic.com/problems/optim-adam |
 | AdamW (Decoupled Weight Decay) | Implement both Adam with L2 regularization and AdamW (decoupled weight decay) to optimize weights for linear regression with MSE loss. | https://www.tensortonic.com/problems/optim-adamw |
