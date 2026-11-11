@@ -157,6 +157,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Normalize GRPO Group Advantages | Normalize rollout rewards within each contiguous prompt group and deactivate groups with no reward variation. | https://www.tensortonic.com/problems/cs336-l16-grpo-group-advantages |
 | Compare Sequence and Token Length Normalization | Compare sequence-summed and token-averaged GRPO contributions to expose response-length normalization effects. | https://www.tensortonic.com/problems/cs336-l16-grpo-length-normalization-audit |
 | Assign Multimodal RoPE Coordinates | Assign time, height, and width coordinates to text, image-grid, separator, and sampled-video segments in one packed sequence. | https://www.tensortonic.com/problems/cs336-l17-multimodal-rope-coordinates |
+| Patchify a Batch of Images | Split PyTorch image batches into a row-major grid of non-overlapping flattened Vision Transformer patches. | https://www.tensortonic.com/problems/cs336-l17-vision-transformer-patchify |
 | Cosine Similarity | Compute cosine similarity in CUDA by reducing the dot product and both vector norms into one scalar result. | https://www.tensortonic.com/problems/cuda-cosine-similarity |
 | Dot Product | Implement a multi-block CUDA dot-product reduction that combines partial sums into one scalar output. | https://www.tensortonic.com/problems/cuda-dot-product |
 | GELU | Implement exact GELU activation in CUDA with one thread per element and the device error-function intrinsic. | https://www.tensortonic.com/problems/cuda-gelu |
