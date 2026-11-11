@@ -427,6 +427,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Stacking Ensemble | Build a stacking classifier using cross-validated predictions from decision-stump and KNN base models to train a logistic meta-learner. | https://www.tensortonic.com/problems/ml-stacking |
 | SVM with Hinge Loss (SGD) | Train a linear SVM with sequential SGD updates on hinge loss, L2 weight regularization, and signed class predictions. | https://www.tensortonic.com/problems/ml-svm-hinge-sgd |
 | t-SNE Affinity Matrix | Compute the symmetric t-SNE affinity matrix using pairwise distances, perplexity-matched bandwidths, and conditional probabilities. | https://www.tensortonic.com/problems/ml-tsne |
+| Monitoring Metrics Selection | Compute the required monitoring metrics for classification, regression, or ranking prediction results. | https://www.tensortonic.com/problems/monitoring-metrics-selection |
 | Bag of Words | Build an alphabetical vocabulary and document-term count matrix from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-bag-of-words |
 | Beam Search Decoding | Decode token sequences with beam search over supplied next-token probabilities, cumulative scores, and stable tie handling. | https://www.tensortonic.com/problems/nlp-beam-search-decoding |
 | Byte Pair Encoding | Byte Pair Encoding (BPE) is a subword tokenization algorithm that iteratively merges the most frequent pair of adjacent symbols in a corpus. | https://www.tensortonic.com/problems/nlp-bpe-algorithm |
