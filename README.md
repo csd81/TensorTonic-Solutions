@@ -146,6 +146,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Remove Response-Length Bias from Judge Scores | Fit model utilities and a response-length coefficient, then evaluate every comparison with length difference fixed to zero. | https://www.tensortonic.com/problems/cs336-l12-judge-length-debiasing |
 | Score Multiple-Choice Continuations | Score each answer continuation by summed conditional token log probability and select the highest-scoring choice. | https://www.tensortonic.com/problems/cs336-l12-multiple-choice-likelihood |
 | Fit Elo Ratings from Pairwise Votes | Fit deterministic centered Elo ratings from sparse pairwise outcomes and report comparison-graph connectivity. | https://www.tensortonic.com/problems/cs336-l12-pairwise-elo-fit |
+| Perform Stable Exact Deduplication | Normalize document text, retain the earliest exact occurrence, and map every removed document to its retained owner. | https://www.tensortonic.com/problems/cs336-l14-stable-exact-deduplication |
 | Cosine Similarity | Compute cosine similarity in CUDA by reducing the dot product and both vector norms into one scalar result. | https://www.tensortonic.com/problems/cuda-cosine-similarity |
 | Dot Product | Implement a multi-block CUDA dot-product reduction that combines partial sums into one scalar output. | https://www.tensortonic.com/problems/cuda-dot-product |
 | GELU | Implement exact GELU activation in CUDA with one thread per element and the device error-function intrinsic. | https://www.tensortonic.com/problems/cuda-gelu |
