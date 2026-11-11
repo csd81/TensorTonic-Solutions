@@ -161,6 +161,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Implement Symmetric CLIP Contrastive Loss | Compute bidirectional CLIP contrastive loss for aligned image and text embeddings with a learned logit scale. | https://www.tensortonic.com/problems/cs336-l17-symmetric-clip-loss |
 | Patchify a Batch of Images | Split PyTorch image batches into a row-major grid of non-overlapping flattened Vision Transformer patches. | https://www.tensortonic.com/problems/cs336-l17-vision-transformer-patchify |
 | Simulate Continuous Decode Batching | Simulate continuous token decoding with arrival-ordered admission, active-capacity limits, and completion times. | https://www.tensortonic.com/problems/cs336-l18-continuous-batching-scheduler |
+| Find Reusable Prefixes in a KV Trie | Build a deterministic token trie for cached sequences and find the longest reusable prefix for each request. | https://www.tensortonic.com/problems/cs336-l18-kv-prefix-trie |
 | Cosine Similarity | Compute cosine similarity in CUDA by reducing the dot product and both vector norms into one scalar result. | https://www.tensortonic.com/problems/cuda-cosine-similarity |
 | Dot Product | Implement a multi-block CUDA dot-product reduction that combines partial sums into one scalar output. | https://www.tensortonic.com/problems/cuda-dot-product |
 | GELU | Implement exact GELU activation in CUDA with one thread per element and the device error-function intrinsic. | https://www.tensortonic.com/problems/cuda-gelu |
