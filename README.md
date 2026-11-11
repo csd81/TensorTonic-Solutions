@@ -367,6 +367,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Word2Vec | Train Skip-gram with Negative Sampling word embeddings from a corpus of tokenized documents. | https://www.tensortonic.com/problems/nlp-word2vec |
 | Arange and Linspace | Generate a one-dimensional NumPy sequence using either step-based arange or count-based linspace semantics. | https://www.tensortonic.com/problems/numpy-arange-linspace |
 | Basic Indexing | Extract a rectangular NumPy subarray with row and column slice boundaries using standard basic indexing. | https://www.tensortonic.com/problems/numpy-basic-indexing |
+| Boolean Masking | Build three filtered views of a 2D array: an element-level boolean mask, rows kept when any element exceeds a threshold. | https://www.tensortonic.com/problems/numpy-boolean-masking |
 | Create Arrays from Lists | Convert a rectangular Python list of lists into a two-dimensional NumPy float64 array. | https://www.tensortonic.com/problems/numpy-create-array |
 | Fancy Indexing | Convert the data to float64 and return the array formed by selecting elements along that axis using integer array indexing. | https://www.tensortonic.com/problems/numpy-fancy-indexing |
 | Random Array Generation | Generate seeded float64 NumPy arrays from either a uniform or standard normal distribution. | https://www.tensortonic.com/problems/numpy-random-arrays |
