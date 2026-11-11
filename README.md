@@ -158,6 +158,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | GAN Training Step | Implement a single forward-pass training step for a Generative Adversarial Network (GAN). | https://www.tensortonic.com/problems/dl-gan-training |
 | GRU Cell | Implement a Gated Recurrent Unit (GRU) cell that processes a sequence using two gates: an update gate and a reset gate. | https://www.tensortonic.com/problems/dl-gru-cell |
 | Inception Module | Implement a simplified Inception module with two parallel convolution branches whose outputs are concatenated along the channel dimension. | https://www.tensortonic.com/problems/dl-inception-module |
+| Layer Normalization | Implement Layer Normalization (Ba et al, 2016), the standard normalization technique in Transformers. | https://www.tensortonic.com/problems/dl-layer-normalization |
 | LeNet Forward Pass | Implement the forward pass of a simplified LeNet-style convolutional neural network using only NumPy. | https://www.tensortonic.com/problems/dl-lenet-5 |
 | Loss Functions | Implement MSE, binary cross-entropy, categorical cross-entropy, and Huber losses from supplied predictions and targets. | https://www.tensortonic.com/problems/dl-loss-functions |
 | LSTM Cell | Implement a Long Short-Term Memory (LSTM) cell that processes a sequence using four gates: forget, input, output, and a candidate cell state. | https://www.tensortonic.com/problems/dl-lstm-cell |
