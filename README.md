@@ -161,6 +161,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Perceptron | Train a binary perceptron from zero-initialized weights using ordered samples, step predictions, and error-correction updates. | https://www.tensortonic.com/problems/dl-perceptron |
 | Pooling Layers | Implement channelwise two-dimensional max and average pooling with configurable kernel and stride. | https://www.tensortonic.com/problems/dl-pooling-layers |
 | Sequence-to-Sequence Forward Pass | Implement the forward pass of a sequence-to-sequence (seq2seq) model using a simple RNN for both the encoder and decoder. | https://www.tensortonic.com/problems/dl-sequence-to-sequence |
+| Transposed Convolution | Implement transposed convolution from scratch as the learned spatial upsampling operation used by decoder networks. | https://www.tensortonic.com/problems/dl-transposed-convolution |
 | Vision Transformer Patch Embedding | Convert an image into non-overlapping Vision Transformer patch embeddings with a learned linear projection. | https://www.tensortonic.com/problems/dl-vision-transformer |
 | Weight Initialization | Compute per-layer NumPy weight initialization parameters from network dimensions and the selected initialization method. | https://www.tensortonic.com/problems/dl-weight-initialization |
 | Implement Dot Product | Implement the dot product of equal-length numeric vectors by summing element-wise products without library shortcuts. | https://www.tensortonic.com/problems/dot-product |
