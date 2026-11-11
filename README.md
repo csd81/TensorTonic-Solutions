@@ -163,6 +163,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | LSTM Cell | Implement a Long Short-Term Memory (LSTM) cell that processes a sequence using four gates: forget, input, output, and a candidate cell state. | https://www.tensortonic.com/problems/dl-lstm-cell |
 | Mini-Batch Training Loop | Train a NumPy multilayer perceptron over ordered mini-batches with forward passes, backpropagation, and SGD updates. | https://www.tensortonic.com/problems/dl-mini-batch-training |
 | Multi-Head Attention | Implement NumPy multi-head attention with QKV projections, optional masking, stable softmax, and output projection. | https://www.tensortonic.com/problems/dl-multi-head-attention |
+| Non-Maximum Suppression | Implement greedy non-maximum suppression for scored object-detection boxes using an IoU threshold and stable selection order. | https://www.tensortonic.com/problems/dl-nms |
 | Perceptron | Train a binary perceptron from zero-initialized weights using ordered samples, step predictions, and error-correction updates. | https://www.tensortonic.com/problems/dl-perceptron |
 | Pooling Layers | Implement channelwise two-dimensional max and average pooling with configurable kernel and stride. | https://www.tensortonic.com/problems/dl-pooling-layers |
 | ResNet Residual Block | Build a NumPy ResNet block with padded convolutions, a skip connection, and ReLU after the residual addition. | https://www.tensortonic.com/problems/dl-resnet-block |
