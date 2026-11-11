@@ -559,6 +559,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | PCA Projection | Project centered observations onto supplied principal components to produce lower-dimensional features. | https://www.tensortonic.com/problems/pca-projection |
 | Compute Pearson Correlation Matrix | Compute the Pearson correlation matrix between numeric features using centered covariance and standard deviations. | https://www.tensortonic.com/problems/pearson-correlation |
 | Perplexity Computation | Compute language-model perplexity from token probability distributions and the observed token indices. | https://www.tensortonic.com/problems/perplexity-computation |
+| Poisson Probability Mass Function & Cumulative Distribution Function | Compute Poisson probability mass and cumulative probabilities for a nonnegative event count and rate. | https://www.tensortonic.com/problems/poisson-pmf-cdf |
 | Implement Positional Encoding (sin/cos) | Generate sinusoidal Transformer positional encodings across sequence positions and embedding dimensions, with the formula and tests in the browser. | https://www.tensortonic.com/problems/positional-encoding |
 | A/B Test Significance | Perform a two-proportion z-test to determine if the treatment conversion rate is significantly different from the control. | https://www.tensortonic.com/problems/probstat-ab-test-significance |
 | ANOVA F-Statistic | Perform a one-way ANOVA across multiple numeric groups to test whether any population means differ. | https://www.tensortonic.com/problems/probstat-anova-f-test |
