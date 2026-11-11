@@ -144,6 +144,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Generate a Warmup-Stable-Decay Schedule | Generate a horizon-independent linear warmup, an exact stable phase, and cosine decay with declared endpoints. | https://www.tensortonic.com/problems/cs336-l11-wsd-learning-rate |
 | Compute Conditional Perplexity | Compute token-average negative log likelihood and perplexity only at target positions selected by a Boolean response mask. | https://www.tensortonic.com/problems/cs336-l12-conditional-perplexity |
 | Score Multiple-Choice Continuations | Score each answer continuation by summed conditional token log probability and select the highest-scoring choice. | https://www.tensortonic.com/problems/cs336-l12-multiple-choice-likelihood |
+| Fit Elo Ratings from Pairwise Votes | Fit deterministic centered Elo ratings from sparse pairwise outcomes and report comparison-graph connectivity. | https://www.tensortonic.com/problems/cs336-l12-pairwise-elo-fit |
 | Cosine Similarity | Compute cosine similarity in CUDA by reducing the dot product and both vector norms into one scalar result. | https://www.tensortonic.com/problems/cuda-cosine-similarity |
 | Dot Product | Implement a multi-block CUDA dot-product reduction that combines partial sums into one scalar output. | https://www.tensortonic.com/problems/cuda-dot-product |
 | GELU | Implement exact GELU activation in CUDA with one thread per element and the device error-function intrinsic. | https://www.tensortonic.com/problems/cuda-gelu |
