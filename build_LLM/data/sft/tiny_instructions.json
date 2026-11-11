@@ -1,0 +1,527 @@
+[
+  {
+    "instruction": "Name a color.",
+    "input": "",
+    "output": "Blue."
+  },
+  {
+    "instruction": "Name a warm color.",
+    "input": "",
+    "output": "Red."
+  },
+  {
+    "instruction": "Name a cool color.",
+    "input": "",
+    "output": "Blue."
+  },
+  {
+    "instruction": "What color is the sky on a clear day?",
+    "input": "",
+    "output": "Blue."
+  },
+  {
+    "instruction": "What color is grass?",
+    "input": "",
+    "output": "Green."
+  },
+  {
+    "instruction": "What color is snow?",
+    "input": "",
+    "output": "White."
+  },
+  {
+    "instruction": "What color is the sun?",
+    "input": "",
+    "output": "Yellow."
+  },
+  {
+    "instruction": "What color is a ripe banana?",
+    "input": "",
+    "output": "Yellow."
+  },
+  {
+    "instruction": "What color is coal?",
+    "input": "",
+    "output": "Black."
+  },
+  {
+    "instruction": "What color is milk?",
+    "input": "",
+    "output": "White."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Apple."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Banana."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Orange."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Grape."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Strawberry."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Watermelon."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Pear."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Peach."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Cherry."
+  },
+  {
+    "instruction": "Name a fruit.",
+    "input": "",
+    "output": "Lemon."
+  },
+  {
+    "instruction": "What sound does a cat make?",
+    "input": "",
+    "output": "A cat says meow."
+  },
+  {
+    "instruction": "What sound does a dog make?",
+    "input": "",
+    "output": "A dog says bark."
+  },
+  {
+    "instruction": "What sound does a cow make?",
+    "input": "",
+    "output": "A cow says moo."
+  },
+  {
+    "instruction": "What sound does a duck make?",
+    "input": "",
+    "output": "A duck says quack."
+  },
+  {
+    "instruction": "What sound does a sheep make?",
+    "input": "",
+    "output": "A sheep says baa."
+  },
+  {
+    "instruction": "What sound does a horse make?",
+    "input": "",
+    "output": "A horse says neigh."
+  },
+  {
+    "instruction": "What sound does a lion make?",
+    "input": "",
+    "output": "A lion says roar."
+  },
+  {
+    "instruction": "What sound does a bird make?",
+    "input": "",
+    "output": "A bird says tweet."
+  },
+  {
+    "instruction": "What sound does a pig make?",
+    "input": "",
+    "output": "A pig says oink."
+  },
+  {
+    "instruction": "What sound does a frog make?",
+    "input": "",
+    "output": "A frog says ribbit."
+  },
+  {
+    "instruction": "What is 1 + 1?",
+    "input": "",
+    "output": "2."
+  },
+  {
+    "instruction": "What is 2 + 2?",
+    "input": "",
+    "output": "4."
+  },
+  {
+    "instruction": "What is 3 + 3?",
+    "input": "",
+    "output": "6."
+  },
+  {
+    "instruction": "What is 4 + 4?",
+    "input": "",
+    "output": "8."
+  },
+  {
+    "instruction": "What is 5 + 5?",
+    "input": "",
+    "output": "10."
+  },
+  {
+    "instruction": "What is 6 + 6?",
+    "input": "",
+    "output": "12."
+  },
+  {
+    "instruction": "What is 7 + 7?",
+    "input": "",
+    "output": "14."
+  },
+  {
+    "instruction": "What is 8 + 8?",
+    "input": "",
+    "output": "16."
+  },
+  {
+    "instruction": "What is 9 + 9?",
+    "input": "",
+    "output": "18."
+  },
+  {
+    "instruction": "What is 10 + 10?",
+    "input": "",
+    "output": "20."
+  },
+  {
+    "instruction": "What is 2 - 1?",
+    "input": "",
+    "output": "1."
+  },
+  {
+    "instruction": "What is 3 - 1?",
+    "input": "",
+    "output": "2."
+  },
+  {
+    "instruction": "What is 4 - 1?",
+    "input": "",
+    "output": "3."
+  },
+  {
+    "instruction": "What is 5 - 1?",
+    "input": "",
+    "output": "4."
+  },
+  {
+    "instruction": "What is 6 - 1?",
+    "input": "",
+    "output": "5."
+  },
+  {
+    "instruction": "What is 7 - 1?",
+    "input": "",
+    "output": "6."
+  },
+  {
+    "instruction": "What is 8 - 1?",
+    "input": "",
+    "output": "7."
+  },
+  {
+    "instruction": "What is 9 - 1?",
+    "input": "",
+    "output": "8."
+  },
+  {
+    "instruction": "What is 10 - 1?",
+    "input": "",
+    "output": "9."
+  },
+  {
+    "instruction": "What is the opposite of hot?",
+    "input": "",
+    "output": "Cold."
+  },
+  {
+    "instruction": "What is the opposite of up?",
+    "input": "",
+    "output": "Down."
+  },
+  {
+    "instruction": "What is the opposite of big?",
+    "input": "",
+    "output": "Small."
+  },
+  {
+    "instruction": "What is the opposite of fast?",
+    "input": "",
+    "output": "Slow."
+  },
+  {
+    "instruction": "What is the opposite of happy?",
+    "input": "",
+    "output": "Sad."
+  },
+  {
+    "instruction": "What is the opposite of light?",
+    "input": "",
+    "output": "Dark."
+  },
+  {
+    "instruction": "What is the opposite of young?",
+    "input": "",
+    "output": "Old."
+  },
+  {
+    "instruction": "What is the opposite of wet?",
+    "input": "",
+    "output": "Dry."
+  },
+  {
+    "instruction": "What is the opposite of open?",
+    "input": "",
+    "output": "Closed."
+  },
+  {
+    "instruction": "What is the opposite of loud?",
+    "input": "",
+    "output": "Quiet."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Circle."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Square."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Triangle."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Rectangle."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Star."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Heart."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Oval."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Diamond."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Pentagon."
+  },
+  {
+    "instruction": "Name a shape.",
+    "input": "",
+    "output": "Hexagon."
+  },
+  {
+    "instruction": "What is the capital of France?",
+    "input": "",
+    "output": "Paris."
+  },
+  {
+    "instruction": "What is the capital of Italy?",
+    "input": "",
+    "output": "Rome."
+  },
+  {
+    "instruction": "What is the capital of Spain?",
+    "input": "",
+    "output": "Madrid."
+  },
+  {
+    "instruction": "What is the capital of Germany?",
+    "input": "",
+    "output": "Berlin."
+  },
+  {
+    "instruction": "What is the capital of Japan?",
+    "input": "",
+    "output": "Tokyo."
+  },
+  {
+    "instruction": "What is the capital of Canada?",
+    "input": "",
+    "output": "Ottawa."
+  },
+  {
+    "instruction": "What is the capital of Egypt?",
+    "input": "",
+    "output": "Cairo."
+  },
+  {
+    "instruction": "What is the capital of Greece?",
+    "input": "",
+    "output": "Athens."
+  },
+  {
+    "instruction": "What is the capital of Portugal?",
+    "input": "",
+    "output": "Lisbon."
+  },
+  {
+    "instruction": "What is the capital of Sweden?",
+    "input": "",
+    "output": "Stockholm."
+  },
+  {
+    "instruction": "Say hello.",
+    "input": "",
+    "output": "Hello!"
+  },
+  {
+    "instruction": "Say goodbye.",
+    "input": "",
+    "output": "Goodbye!"
+  },
+  {
+    "instruction": "Say thank you.",
+    "input": "",
+    "output": "Thank you!"
+  },
+  {
+    "instruction": "Say please.",
+    "input": "",
+    "output": "Please."
+  },
+  {
+    "instruction": "Wish someone good morning.",
+    "input": "",
+    "output": "Good morning!"
+  },
+  {
+    "instruction": "What day comes after Monday?",
+    "input": "",
+    "output": "Tuesday."
+  },
+  {
+    "instruction": "What day comes after Tuesday?",
+    "input": "",
+    "output": "Wednesday."
+  },
+  {
+    "instruction": "What day comes after Wednesday?",
+    "input": "",
+    "output": "Thursday."
+  },
+  {
+    "instruction": "What day comes after Thursday?",
+    "input": "",
+    "output": "Friday."
+  },
+  {
+    "instruction": "What day comes after Friday?",
+    "input": "",
+    "output": "Saturday."
+  },
+  {
+    "instruction": "What day comes after Saturday?",
+    "input": "",
+    "output": "Sunday."
+  },
+  {
+    "instruction": "What day comes after Sunday?",
+    "input": "",
+    "output": "Monday."
+  },
+  {
+    "instruction": "What month comes after January?",
+    "input": "",
+    "output": "February."
+  },
+  {
+    "instruction": "What month comes after February?",
+    "input": "",
+    "output": "March."
+  },
+  {
+    "instruction": "What month comes after March?",
+    "input": "",
+    "output": "April."
+  },
+  {
+    "instruction": "What month comes after April?",
+    "input": "",
+    "output": "May."
+  },
+  {
+    "instruction": "What month comes after May?",
+    "input": "",
+    "output": "June."
+  },
+  {
+    "instruction": "What month comes after June?",
+    "input": "",
+    "output": "July."
+  },
+  {
+    "instruction": "What is a dog?",
+    "input": "",
+    "output": "A dog is a loyal animal."
+  },
+  {
+    "instruction": "What is a cat?",
+    "input": "",
+    "output": "A cat is a small furry animal."
+  },
+  {
+    "instruction": "What is a sun?",
+    "input": "",
+    "output": "A sun is the star that gives us light."
+  },
+  {
+    "instruction": "What is a water?",
+    "input": "",
+    "output": "A water is a clear liquid we drink."
+  },
+  {
+    "instruction": "What is a tree?",
+    "input": "",
+    "output": "A tree is a tall plant with leaves."
+  },
+  {
+    "instruction": "What is a book?",
+    "input": "",
+    "output": "A book is pages with words to read."
+  },
+  {
+    "instruction": "What is a car?",
+    "input": "",
+    "output": "A car is a vehicle with four wheels."
+  },
+  {
+    "instruction": "What is a bird?",
+    "input": "",
+    "output": "A bird is an animal with feathers and wings."
+  }
+]

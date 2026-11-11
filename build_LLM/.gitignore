@@ -1,0 +1,9 @@
+runs/
+__pycache__/
+data/sources/
+data/mixed.txt
+data/mixed_manifest.json
+data/STS-B/
+data/STS-B.zip
+data/stsb_sentences.txt
+data/sft/alpaca_full.json
