@@ -343,6 +343,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Device Mesh and Named Sharding | Build a JAX device mesh over 8 CPU devices, place an array with NamedSharding and a PartitionSpec, and report every device's shard. | https://www.tensortonic.com/problems/jax-l09-named-sharding-mesh |
 | Ring All-Reduce with ppermute | Implement ring all-reduce in JAX as reduce-scatter then all-gather with lax.ppermute inside shard_map, matching psum exactly on 8 devices. | https://www.tensortonic.com/problems/jax-l09-ring-all-reduce |
 | Tensor-Parallel MLP | Run a tensor-parallel two-layer MLP in JAX with shard_map, splitting the first weight by columns and the second by rows, joined by psum. | https://www.tensortonic.com/problems/jax-l09-tensor-parallel-mlp |
+| K-Means Assignment Step | Assign each sample to its nearest K-means centroid using Euclidean distance and deterministic tie handling. | https://www.tensortonic.com/problems/k-means-assignment |
 | L1 Normalization | Implement CUDA L1 vector normalization by reducing absolute values and dividing each element by the resulting norm. | https://www.tensortonic.com/problems/l1-normalize |
 | L2 Normalization | Implement CUDA L2 vector normalization by reducing squared values and dividing each element by the resulting norm. | https://www.tensortonic.com/problems/l2-normalize |
 | Cholesky Decomposition | Factor a symmetric positive-definite NumPy matrix into a lower-triangular matrix and its transpose. | https://www.tensortonic.com/problems/la-cholesky |
