@@ -170,6 +170,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Sequence-to-Sequence Forward Pass | Implement the forward pass of a sequence-to-sequence (seq2seq) model using a simple RNN for both the encoder and decoder. | https://www.tensortonic.com/problems/dl-sequence-to-sequence |
 | Squeeze-and-Excitation Block | Implement a Squeeze-and-Excitation (SE) block that adaptively recalibrates channel-wise feature responses. | https://www.tensortonic.com/problems/dl-squeeze-excitation |
 | Transposed Convolution | Implement transposed convolution from scratch as the learned spatial upsampling operation used by decoder networks. | https://www.tensortonic.com/problems/dl-transposed-convolution |
+| U-Net Skip Connection | Implement a minimal U-Net with one skip connection using fully connected layers (no convolutions). | https://www.tensortonic.com/problems/dl-unet |
 | Variational Autoencoder Forward Pass | Implement a NumPy variational autoencoder forward pass with mean, log variance, reparameterization, and reconstruction. | https://www.tensortonic.com/problems/dl-vae |
 | Vanilla RNN Cell | Implement a vanilla recurrent cell with sequential hidden states and optional backpropagation through time gradients. | https://www.tensortonic.com/problems/dl-vanilla-rnn-cell |
 | VGG Convolution Block | Build a NumPy VGG-style block with two valid three-by-three convolutions, ReLU activations, and max pooling. | https://www.tensortonic.com/problems/dl-vgg-block |
