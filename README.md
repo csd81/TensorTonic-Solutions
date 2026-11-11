@@ -55,6 +55,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Gradient-Check a Scalar Neuron | Check a tanh neuron's analytic parameter gradients against one-parameter-at-a-time forward differences in float64. | https://www.tensortonic.com/problems/autograd-l04-neuron-gradient-check |
 | Differentiate a Tanh Activation | Evaluate scalar tanh and manually combine its local derivative with an upstream gradient. | https://www.tensortonic.com/problems/autograd-l04-tanh-forward-backward |
 | Apply Local Vector-Jacobian Rules | A reverse-mode autodiff engine moves an upstream scalar gradient through one operation at a time. | https://www.tensortonic.com/problems/autograd-l05-local-vjp-rules |
+| Run Reverse-Mode Autodiff | Run reverse-mode autodiff over a scalar tree containing leaves and add, multiply, or tanh operations. | https://www.tensortonic.com/problems/autograd-l05-reverse-mode-autodiff |
 | Topologically Sort a Computation DAG | Reverse-mode autodiff must process children before their parents during the backward pass. | https://www.tensortonic.com/problems/autograd-l05-topological-sort |
 | Train a Tiny Micrograd MLP | Train a supplied scalar-output MLP with manual reverse-mode differentiation and deterministic gradient descent. | https://www.tensortonic.com/problems/autograd-l08-train-tiny-micrograd-mlp |
 | Continuity of Activation Functions | Classify continuity and nondifferentiable points for common activation functions at supplied scalar inputs. | https://www.tensortonic.com/problems/calculus-activation-continuity |
