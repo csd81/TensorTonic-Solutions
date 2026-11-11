@@ -473,6 +473,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Stratified Sampling | Compute proportional allocation of a total sample and the resulting stratified estimator's mean and standard error. | https://www.tensortonic.com/problems/probstat-stratified-sampling |
 | T-Test (One Sample) | Given raw sample data and a hypothesized mean, perform a one-sample t-test when the population standard deviation is unknown. | https://www.tensortonic.com/problems/probstat-t-test-one-sample |
 | Z-Test (One Sample) | Perform a two-tailed one-sample z-test from a sample mean, hypothesized mean, known deviation, and sample size. | https://www.tensortonic.com/problems/probstat-z-test-one-sample |
+| Tensor Factory | Create PyTorch tensors with zeros, ones, or a constant fill value using the requested shape and dtype. | https://www.tensortonic.com/problems/pytorch-tensor-creation |
 | ReLU | Implement ReLU activation in CUDA with one thread per element, bounds checks, and branch-efficient rectification. | https://www.tensortonic.com/problems/relu |
 | Actor-Critic (A2C) Loss with Entropy | Advantage Actor-Critic (A2C) jointly trains a policy and a value function with a single composite loss. | https://www.tensortonic.com/problems/rl-actor-critic-a2c-loss |
 | Bellman Expectation Equation | The Bellman expectation equation is the cornerstone of policy evaluation in reinforcement learning. | https://www.tensortonic.com/problems/rl-bellman-expectation-equation |
