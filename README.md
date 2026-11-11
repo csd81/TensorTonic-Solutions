@@ -368,6 +368,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Arange and Linspace | Generate a one-dimensional NumPy sequence using either step-based arange or count-based linspace semantics. | https://www.tensortonic.com/problems/numpy-arange-linspace |
 | Create Arrays from Lists | Convert a rectangular Python list of lists into a two-dimensional NumPy float64 array. | https://www.tensortonic.com/problems/numpy-create-array |
 | Random Array Generation | Generate seeded float64 NumPy arrays from either a uniform or standard normal distribution. | https://www.tensortonic.com/problems/numpy-random-arrays |
+| Reshaping Arrays | Transform a rectangular input into a NumPy float64 array using flattening, transposition, or a leading batch dimension. | https://www.tensortonic.com/problems/numpy-reshape |
 | Zeros and Ones | Create a two-dimensional float64 NumPy array of a requested shape filled entirely with zeros or ones. | https://www.tensortonic.com/problems/numpy-zeros-ones |
 | AdaGrad | Implement the AdaGrad (Adaptive Gradient) optimizer for linear regression with MSE loss using full-batch gradient descent. | https://www.tensortonic.com/problems/optim-adagrad |
 | Adam Optimizer | Implement the Adam optimizer to train a linear regression model using mean squared error (MSE) loss with full-batch gradient descent. | https://www.tensortonic.com/problems/optim-adam |
