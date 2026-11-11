@@ -149,6 +149,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Build Deterministic MinHash Signatures | Build deterministic MinHash signatures from unique token shingles using supplied affine hash parameters. | https://www.tensortonic.com/problems/cs336-l14-minhash-signatures |
 | Perform Stable Exact Deduplication | Normalize document text, retain the earliest exact occurrence, and map every removed document to its retained owner. | https://www.tensortonic.com/problems/cs336-l14-stable-exact-deduplication |
 | Compute Temperature-Based Data Mixtures | Compute temperature-adjusted source sampling probabilities, expected sampled tokens, and expected epochs. | https://www.tensortonic.com/problems/cs336-l14-temperature-data-mixture |
+| Build an Assistant-Only SFT Loss Mask | Build a shifted supervised-fine-tuning loss mask that trains only on assistant tokens and ignores padding and controls. | https://www.tensortonic.com/problems/cs336-l15-assistant-only-sft-mask |
 | Cosine Similarity | Compute cosine similarity in CUDA by reducing the dot product and both vector norms into one scalar result. | https://www.tensortonic.com/problems/cuda-cosine-similarity |
 | Dot Product | Implement a multi-block CUDA dot-product reduction that combines partial sums into one scalar output. | https://www.tensortonic.com/problems/cuda-dot-product |
 | GELU | Implement exact GELU activation in CUDA with one thread per element and the device error-function intrinsic. | https://www.tensortonic.com/problems/cuda-gelu |
