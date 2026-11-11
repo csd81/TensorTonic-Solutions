@@ -168,6 +168,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Pooling Layers | Implement channelwise two-dimensional max and average pooling with configurable kernel and stride. | https://www.tensortonic.com/problems/dl-pooling-layers |
 | ResNet Residual Block | Build a NumPy ResNet block with padded convolutions, a skip connection, and ReLU after the residual addition. | https://www.tensortonic.com/problems/dl-resnet-block |
 | Sequence-to-Sequence Forward Pass | Implement the forward pass of a sequence-to-sequence (seq2seq) model using a simple RNN for both the encoder and decoder. | https://www.tensortonic.com/problems/dl-sequence-to-sequence |
+| Squeeze-and-Excitation Block | Implement a Squeeze-and-Excitation (SE) block that adaptively recalibrates channel-wise feature responses. | https://www.tensortonic.com/problems/dl-squeeze-excitation |
 | Transposed Convolution | Implement transposed convolution from scratch as the learned spatial upsampling operation used by decoder networks. | https://www.tensortonic.com/problems/dl-transposed-convolution |
 | Variational Autoencoder Forward Pass | Implement a NumPy variational autoencoder forward pass with mean, log variance, reparameterization, and reconstruction. | https://www.tensortonic.com/problems/dl-vae |
 | Vanilla RNN Cell | Implement a vanilla recurrent cell with sequential hidden states and optional backpropagation through time gradients. | https://www.tensortonic.com/problems/dl-vanilla-rnn-cell |
