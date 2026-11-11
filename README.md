@@ -474,6 +474,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | T-Test (One Sample) | Given raw sample data and a hypothesized mean, perform a one-sample t-test when the population standard deviation is unknown. | https://www.tensortonic.com/problems/probstat-t-test-one-sample |
 | Z-Test (One Sample) | Perform a two-tailed one-sample z-test from a sample mean, hypothesized mean, known deviation, and sample size. | https://www.tensortonic.com/problems/probstat-z-test-one-sample |
 | Simple Neural Network | Implement a class SimpleNet subclassing nn.Module with two linear layers and ReLU between them. | https://www.tensortonic.com/problems/pytorch-build-simple-nn-from-scratch |
+| Tensor Operations | Perform common element-wise and matrix tensor operations: add, multiply, matmul, power, and max. | https://www.tensortonic.com/problems/pytorch-tensor-arithmetic |
 | Tensor Factory | Create PyTorch tensors with zeros, ones, or a constant fill value using the requested shape and dtype. | https://www.tensortonic.com/problems/pytorch-tensor-creation |
 | ReLU | Implement ReLU activation in CUDA with one thread per element, bounds checks, and branch-efficient rectification. | https://www.tensortonic.com/problems/relu |
 | Actor-Critic (A2C) Loss with Entropy | Advantage Actor-Critic (A2C) jointly trains a policy and a value function with a single composite loss. | https://www.tensortonic.com/problems/rl-actor-critic-a2c-loss |
