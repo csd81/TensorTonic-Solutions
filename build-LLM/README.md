@@ -1,10 +1,11 @@
-# LLM, Semantic Search, SFT, and QA from the CS336 Parts
+# LLM, Semantic Search, SFT, QA, and Reasoning Systems
 
 A build around the 113 files in
 `study-plans/language-modeling-from-scratch/` (58 Python solutions, 54
-write-ups, 1 CUDA kernel), plus useful pieces from other tracks.
+write-ups, 1 CUDA kernel), plus useful pieces from other tracks and a
+vendored subset of `reasoning-from-scratch`.
 
-It now contains five working systems:
+It now contains seven working systems:
 
 1. **Tiny LLM** — a 640k-parameter decoder-only transformer on a bundled
    Shakespeare excerpt, CPU-friendly.
@@ -16,11 +17,17 @@ It now contains five working systems:
    copied CS336 assistant-only SFT mask.
 5. **Question answering** — a pretrained SQuAD-fine-tuned T5-small reader plus
    copied BM25 retrieval.
+6. **Retrieval-augmented reasoning QA** — Flan-T5-base with BM25 exemplar
+   retrieval, chain-of-thought prompts, a calculator, and the ch03 SymPy
+   grader.
+7. **Small reasoner** — Qwen2.5-0.5B-Instruct served through the from-scratch
+   Qwen3 model, with a chat REPL, web search, GSM8K evaluation, and
+   self-consistency code.
 
 ## Quick start
 
 ```bash
-cd /home/d/Desktop/TensorTonic-Solutions/build_LLM
+cd /home/d/Desktop/TensorTonic-Solutions/build-LLM
 
 # Tiny CPU model
 python llm_system.py selftest
@@ -60,11 +67,33 @@ python qa_system.py download
     --question "Who wrote Frankenstein?"
 /home/d/.venvs/torch126/bin/python qa_system.py eval --device cuda \
     --limit 200 --retrieval-limit 50
+
+# Retrieval-augmented reasoning QA (Flan-T5-base + BM25 + ch03 grader)
+python reason_qa.py download
+/home/d/.venvs/torch126/bin/python reason_qa.py selftest --device cuda
+/home/d/.venvs/torch126/bin/python reason_qa.py eval --device cuda \
+    --task both --gsm8k-limit 30 --strategyqa-limit 100
+/home/d/.venvs/torch126/bin/python reason_qa.py ask --device cuda \
+    --task gsm8k --question "A train travels 60 mph for 2.5 hours. How far does it go?"
+
+# Small reasoner (Qwen2.5-0.5B-Instruct through the from-scratch Qwen3 model)
+/home/d/.venvs/torch126/bin/python small_reasoner.py eval \
+    --model qwen2.5-0.5b-instruct --task gsm8k --limit 100 \
+    --device cuda --max-new-tokens 512
+/home/d/.venvs/torch126/bin/python small_reasoner.py chat \
+    --model qwen2.5-0.5b-instruct --device cuda
+/home/d/.venvs/torch126/bin/python small_reasoner.py ask \
+    --model qwen2.5-0.5b-instruct --device cuda \
+    --question "What is 2 + 2?"
+
+# Self-consistency code is added but has not been run yet:
+# small_reasoner.py eval ... --num-samples 3 --temperature 0.7
 ```
 
 The P2000 is `sm_61`; the system Python's `torch 2.15.0+cu132` cannot run it.
-Use `/home/d/.venvs/torch126/bin/python` (torch 2.10.0+cu126). NumPy and
-`tokenizers` were installed into that venv for these runs.
+Use `/home/d/.venvs/torch126/bin/python` (torch 2.10.0+cu126). NumPy,
+`tokenizers`, `sympy`, `requests`, `ddgs`, `huggingface_hub`, and `safetensors`
+were installed into that venv for these runs.
 
 ## 1. Tiny CPU LLM
 
@@ -215,6 +244,125 @@ This is extractive QA: it answers from a supplied or retrieved passage. It is
 not an open-domain reasoning chatbot. The end-to-end 0.36 EM is limited by
 BM25 recall and by T5-small itself; the reader alone reaches 0.705 EM.
 
+## 6. Retrieval-augmented reasoning QA (Flan-T5-base)
+
+`reason_qa.py` combines:
+
+- `google/flan-t5-base` (250M parameters) as the generative reasoner;
+- BM25 retrieval of solved exemplars from the copied
+  `nlp-document-ranking-bm25.py`;
+- chain-of-thought prompts;
+- a safe `CALC:` arithmetic calculator;
+- the ch03 SymPy grader from `reasoning/` for answer checking.
+
+Tasks are GSM8K (grade-school math word problems) and StrategyQA (yes/no
+commonsense questions with facts). The grader was validated against all 8,792
+GSM8K gold answers (1,319 test + 7,473 train) with zero extraction mismatches;
+end-to-end Flan-T5 accuracy is not reported here.
+
+```bash
+python reason_qa.py download
+/home/d/.venvs/torch126/bin/python reason_qa.py selftest --device cuda
+/home/d/.venvs/torch126/bin/python reason_qa.py eval --device cuda \
+    --task both --gsm8k-limit 30 --strategyqa-limit 100
+/home/d/.venvs/torch126/bin/python reason_qa.py ask --device cuda \
+    --task gsm8k --question "A train travels 60 mph for 2.5 hours. How far does it go?"
+```
+
+Flan-T5-base weights download on first use (~1 GB). The system does not
+update any weights; it is prompting plus retrieval, not RL or distillation.
+
+## 7. Small reasoner (Qwen2.5-0.5B-Instruct)
+
+`small_reasoner.py` loads Hugging Face checkpoints into the from-scratch
+`Qwen3Model` from `reasoning/`:
+
+- **Qwen2.5-0.5B-Instruct** (494M parameters, 988 MB bf16) with QKV-bias
+  support and the Hugging Face chat template;
+- **SmolLM2-360M / 135M** (Llama layout, no QKV/MLP biases, RMSNorm eps 1e-5).
+
+It evaluates on GSM8K with the ch03 SymPy grader, and provides a multi-turn
+chat REPL with streaming, `/search`, and context accounting.
+
+Measured on the P2000 with the chat prompt, greedy decoding, 512 max new
+tokens, and the ch03 grader:
+
+| Model | Questions | Result | Time |
+|---|---|---|---|
+| Qwen2.5-0.5B-Instruct | 100 | **47/100 = 47.0%** | 789 s (~13.2 min), ~37.7 tok/s |
+| Qwen2.5-0.5B-Instruct | 50 | 25/50 = 50.0% | 401 s |
+| Qwen2.5-0.5B-Instruct | 10 | 6/10 = 60% (small sample) | 73 s |
+| SmolLM2-360M | 10 | 0/10 zero-shot; 0/10 two-shot | below the capability floor |
+
+The 100-question failures are reasoning/arithmetic, not format: all 100
+produced an extractable answer (3 lacked a `\boxed{}` wrapper and used the
+numeric fallback), only 3 hit the 512-token cap, and wrong answers averaged
+321 generated tokens vs 271 for correct ones. The 50-question 50% was a
+high-variance sample; 47% is the stable estimate. SmolLM2-360M is useful for
+testing the loader, not for reasoning.
+
+```bash
+# GSM8K evaluation
+/home/d/.venvs/torch126/bin/python small_reasoner.py eval \
+    --model qwen2.5-0.5b-instruct --task gsm8k --limit 100 \
+    --device cuda --max-new-tokens 512
+
+# Interactive chat
+/home/d/.venvs/torch126/bin/python small_reasoner.py chat \
+    --model qwen2.5-0.5b-instruct --device cuda
+
+# One-shot question
+/home/d/.venvs/torch126/bin/python small_reasoner.py ask \
+    --model qwen2.5-0.5b-instruct --device cuda \
+    --question "What is 2 + 2?"
+
+# Self-consistency code is present but not yet run
+/home/d/.venvs/torch126/bin/python small_reasoner.py eval \
+    --model qwen2.5-0.5b-instruct --task gsm8k --limit 100 \
+    --device cuda --max-new-tokens 512 --num-samples 3 --temperature 0.7
+```
+
+Chat commands: `/reset`, `/system <text>`, `/temp <value>`, `/tokens <n>`,
+`/status`, `/search <query>`, `/exit`.
+
+`/search` uses the keyless `ddgs` DuckDuckGo package plus the Wikipedia API.
+It prints numbered sources, feeds them into the prompt, and asks the model to
+answer from them with citations. The model itself has no web access; the
+harness retrieves the sources. Treat the generated summary as unverified and
+check the printed sources. `/status` reports the context budget; when it is
+exceeded, the oldest user/assistant pairs are dropped, not summarized.
+
+Model files live in the Hugging Face cache, not the repo:
+
+- `~/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct` — 988 MB
+- `~/.cache/huggingface/hub/models--HuggingFaceTB--SmolLM2-360M` — 724 MB
+
+Qwen2.5-0.5B has only 2 KV heads × 64 dimensions, so its KV cache is about
+12 KB/token; the full 32K context needs ~384 MB, which fits alongside the ~1 GB
+of weights on the 4.2 GB P2000. Full-parameter training does not fit: weights,
+gradients, and AdamW state are ~4 GB before activations.
+
+## Vendored reasoning-from-scratch subset
+
+`build-LLM/reasoning/` is a 272 KB Apache-2.0 subset of
+[reasoning-from-scratch](https://github.com/rasbt/reasoning-from-scratch),
+copied 2026-11-12. It contains only the modules used by `small_reasoner.py`
+and `reason_qa.py`:
+
+| Module | Role |
+|---|---|
+| `qwen3.py` | Qwen3-style model, tokenizer wrapper, HF weight loader, KV cache |
+| `ch02.py` | greedy KV-cached streaming generation |
+| `ch03.py` | `\boxed{}` extraction, LaTeX normalization, SymPy grading, MATH-500 loader |
+| `ch04.py` | temperature/top-p streaming generation |
+| `utils.py` | download helper used by `qwen3.py` |
+
+`LICENSE`, `NOTICE.md`, `README.md`, and `requirements.txt` are included. The
+full upstream copy at `build-LLM/reasoning-from-scratch/` (6.5 MB, including
+the copyrighted `book.txt`) stays local and is gitignored. The book's training
+chapters (`ch05`–`ch08`: scoring, GRPO, distillation) are not wired into this
+build.
+
 ## Which CS336 files are actually used?
 
 **No, not all 113 are on an active path.** All are copied verbatim into
@@ -266,6 +414,11 @@ system, but they are not required to run it.
   (CC BY-NC 4.0, research use).
 - `data/sft/tiny_instructions.json` — 105 hand-written short instruction/answer
   pairs for the focused SFT demo.
+- `data/reason/` — GSM8K and StrategyQA JSON downloaded by
+  `reason_qa.py download`.
+- `data/qa/` — SQuAD dev passages and corpus downloaded by
+  `qa_system.py download`.
+- `runs/small_reasoner/` — GSM8K evaluation JSONL and tokenizer copies.
 
 Generated corpora and downloaded data are ignored by git; `runs/` is ignored.
 
@@ -273,11 +426,15 @@ Generated corpora and downloaded data are ignored by git; `runs/` is ignored.
 
 - CPU path: system Python, `torch 2.15.0+cu132`, NumPy 2.5.4, matplotlib.
 - GPU path: `/home/d/.venvs/torch126` with `torch 2.10.0+cu126`, CUDA on the
-  Quadro P2000 (4.2 GB). NumPy 2.5.4 and `tokenizers` 0.23.3 were installed
-  into that venv.
+  Quadro P2000 (4.2 GB). NumPy 2.5.4, `tokenizers`, `sympy`, `requests`,
+  `ddgs`, `huggingface_hub`, and `safetensors` were installed into that venv.
 - Use `--device cuda` only with the torch126 venv. The system torch build does
   not contain sm_61 kernels.
-- `requirements.txt`: `numpy`, `torch`, `matplotlib`, `tokenizers`.
+- `requirements.txt`: `numpy`, `torch`, `matplotlib`, `tokenizers`,
+  `transformers`, `sympy`, `requests`, `ddgs`, `huggingface_hub`,
+  `safetensors`, `sentencepiece`, `protobuf`.
+- Hugging Face checkpoints are cached under `~/.cache/huggingface/hub`; they
+  are not in the repo. `reason_qa.py` downloads Flan-T5-base on first use.
 
 ## Limitations
 
@@ -291,11 +448,31 @@ Generated corpora and downloaded data are ignored by git; `runs/` is ignored.
   end-to-end EM with BM25 retrieval. It is not open-domain reasoning.
 - A real meaning/instruction-following system needs many orders of magnitude
   more data and compute; use a modern GPU and a much larger base model.
-- Generation recomputes the full context per token; the copied KV-cache path is
-  self-tested but not used in the loop.
+- The tiny and scaled LLM loops recompute the full context per token; the
+  copied KV-cache path is self-tested there but not used in their loops. The
+  small reasoner does use KV caching.
+- The small reasoner is a 0.5B instruct model: **47% on 100 GSM8K test
+  questions**, with genuine arithmetic/reasoning failures. It is not a general
+  reasoner. SmolLM2-360M is below the capability floor.
+- Self-consistency code is present (`--num-samples`) but has not been run; its
+  expected gain is therefore not claimed here.
+- `/search` retrieval is real (DDGS + Wikipedia), but the answer is a
+  model-generated summary. Verify the printed sources; the model has no
+  autonomous web access.
+- Full-parameter GRPO or distillation does not fit on the P2000: weights,
+  gradients, and AdamW state are ~4 GB before activations against a 3.9 GiB
+  budget. The book's training runs need a 24 GB+ GPU and are not wired into
+  this build.
+- `reason_qa.py` is retrieval plus prompting with Flan-T5-base; it updates no
+  weights. End-to-end Flan-T5 accuracy is not reported here.
 
 ## Provenance
 
 Copied unmodified on 2026-11-11 from
 `study-plans/language-modeling-from-scratch/` and the relevant `pytorch-basics`,
 `cracking-nlp`, and `math-linear-algebra` exercises.
+
+The vendored reasoning subset in `reasoning/` was copied unmodified on
+2026-11-12 from https://github.com/rasbt/reasoning-from-scratch (Apache-2.0;
+see `reasoning/LICENSE` and `reasoning/NOTICE.md`). The full upstream copy is
+kept locally and gitignored; its `book.txt` is not redistributed.
