@@ -687,6 +687,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | UCB1 for Multi-Armed Bandits | In a multi-armed bandit, an agent must repeatedly choose one of K arms and only observes the reward of the arm it pulls. | https://www.tensortonic.com/problems/rl-ucb1-multi-armed-bandit |
 | Value Iteration | Run value iteration to convergence for a finite MDP, then extract the greedy optimal policy with stable tie handling. | https://www.tensortonic.com/problems/rl-value-iteration |
 | RMS Normalization | Implement row-wise RMS normalization in CUDA with sum-of-squares reduction, numerical stability, and learnable scaling. | https://www.tensortonic.com/problems/rms-norm |
+| RMSProp Optimizer (Single Update Step) | Implement one RMSProp update in NumPy using an exponential squared-gradient average and adaptive scaling. | https://www.tensortonic.com/problems/rmsprop-optimizer |
 | RNN Step Backward (Vanilla RNN) | Backpropagate through one vanilla RNN timestep to compute input, hidden-state, weight, and bias gradients. | https://www.tensortonic.com/problems/rnn-step-backward |
 | RNN Step Forward (Tanh Cell) | Implement one vanilla RNN timestep with affine input and recurrent transforms followed by tanh activation. | https://www.tensortonic.com/problems/rnn-step-forward |
 | Compute ROC Curve from Scores | Construct ROC curve thresholds with corresponding true-positive and false-positive rates from binary scores. | https://www.tensortonic.com/problems/roc-curve |
