@@ -1,0 +1,4 @@
+torch>=2.10,<3
+tokenizers>=0.21
+sympy>=1.14
+requests>=2.31

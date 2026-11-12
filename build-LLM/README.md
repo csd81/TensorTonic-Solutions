@@ -1,10 +1,10 @@
-# LLM, Semantic Search, and SFT from the CS336 Parts
+# LLM, Semantic Search, SFT, and QA from the CS336 Parts
 
 A build around the 113 files in
 `study-plans/language-modeling-from-scratch/` (58 Python solutions, 54
 write-ups, 1 CUDA kernel), plus useful pieces from other tracks.
 
-It now contains four working systems:
+It now contains five working systems:
 
 1. **Tiny LLM** — a 640k-parameter decoder-only transformer on a bundled
    Shakespeare excerpt, CPU-friendly.
@@ -14,6 +14,8 @@ It now contains four working systems:
    Spearman and retrieval against a BM25 baseline.
 4. **Instruction tuning** — Alpaca + focused instruction data, trained with the
    copied CS336 assistant-only SFT mask.
+5. **Question answering** — a pretrained SQuAD-fine-tuned T5-small reader plus
+   copied BM25 retrieval.
 
 ## Quick start
 
@@ -50,6 +52,14 @@ python semantic_search.py download
     --checkpoint-dir runs/llm10m --device cuda --out runs/sft
 python llm_system.py generate --out runs/sft_tiny \
     --prompt "### Instruction:\nWhat is 2 + 2?\n### Response:\n"
+
+# Question answering (pretrained T5-small SQuAD reader + BM25)
+python qa_system.py download
+/home/d/.venvs/torch126/bin/python qa_system.py selftest --device cuda
+/home/d/.venvs/torch126/bin/python qa_system.py ask --device cuda \
+    --question "Who wrote Frankenstein?"
+/home/d/.venvs/torch126/bin/python qa_system.py eval --device cuda \
+    --limit 200 --retrieval-limit 50
 ```
 
 The P2000 is `sm_61`; the system Python's `torch 2.15.0+cu132` cannot run it.
@@ -157,6 +167,54 @@ greetings, shapes), 100 train / 5 val, 64-token blocks. 2,000 steps:
 This shows the model learning the response format and memorizing the small
 training set; it is not general reasoning.
 
+## 5. Question answering (T5-small SQuAD)
+
+`qa_system.py` uses the pretrained
+`mrm8488/t5-small-finetuned-squadv2` checkpoint as an extractive reader, plus
+the copied `nlp-document-ranking-bm25.py` part for retrieval over SQuAD dev
+passages and 20 hand-written fact passages.
+
+Reader input: `question: {question} context: {context}` (lowercase). The
+checkpoint is sensitive to this format; uppercase reduces exact match.
+
+| Metric | Result |
+|---|---|
+| Reader with gold context, 200 SQuAD dev questions | **EM 0.705**, F1 0.734 |
+| BM25 retrieval + reader, 50 questions | recall@3 **0.620**, end-to-end EM **0.360** |
+| Reader parameters | ~77M (T5-small fine-tuned on SQuAD v2) |
+| Evaluation time | about 28 s on the P2000 |
+
+Examples:
+
+```
+Q: Who wrote Frankenstein?
+A: Mary Shelley
+
+Q: Which NFL team represented the AFC at Super Bowl 50?
+A: Denver Broncos
+
+Q: What is the capital of France?   (with the matching context)
+A: Paris
+```
+
+Commands:
+
+```bash
+python qa_system.py download
+/home/d/.venvs/torch126/bin/python qa_system.py selftest --device cuda
+/home/d/.venvs/torch126/bin/python qa_system.py ask --device cuda \
+    --question "Who wrote Frankenstein?" --top-k 3
+/home/d/.venvs/torch126/bin/python qa_system.py ask --device cuda \
+    --question "What is the capital of France?" \
+    --context "The capital of France is Paris."
+/home/d/.venvs/torch126/bin/python qa_system.py eval --device cuda \
+    --limit 200 --retrieval-limit 50
+```
+
+This is extractive QA: it answers from a supplied or retrieved passage. It is
+not an open-domain reasoning chatbot. The end-to-end 0.36 EM is limited by
+BM25 recall and by T5-small itself; the reader alone reaches 0.705 EM.
+
 ## Which CS336 files are actually used?
 
 **No, not all 113 are on an active path.** All are copied verbatim into
@@ -195,7 +253,7 @@ system, but they are not required to run it.
 | `la-vector-norms.py` | vector utilities |
 | `nlp-sentence-embeddings.py` | sentence-pooling reference |
 | `nlp-embedding-similarity.py` | ranking reference |
-| `nlp-document-ranking-bm25.py` | BM25 baseline |
+| `nlp-document-ranking-bm25.py` | BM25 baseline and QA retrieval |
 | `nlp-tokenization.py` | tokenization reference |
 
 ## Data
@@ -229,6 +287,8 @@ Generated corpora and downloaded data are ignored by git; `runs/` is ignored.
   exact retrieval, though its Spearman correlation is strong.
 - SFT on Alpaca with the 12.6M base still produces story-like text. The focused
   run answers its training prompts and fails held-out arithmetic.
+- QA is extractive and retrieval-bound: 0.705 EM with the gold passage, 0.36
+  end-to-end EM with BM25 retrieval. It is not open-domain reasoning.
 - A real meaning/instruction-following system needs many orders of magnitude
   more data and compute; use a modern GPU and a much larger base model.
 - Generation recomputes the full context per token; the copied KV-cache path is

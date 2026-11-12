@@ -7,3 +7,6 @@ data/STS-B/
 data/STS-B.zip
 data/stsb_sentences.txt
 data/sft/alpaca_full.json
+data/qa/
+data/reason/
+reasoning-from-scratch/
