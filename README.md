@@ -439,6 +439,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Max Pooling Forward | Apply 2D max pooling to a numeric matrix using a configurable square window and stride. | https://www.tensortonic.com/problems/maxpool-forward |
 | Compute Mean Average Precision (mAP) | Compute mean average precision across ranked retrieval results from per-query relevance labels. | https://www.tensortonic.com/problems/mean-average-precision |
 | Mean, Median, Mode | Calculate the mean, median, and deterministic mode of a numeric collection, including tied frequencies. | https://www.tensortonic.com/problems/mean-median-mode |
+| Mean Rating Imputation | Fill missing user-item ratings with the required row or column mean while preserving observed ratings. | https://www.tensortonic.com/problems/mean-rating-imputation |
 | Mean Squared Error (MSE) | Compute mean squared error between predictions and targets by averaging their squared element-wise differences. | https://www.tensortonic.com/problems/mean-squared-error |
 | Mean and Variance | Compute population mean and variance in CUDA with device-side reductions and synchronized scalar outputs. | https://www.tensortonic.com/problems/mean-variance |
 | Min of Array | Implement a multi-block CUDA minimum reduction that combines block-local minima into one scalar output. | https://www.tensortonic.com/problems/min-of-array |
@@ -604,6 +605,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Poisson Probability Mass Function & Cumulative Distribution Function | Compute Poisson probability mass and cumulative probabilities for a nonnegative event count and rate. | https://www.tensortonic.com/problems/poisson-pmf-cdf |
 | Policy Gradient Loss | Compute policy-gradient loss from selected action probabilities and advantage estimates with stable logarithms. | https://www.tensortonic.com/problems/policy-gradient-loss |
 | Implement Positional Encoding (sin/cos) | Generate sinusoidal Transformer positional encodings across sequence positions and embedding dimensions, with the formula and tests in the browser. | https://www.tensortonic.com/problems/positional-encoding |
+| Precision and Recall at K | Compute precision@K and recall@K for recommendation systems by comparing ranked predictions with relevant items, with tests in the browser. | https://www.tensortonic.com/problems/precision-recall-at-k |
 | A/B Test Significance | Perform a two-proportion z-test to determine if the treatment conversion rate is significantly different from the control. | https://www.tensortonic.com/problems/probstat-ab-test-significance |
 | ANOVA F-Statistic | Perform a one-way ANOVA across multiple numeric groups to test whether any population means differ. | https://www.tensortonic.com/problems/probstat-anova-f-test |
 | Basic Probability Rules | Compute union, complement, and exclusive-event probabilities from two event probabilities and their intersection. | https://www.tensortonic.com/problems/probstat-basic-probability-rules |
