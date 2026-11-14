@@ -452,6 +452,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Mean Rating Imputation | Fill missing user-item ratings with the required row or column mean while preserving observed ratings. | https://www.tensortonic.com/problems/mean-rating-imputation |
 | Mean Squared Error (MSE) | Compute mean squared error between predictions and targets by averaging their squared element-wise differences. | https://www.tensortonic.com/problems/mean-squared-error |
 | Mean and Variance | Compute population mean and variance in CUDA with device-side reductions and synchronized scalar outputs. | https://www.tensortonic.com/problems/mean-variance |
+| Min-Max Scaling | Scale numeric values to a requested range using observed minimum and maximum values with constant-input handling. | https://www.tensortonic.com/problems/min-max-scaling |
 | Min of Array | Implement a multi-block CUDA minimum reduction that combines block-local minima into one scalar output. | https://www.tensortonic.com/problems/min-of-array |
 | AdaBoost from Scratch | Implement AdaBoost binary classification using decision stumps, weighted errors, adaptive sample weights, and weighted voting. | https://www.tensortonic.com/problems/ml-adaboost |
 | Agglomerative Clustering | Implement agglomerative hierarchical clustering with single, complete, and average linkage and deterministic cluster labels. | https://www.tensortonic.com/problems/ml-agglomerative |
