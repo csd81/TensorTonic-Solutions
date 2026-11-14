@@ -901,6 +901,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Dense Block (Concatenative Connectivity) | Implement a DenseNet block that repeatedly concatenates every new layer output with all preceding feature maps. | https://www.tensortonic.com/research/densenet/densenet-dense-block |
 | Full DenseNet Forward Pass | Assemble a DenseNet forward pass with dense blocks, transitions, final normalization, global pooling, and classification. | https://www.tensortonic.com/research/densenet/densenet-forward |
 | Transition Layer | Implement a DenseNet transition layer with batch normalization, ReLU, 1x1 compression, and average pooling. | https://www.tensortonic.com/research/densenet/densenet-transition |
+| Sliding Window Causal Mask | Create a GPT-OSS sliding-window causal mask that exposes only the current token and its recent history. | https://www.tensortonic.com/research/gptoss/gpto-sliding-window-mask |
 | Candidate Hidden State | Compute the GRU candidate hidden state from the current input and the reset-gated previous hidden state. | https://www.tensortonic.com/research/gru/gru-candidate |
 | Complete GRU Cell | Build a complete GRU cell with reset and update gates, candidate computation, and the final hidden-state update. | https://www.tensortonic.com/research/gru/gru-cell |
 | Complete GRU Network | Assemble a GRU sequence forward pass that recurrently updates and returns hidden states across time steps. | https://www.tensortonic.com/research/gru/gru-full-network |
