@@ -897,6 +897,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Transition Layer | Implement a DenseNet transition layer with batch normalization, ReLU, 1x1 compression, and average pooling. | https://www.tensortonic.com/research/densenet/densenet-transition |
 | Bidirectional Mask Predictor | Build LLaDA's bidirectional mask-predictor attention with no causal mask and an additive key-padding bias. | https://www.tensortonic.com/research/llada/llada-bidirectional-mask-predictor |
 | Forward Masking | Build LLaDA's discrete forward process that masks tokens at one shared random ratio while keeping SFT prompts intact. | https://www.tensortonic.com/research/llada/llada-forward-masking |
+| Masked Diffusion Loss | Build LLaDA's masked diffusion loss with inverse-ratio weighting and per-sequence response-length normalization for pretraining and SFT. | https://www.tensortonic.com/research/llada/llada-masked-diffusion-loss |
 | Complete LSTM Cell | Build a complete LSTM cell with forget, input, candidate, cell-state, output, and hidden-state calculations. | https://www.tensortonic.com/research/lstm/lstm-cell |
 | Cell State Update | Implement the LSTM cell-state update by combining retained memory with input-gated candidate information. | https://www.tensortonic.com/research/lstm/lstm-cell-state |
 | Forget Gate | Implement an LSTM forget gate by combining the previous hidden state and current input with a sigmoid projection. | https://www.tensortonic.com/research/lstm/lstm-forget-gate |
