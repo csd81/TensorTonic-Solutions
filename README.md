@@ -901,6 +901,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Dense Block (Concatenative Connectivity) | Implement a DenseNet block that repeatedly concatenates every new layer output with all preceding feature maps. | https://www.tensortonic.com/research/densenet/densenet-dense-block |
 | Full DenseNet Forward Pass | Assemble a DenseNet forward pass with dense blocks, transitions, final normalization, global pooling, and classification. | https://www.tensortonic.com/research/densenet/densenet-forward |
 | Transition Layer | Implement a DenseNet transition layer with batch normalization, ReLU, 1x1 compression, and average pooling. | https://www.tensortonic.com/research/densenet/densenet-transition |
+| GAN Discriminator | Implement a GAN discriminator that maps input samples through dense layers to real-versus-fake probabilities. | https://www.tensortonic.com/research/gan/gan-discriminator |
 | GAN Generator | Implement a GAN generator that transforms latent noise through learned dense layers into generated samples. | https://www.tensortonic.com/research/gan/gan-generator |
 | Sliding Window Causal Mask | Create a GPT-OSS sliding-window causal mask that exposes only the current token and its recent history. | https://www.tensortonic.com/research/gptoss/gpto-sliding-window-mask |
 | Candidate Hidden State | Compute the GRU candidate hidden state from the current input and the reset-gated previous hidden state. | https://www.tensortonic.com/research/gru/gru-candidate |
