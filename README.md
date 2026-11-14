@@ -920,6 +920,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Residual Projection Initialization Scaling | Compute GPT-2 residual projection initialization scaling based on model width and decoder depth. | https://www.tensortonic.com/research/gpt2/gpt2-init-scaling |
 | GPT-2 Layer Normalization | Implement GPT-2 layer normalization with per-token statistics and learned scale and bias parameters. | https://www.tensortonic.com/research/gpt2/gpt2-layernorm |
 | GPT-2 Multi-Head Causal Attention | Build GPT-2 multi-head attention with QKV projection, causal attention per head, concatenation, and output projection. | https://www.tensortonic.com/research/gpt2/gpt2-mha |
+| Temperature and Top-k Sampling | Implement GPT-2 top-k sampling with temperature scaling, probability normalization, and seeded token selection. | https://www.tensortonic.com/research/gpt2/gpt2-topk-sampling |
 | Attention Sinks | Add GPT-OSS attention sinks as learned softmax biases that give attention heads persistent virtual key positions. | https://www.tensortonic.com/research/gptoss/gpto-attention-sinks |
 | GPT-OSS Transformer Block | Assemble a GPT-OSS Transformer block with normalized grouped-query attention, MoE computation, and residual paths. | https://www.tensortonic.com/research/gptoss/gpto-block |
 | Full GPT-OSS Forward Pass | Build the full GPT-OSS forward pass from token embeddings through attention and MoE blocks to vocabulary logits. | https://www.tensortonic.com/research/gptoss/gpto-forward |
