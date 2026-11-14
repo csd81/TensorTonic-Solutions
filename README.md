@@ -910,6 +910,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Train a Byte-Level BPE Vocabulary | Train a GPT-2 byte-pair encoding vocabulary by repeatedly merging the most frequent adjacent token pair. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-training |
 | Attention Sinks | Add GPT-OSS attention sinks as learned softmax biases that give attention heads persistent virtual key positions. | https://www.tensortonic.com/research/gptoss/gpto-attention-sinks |
 | Grouped Query Attention with Sinks | Implement GPT-OSS grouped-query attention with repeated KV heads, attention sinks, and sliding-window masking. | https://www.tensortonic.com/research/gptoss/gpto-gqa-attention |
+| GPT-OSS MoE Forward Pass | Build the GPT-OSS MoE forward pass with routed expert dispatch, MXFP4 expert weights, and weighted output combination. | https://www.tensortonic.com/research/gptoss/gpto-moe-forward |
 | MoE Top-k Routing | Implement GPT-OSS MoE routing with top-k expert selection followed by softmax normalization over selected scores. | https://www.tensortonic.com/research/gptoss/gpto-moe-routing |
 | MXFP4 Block Dequantization | Dequantize GPT-OSS MXFP4 blocks by decoding packed E2M1 values and applying shared E8M0 block scales. | https://www.tensortonic.com/research/gptoss/gpto-mxfp4-dequant |
 | Sliding Window Causal Mask | Create a GPT-OSS sliding-window causal mask that exposes only the current token and its recent history. | https://www.tensortonic.com/research/gptoss/gpto-sliding-window-mask |
