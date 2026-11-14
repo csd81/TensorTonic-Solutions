@@ -887,6 +887,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Bottleneck Layer (DenseNet-B) | Build a DenseNet-B bottleneck layer with 1x1 channel reduction before the 3x3 feature-producing convolution. | https://www.tensortonic.com/research/densenet/densenet-bottleneck |
 | Composite Layer (BN-ReLU-Conv) | Implement a DenseNet composite layer with batch normalization, ReLU, convolution, and feature-map concatenation. | https://www.tensortonic.com/research/densenet/densenet-composite-layer |
 | Dense Block (Concatenative Connectivity) | Implement a DenseNet block that repeatedly concatenates every new layer output with all preceding feature maps. | https://www.tensortonic.com/research/densenet/densenet-dense-block |
+| Transition Layer | Implement a DenseNet transition layer with batch normalization, ReLU, 1x1 compression, and average pooling. | https://www.tensortonic.com/research/densenet/densenet-transition |
 | Forget Gate | Implement an LSTM forget gate by combining the previous hidden state and current input with a sigmoid projection. | https://www.tensortonic.com/research/lstm/lstm-forget-gate |
 | BatchNorm in ResNet | Implement ResNet batch normalization with channel statistics, learned scale and bias, and training or inference behavior. | https://www.tensortonic.com/research/resnet/resnet-batch-norm |
 | Bottleneck Block | Build a ResNet bottleneck block using 1x1 channel reduction, 3x3 convolution, and 1x1 channel expansion. | https://www.tensortonic.com/research/resnet/resnet-bottleneck |
