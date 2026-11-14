@@ -466,6 +466,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Mean and Variance | Compute population mean and variance in CUDA with device-side reductions and synchronized scalar outputs. | https://www.tensortonic.com/problems/mean-variance |
 | Min-Max Scaling | Scale numeric values to a requested range using observed minimum and maximum values with constant-input handling. | https://www.tensortonic.com/problems/min-max-scaling |
 | Min of Array | Implement a multi-block CUDA minimum reduction that combines block-local minima into one scalar output. | https://www.tensortonic.com/problems/min-of-array |
+| Implement Min-Max Normalization | Normalize each NumPy feature to the zero-to-one range with explicit handling for constant columns. | https://www.tensortonic.com/problems/minmax-normalization |
 | AdaBoost from Scratch | Implement AdaBoost binary classification using decision stumps, weighted errors, adaptive sample weights, and weighted voting. | https://www.tensortonic.com/problems/ml-adaboost |
 | Agglomerative Clustering | Implement agglomerative hierarchical clustering with single, complete, and average linkage and deterministic cluster labels. | https://www.tensortonic.com/problems/ml-agglomerative |
 | AUC-ROC from Scratch | Build an AUC-ROC evaluator by ranking prediction scores, computing TPR and FPR, and integrating with the trapezoidal rule. | https://www.tensortonic.com/problems/ml-auc-roc |
