@@ -909,6 +909,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | GAN Training Loop | Implement one GAN training iteration with separate discriminator and generator forward and update steps. | https://www.tensortonic.com/research/gan/gan-training-loop |
 | Train a Byte-Level BPE Vocabulary | Train a GPT-2 byte-pair encoding vocabulary by repeatedly merging the most frequent adjacent token pair. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-training |
 | Attention Sinks | Add GPT-OSS attention sinks as learned softmax biases that give attention heads persistent virtual key positions. | https://www.tensortonic.com/research/gptoss/gpto-attention-sinks |
+| GPT-OSS Transformer Block | Assemble a GPT-OSS Transformer block with normalized grouped-query attention, MoE computation, and residual paths. | https://www.tensortonic.com/research/gptoss/gpto-block |
 | Grouped Query Attention with Sinks | Implement GPT-OSS grouped-query attention with repeated KV heads, attention sinks, and sliding-window masking. | https://www.tensortonic.com/research/gptoss/gpto-gqa-attention |
 | GPT-OSS MoE Forward Pass | Build the GPT-OSS MoE forward pass with routed expert dispatch, MXFP4 expert weights, and weighted output combination. | https://www.tensortonic.com/research/gptoss/gpto-moe-forward |
 | MoE Top-k Routing | Implement GPT-OSS MoE routing with top-k expert selection followed by softmax normalization over selected scores. | https://www.tensortonic.com/research/gptoss/gpto-moe-routing |
