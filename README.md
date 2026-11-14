@@ -932,6 +932,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Random Remasking | Build LLaDA's random remasking sampler that reveals masked tokens step by step and remasks each new prediction with probability s over t. | https://www.tensortonic.com/research/llada/llada-random-remasking |
 | Semi-Autoregressive Remasking | Build LLaDA's semi-autoregressive sampler that completes fixed-length blocks left to right with low-confidence remasking inside each block. | https://www.tensortonic.com/research/llada/llada-semi-autoregressive-remasking |
 | Grouped-Query Causal Attention | Implement Llama grouped-query attention with more query heads than key-value heads and causal masking. | https://www.tensortonic.com/research/llama/llama-gqa |
+| Repeat Grouped Key-Value Heads | Repeat Llama key and value heads so grouped-query attention aligns them with the full query-head count. | https://www.tensortonic.com/research/llama/llama-kv-repeat |
 | Root Mean Square Normalization | Implement Llama RMSNorm by scaling hidden states with their root-mean-square magnitude and learned weights. | https://www.tensortonic.com/research/llama/llama-rmsnorm |
 | Apply Rotary Position Embeddings | Apply Llama rotary positional embeddings to query and key tensors by rotating paired feature dimensions. | https://www.tensortonic.com/research/llama/llama-rope |
 | Precompute RoPE Frequencies | Build the Llama RoPE frequency table from token positions, head dimensions, and the rotary base. | https://www.tensortonic.com/research/llama/llama-rope-freqs |
