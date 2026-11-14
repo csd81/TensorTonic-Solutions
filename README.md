@@ -909,6 +909,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | GAN Training Loop | Implement one GAN training iteration with separate discriminator and generator forward and update steps. | https://www.tensortonic.com/research/gan/gan-training-loop |
 | Train a Byte-Level BPE Vocabulary | Train a GPT-2 byte-pair encoding vocabulary by repeatedly merging the most frequent adjacent token pair. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-training |
 | Attention Sinks | Add GPT-OSS attention sinks as learned softmax biases that give attention heads persistent virtual key positions. | https://www.tensortonic.com/research/gptoss/gpto-attention-sinks |
+| Grouped Query Attention with Sinks | Implement GPT-OSS grouped-query attention with repeated KV heads, attention sinks, and sliding-window masking. | https://www.tensortonic.com/research/gptoss/gpto-gqa-attention |
 | Sliding Window Causal Mask | Create a GPT-OSS sliding-window causal mask that exposes only the current token and its recent history. | https://www.tensortonic.com/research/gptoss/gpto-sliding-window-mask |
 | YaRN Scaled RoPE | Implement GPT-OSS YaRN-scaled rotary embeddings with frequency interpolation for extended context lengths. | https://www.tensortonic.com/research/gptoss/gpto-yarn-rope |
 | Candidate Hidden State | Compute the GRU candidate hidden state from the current input and the reset-gated previous hidden state. | https://www.tensortonic.com/research/gru/gru-candidate |
