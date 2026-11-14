@@ -44,6 +44,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Apply One Policy-Value Head Training Step | Update linear policy and value heads in PyTorch from fixed features, search-policy targets, and bounded outcome targets. | https://www.tensortonic.com/problems/alphago-l05-policy-value-training-step |
 | Sample a Recent Self-Play Replay Batch | Sample deterministic training positions from a recent window of self-play games while preserving game and position order. | https://www.tensortonic.com/problems/alphago-l05-recent-replay-sampling |
 | Anchor Box Generation | Generate object-detection anchor boxes across a feature grid for every scale and aspect-ratio combination. | https://www.tensortonic.com/problems/anchor-box-generation |
+| Angle Between 3D Vectors | Compute the angle between two 3D vectors in NumPy with clamped cosine values and safe handling of zero norms. | https://www.tensortonic.com/problems/angle-between-3d |
 | Argmax | Implement a parallel CUDA argmax reduction that returns the lowest index when multiple elements share the maximum. | https://www.tensortonic.com/problems/argmax |
 | Argmin | Implement a parallel CUDA argmin reduction that returns the lowest index when multiple elements share the minimum. | https://www.tensortonic.com/problems/argmin |
 | Autocorrelation | Compute normalized time-series autocorrelation across a requested range of lags, including constant-series handling. | https://www.tensortonic.com/problems/autocorrelation |
