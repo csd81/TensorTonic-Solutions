@@ -291,6 +291,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Vision Transformer Patch Embedding | Convert an image into non-overlapping Vision Transformer patch embeddings with a learned linear projection. | https://www.tensortonic.com/problems/dl-vision-transformer |
 | Weight Initialization | Compute per-layer NumPy weight initialization parameters from network dimensions and the selected initialization method. | https://www.tensortonic.com/problems/dl-weight-initialization |
 | Implement Dot Product | Implement the dot product of equal-length numeric vectors by summing element-wise products without library shortcuts. | https://www.tensortonic.com/problems/dot-product |
+| Double Exponential Smoothing | Apply Holt double exponential smoothing to a time series by updating level and trend components. | https://www.tensortonic.com/problems/double-exponential-smoothing |
 | Dropout | Implement inverted dropout in CUDA using a supplied binary mask and scaling retained elements by the keep probability. | https://www.tensortonic.com/problems/dropout |
 | Implement Dropout (Training Mode) | Implement training-mode dropout in NumPy with random masking and inverted scaling of retained activations. | https://www.tensortonic.com/problems/dropout-training |
 | Mini-Batch K-Means with EMA Updates (e-means) | Implement e-means, mini-batch k-means that keeps an exponential moving average of each cluster's sum and count, and recover Lloyd's update as a special case. | https://www.tensortonic.com/problems/e-means-mini-batch-k-means |
