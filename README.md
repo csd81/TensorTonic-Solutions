@@ -886,6 +886,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | WordPiece Tokenization | Implement BERT WordPiece tokenization with greedy longest-match subwords, continuation prefixes, and unknown-token fallback. | https://www.tensortonic.com/research/bert/bert-wordpiece |
 | Forward Diffusion Process | Implement the DDPM forward diffusion process by mixing clean samples with Gaussian noise at a selected timestep. | https://www.tensortonic.com/research/ddpm/ddpm-forward |
 | Reverse Diffusion Process | Implement one DDPM reverse-process step using the model's predicted noise and the schedule coefficients. | https://www.tensortonic.com/research/ddpm/ddpm-reverse |
+| Noise Schedule | Generate a DDPM noise schedule with beta values and cumulative alpha products used across diffusion timesteps. | https://www.tensortonic.com/research/ddpm/ddpm-schedule |
 | Bottleneck Layer (DenseNet-B) | Build a DenseNet-B bottleneck layer with 1x1 channel reduction before the 3x3 feature-producing convolution. | https://www.tensortonic.com/research/densenet/densenet-bottleneck |
 | Channel Growth and Compression | Compute DenseNet channel growth across dense blocks and transition compression from the initial channels and growth rate. | https://www.tensortonic.com/research/densenet/densenet-channels |
 | Composite Layer (BN-ReLU-Conv) | Implement a DenseNet composite layer with batch normalization, ReLU, convolution, and feature-map concatenation. | https://www.tensortonic.com/research/densenet/densenet-composite-layer |
