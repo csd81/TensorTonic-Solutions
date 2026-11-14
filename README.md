@@ -690,6 +690,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Tensor Shape Manipulation | Reshape tensors using three common PyTorch operations: flatten to collapse into 1D, squeeze to remove size-1 dimensions. | https://www.tensortonic.com/problems/pytorch-tensor-reshape |
 | Transform Pipeline | Implement a callable class that converts a raw image tensor into a normalized, channel-first tensor ready for a neural network. | https://www.tensortonic.com/problems/pytorch-transforms-pipeline |
 | Weight Initialization | Implement a function that initializes a weight tensor using one of four standard initialization methods. | https://www.tensortonic.com/problems/pytorch-weight-initialization |
+| Tabular Q-Learning (Single Update) | Perform one tabular Q-learning update from reward, discount, learning rate, and the best next-state value. | https://www.tensortonic.com/problems/q-learning-update |
 | Random Forest Majority Vote | Combine multiple decision-tree predictions with majority voting and deterministic handling of tied classes. | https://www.tensortonic.com/problems/random-forest-vote |
 | Rank Transform | Replace numeric values with their ranks while applying the specified policy to tied observations. | https://www.tensortonic.com/problems/rank-transform |
 | ReLU | Implement ReLU activation in CUDA with one thread per element, bounds checks, and branch-efficient rectification. | https://www.tensortonic.com/problems/relu |
