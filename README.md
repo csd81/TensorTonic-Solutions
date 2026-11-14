@@ -120,6 +120,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Subgradients for Non-Smooth Functions | Compute valid subgradients for absolute value, ReLU, and maximum functions at smooth and nonsmooth points. | https://www.tensortonic.com/problems/calculus-subgradients |
 | Taylor Approximation of a Loss Landscape | Build first-order (linear) and second-order (quadratic) Taylor approximations of a loss function at a given point. | https://www.tensortonic.com/problems/calculus-taylor-approximation |
 | Hessian Tensor of a Vector-Valued Function | Compute the full Hessian tensor for a three-output polynomial function of three scalar variables. | https://www.tensortonic.com/problems/calculus-vector-valued-hessian |
+| Catalog Coverage | Measure recommendation catalog coverage as the fraction of available items appearing across user recommendation lists. | https://www.tensortonic.com/problems/catalog-coverage |
 | Implement Causal Masking for Attention | Create a causal attention mask that blocks each token from attending to future positions in a sequence. | https://www.tensortonic.com/problems/causal-masking |
 | Chi-Square Test | Run a chi-square independence test on a contingency table using expected counts and the chi-square statistic. | https://www.tensortonic.com/problems/chi2-independence |
 | Compute Accuracy, Precision, Recall, F1 | Compute binary accuracy, precision, recall, and F1 score from predicted and true class labels. | https://www.tensortonic.com/problems/classification-metrics |
