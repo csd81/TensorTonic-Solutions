@@ -912,6 +912,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Train a Byte-Level BPE Vocabulary | Train a GPT-2 byte-pair encoding vocabulary by repeatedly merging the most frequent adjacent token pair. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-training |
 | Causal Scaled Dot-Product Attention | Implement GPT-2 causal self-attention with an upper-triangular mask that blocks access to future tokens. | https://www.tensortonic.com/research/gpt2/gpt2-causal-attention |
 | Token and Learned Position Embeddings | Build GPT-2 input representations by summing learned token embeddings with learned positional embeddings. | https://www.tensortonic.com/research/gpt2/gpt2-embedding |
+| GPT-2 Position-Wise Feedforward Network | Implement the GPT-2 position-wise feed-forward network with expansion, GELU activation, and output projection. | https://www.tensortonic.com/research/gpt2/gpt2-ffn |
 | GPT-2 GELU Activation | Implement GPT-2's tanh-based GELU approximation for smooth nonlinear activation of feed-forward features. | https://www.tensortonic.com/research/gpt2/gpt2-gelu |
 | GPT-2 Layer Normalization | Implement GPT-2 layer normalization with per-token statistics and learned scale and bias parameters. | https://www.tensortonic.com/research/gpt2/gpt2-layernorm |
 | GPT-2 Multi-Head Causal Attention | Build GPT-2 multi-head attention with QKV projection, causal attention per head, concatenation, and output projection. | https://www.tensortonic.com/research/gpt2/gpt2-mha |
