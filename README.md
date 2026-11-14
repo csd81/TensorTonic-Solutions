@@ -909,6 +909,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | GAN Training Loop | Implement one GAN training iteration with separate discriminator and generator forward and update steps. | https://www.tensortonic.com/research/gan/gan-training-loop |
 | Apply and Reverse Byte-Level BPE | Implement GPT-2 BPE encoding and decoding by applying learned merges and reconstructing the original token sequence. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-encode-decode |
 | Train a Byte-Level BPE Vocabulary | Train a GPT-2 byte-pair encoding vocabulary by repeatedly merging the most frequent adjacent token pair. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-training |
+| Token and Learned Position Embeddings | Build GPT-2 input representations by summing learned token embeddings with learned positional embeddings. | https://www.tensortonic.com/research/gpt2/gpt2-embedding |
 | Attention Sinks | Add GPT-OSS attention sinks as learned softmax biases that give attention heads persistent virtual key positions. | https://www.tensortonic.com/research/gptoss/gpto-attention-sinks |
 | GPT-OSS Transformer Block | Assemble a GPT-OSS Transformer block with normalized grouped-query attention, MoE computation, and residual paths. | https://www.tensortonic.com/research/gptoss/gpto-block |
 | Full GPT-OSS Forward Pass | Build the full GPT-OSS forward pass from token embeddings through attention and MoE blocks to vocabulary logits. | https://www.tensortonic.com/research/gptoss/gpto-forward |
