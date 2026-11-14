@@ -233,6 +233,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | ViT Multi-Head Self-Attention | Implement Vision Transformer multi-head self-attention with combined QKV projection, scaled softmax, and output projection. | https://www.tensortonic.com/problems/cv-vit-attention-block |
 | Window Partition and Reverse | Partition BHWC feature maps into row-major Swin Transformer windows and reconstruct the original tensor exactly. | https://www.tensortonic.com/problems/cv-window-partition |
 | Zero Pad and Center Crop | Zero-pad a two-dimensional grayscale image on every side, then extract a centered crop with the requested dimensions. | https://www.tensortonic.com/problems/cv-zero-pad-and-center-crop |
+| Cyclic Encoding | Encode periodic numeric features as sine and cosine coordinates using a specified cycle length. | https://www.tensortonic.com/problems/cyclic-encoding |
 | Decision Tree Best Split | Find the best decision-tree split by evaluating candidate feature thresholds and selecting the largest impurity reduction. | https://www.tensortonic.com/problems/decision-tree-split |
 | Implement Dice Loss | Compute Dice loss for segmentation predictions using overlap, total mass, and a numerical smoothing term. | https://www.tensortonic.com/problems/dice-loss |
 | Diagonal Gaussian KL Divergence | Compute the closed-form KL divergence between two diagonal Gaussians given means and log variances, as used in the DDPM bound. | https://www.tensortonic.com/problems/diffusion-l01-diagonal-gaussian-kl |
