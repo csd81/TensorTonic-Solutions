@@ -934,6 +934,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Query-Key RMS Normalization | Apply Gemma 3 query-key normalization independently to attention heads before computing attention scores. | https://www.tensortonic.com/research/gemma3/gemma3-qk-norm |
 | Sliding-Window Causal Attention | Create Gemma 3 sliding-window causal attention masks that restrict each query to recent preceding tokens. | https://www.tensortonic.com/research/gemma3/gemma3-sliding-window |
 | Partial RoPE | Apply GLM-4.5 partial RoPE to only the rotary subset of query and key dimensions while preserving the remainder. | https://www.tensortonic.com/research/glm45/glm-partial-rope |
+| QK-Norm | Normalize GLM-4.5 query and key vectors independently per attention head before score computation. | https://www.tensortonic.com/research/glm45/glm-qk-norm |
 | RMSNorm | Implement GLM-4.5 RMSNorm by scaling hidden states with inverse root-mean-square magnitude and learned weights. | https://www.tensortonic.com/research/glm45/glm-rmsnorm |
 | RoPE Frequency Table | Generate the GLM-4.5 rotary frequency table from positions, rotary dimensions, and the configured frequency base. | https://www.tensortonic.com/research/glm45/glm-rope-freqs |
 | Scaled Dot-Product Attention | Implement GPT-2 scaled dot-product attention from query-key scores, softmax weights, and value aggregation. | https://www.tensortonic.com/research/gpt2/gpt2-attention |
