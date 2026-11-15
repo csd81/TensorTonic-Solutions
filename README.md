@@ -884,6 +884,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Local Response Normalization | Implement AlexNet local response normalization across neighboring channels using the paper's scaling equation. | https://www.tensortonic.com/research/alexnet/alexnet-lrn |
 | Overlapping Max Pooling | Implement AlexNet overlapping max pooling with a 3x3 window and stride two across spatial dimensions. | https://www.tensortonic.com/research/alexnet/alexnet-pooling |
 | ReLU Activation Function | Implement AlexNet's elementwise ReLU activation, preserving positive values while setting negative values to zero. | https://www.tensortonic.com/research/alexnet/alexnet-relu |
+| Coarse-Grained MoE Expert Mixture | Implement Arcee Trinity's coarse-grained MoE feed-forward block with top-k routing and expert output aggregation. | https://www.tensortonic.com/research/arcee-trinity/at-coarse-moe |
 | Gated Attention Output | Implement Arcee Trinity gated attention by modulating each attention head's output with learned sigmoid gates. | https://www.tensortonic.com/research/arcee-trinity/at-gated-attn |
 | Interleaved Local and Global Attention Mask | Route Arcee Trinity layers through an interleaved pattern of rotary-position and NoPE attention. | https://www.tensortonic.com/research/arcee-trinity/at-interleaved |
 | NoPE Grouped-Query Attention | Build an Arcee Trinity NoPE causal attention layer that computes masked attention without positional embeddings. | https://www.tensortonic.com/research/arcee-trinity/at-nope |
