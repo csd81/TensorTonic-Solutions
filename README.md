@@ -919,6 +919,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | GAN Loss Functions | Compute numerically stable binary cross-entropy losses for the GAN generator and discriminator objectives. | https://www.tensortonic.com/research/gan/gan-loss |
 | Mode Collapse Detection | Detect GAN mode collapse by measuring diversity across generated samples and flagging low-variance outputs. | https://www.tensortonic.com/research/gan/gan-mode-collapse |
 | GAN Training Loop | Implement one GAN training iteration with separate discriminator and generator forward and update steps. | https://www.tensortonic.com/research/gan/gan-training-loop |
+| Local and Global Layer Routing | Route Gemma 3 layers between global and local attention according to the configured layer pattern. | https://www.tensortonic.com/research/gemma3/gemma3-layer-routing |
 | Scaled Dot-Product Attention | Implement GPT-2 scaled dot-product attention from query-key scores, softmax weights, and value aggregation. | https://www.tensortonic.com/research/gpt2/gpt2-attention |
 | Apply and Reverse Byte-Level BPE | Implement GPT-2 BPE encoding and decoding by applying learned merges and reconstructing the original token sequence. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-encode-decode |
 | Train a Byte-Level BPE Vocabulary | Train a GPT-2 byte-pair encoding vocabulary by repeatedly merging the most frequent adjacent token pair. | https://www.tensortonic.com/research/gpt2/gpt2-bpe-training |
