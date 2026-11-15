@@ -885,6 +885,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Overlapping Max Pooling | Implement AlexNet overlapping max pooling with a 3x3 window and stride two across spatial dimensions. | https://www.tensortonic.com/research/alexnet/alexnet-pooling |
 | ReLU Activation Function | Implement AlexNet's elementwise ReLU activation, preserving positive values while setting negative values to zero. | https://www.tensortonic.com/research/alexnet/alexnet-relu |
 | Gated Attention Output | Implement Arcee Trinity gated attention by modulating each attention head's output with learned sigmoid gates. | https://www.tensortonic.com/research/arcee-trinity/at-gated-attn |
+| NoPE Grouped-Query Attention | Build an Arcee Trinity NoPE causal attention layer that computes masked attention without positional embeddings. | https://www.tensortonic.com/research/arcee-trinity/at-nope |
 | Depth-Scaled Sandwich Norm | Implement Arcee Trinity sandwich normalization around sublayers with depth-dependent residual scaling. | https://www.tensortonic.com/research/arcee-trinity/at-sandwich-norm |
 | Sigmoid MoE Router | Implement Arcee Trinity's sigmoid MoE router with top-k expert selection and normalized routing weights. | https://www.tensortonic.com/research/arcee-trinity/at-sigmoid-router |
 | SMEBU Load Balancing | Implement Arcee Trinity SMEBU load balancing by updating expert biases from token-assignment imbalance. | https://www.tensortonic.com/research/arcee-trinity/at-smebu |
