@@ -952,6 +952,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Full Attention Residuals | Implement Kimi K3 full attention residuals by mixing normalized layer outputs with learned residual coefficients. | https://www.tensortonic.com/research/kimik3/k3-full-attnres |
 | Gated MLA | Build Kimi K3 Gated MLA with low-rank query and KV projections, per-head gating, RoPE inputs, and latent caching. | https://www.tensortonic.com/research/kimik3/k3-gated-mla |
 | KDA Recurrence | Implement Kimi K3's KDA recurrence with gated state updates, normalized queries and keys, and ordered token readouts. | https://www.tensortonic.com/research/kimik3/k3-kda-recurrence |
+| MXFP4 Routed Expert Linear | Implement Kimi K3 MXFP4 expert linear layers by decoding packed E2M1 values and E8M0 block scales before projection. | https://www.tensortonic.com/research/kimik3/k3-mxfp4-expert-linear |
 | Quantile Balancing | Implement Kimi K3 quantile balancing by ranking expert loads and computing bounded routing-bias updates. | https://www.tensortonic.com/research/kimik3/k3-quantile-balancing |
 | SiTU-GLU | Implement Kimi K3 SiTU-GLU by combining sigmoid-tanh gated activations with an elementwise linear branch. | https://www.tensortonic.com/research/kimik3/k3-situ-glu |
 | Stable LatentMoE | Build Kimi K3 Stable LatentMoE routing with latent tokens, expert selection, weighted dispatch, and output reconstruction. | https://www.tensortonic.com/research/kimik3/k3-stable-latent-moe |
