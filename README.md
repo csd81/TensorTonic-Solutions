@@ -898,6 +898,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Decoupled RoPE Key Assembly | Apply DeepSeek V3 decoupled RoPE to the positional key and query components outside the compressed content path. | https://www.tensortonic.com/research/deepseekv3/ds3-decoupled-rope |
 | KV Latent Compression | Implement DeepSeek V3 KV compression by projecting hidden states into a shared low-rank attention latent. | https://www.tensortonic.com/research/deepseekv3/ds3-kv-compress |
 | Head-Specific KV Reconstruction | Reconstruct DeepSeek V3 key and value representations by up-projecting the compressed KV latent for each head. | https://www.tensortonic.com/research/deepseekv3/ds3-kv-reconstruct |
+| Auxiliary-Loss-Free Expert Bias Update | Implement DeepSeek V3 auxiliary-loss-free load balancing by updating expert routing biases from observed loads. | https://www.tensortonic.com/research/deepseekv3/ds3-load-balance |
 | Multi-head Latent Attention | Build DeepSeek V3 multi-head latent attention with KV compression, decoupled RoPE, causal masking, and output projection. | https://www.tensortonic.com/research/deepseekv3/ds3-mla |
 | Normalized Sigmoid Expert Router | Implement the DeepSeek V3 MoE router with expert scores, top-k selection, and normalized routing weights. | https://www.tensortonic.com/research/deepseekv3/ds3-moe-router |
 | Always-Active Shared Expert | Implement the DeepSeek V3 shared expert path and combine its dense output with routed expert outputs. | https://www.tensortonic.com/research/deepseekv3/ds3-shared-expert |
