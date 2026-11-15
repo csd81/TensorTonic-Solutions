@@ -952,6 +952,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Full Attention Residuals | Implement Kimi K3 full attention residuals by mixing normalized layer outputs with learned residual coefficients. | https://www.tensortonic.com/research/kimik3/k3-full-attnres |
 | Gated MLA | Build Kimi K3 Gated MLA with low-rank query and KV projections, per-head gating, RoPE inputs, and latent caching. | https://www.tensortonic.com/research/kimik3/k3-gated-mla |
 | KDA Recurrence | Implement Kimi K3's KDA recurrence with gated state updates, normalized queries and keys, and ordered token readouts. | https://www.tensortonic.com/research/kimik3/k3-kda-recurrence |
+| Quantile Balancing | Implement Kimi K3 quantile balancing by ranking expert loads and computing bounded routing-bias updates. | https://www.tensortonic.com/research/kimik3/k3-quantile-balancing |
 | SiTU-GLU | Implement Kimi K3 SiTU-GLU by combining sigmoid-tanh gated activations with an elementwise linear branch. | https://www.tensortonic.com/research/kimik3/k3-situ-glu |
 | Bidirectional Mask Predictor | Build LLaDA's bidirectional mask-predictor attention with no causal mask and an additive key-padding bias. | https://www.tensortonic.com/research/llada/llada-bidirectional-mask-predictor |
 | Classifier-Free Guidance | Build LLaDA's unsupervised classifier-free guidance by masking the prompt, batching both branches and extrapolating logits. | https://www.tensortonic.com/research/llada/llada-classifier-free-guidance |
