@@ -895,6 +895,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Reverse Diffusion Process | Implement one DDPM reverse-process step using the model's predicted noise and the schedule coefficients. | https://www.tensortonic.com/research/ddpm/ddpm-reverse |
 | DDPM Sampling | Implement iterative DDPM sampling from Gaussian noise by applying the learned reverse process over all timesteps. | https://www.tensortonic.com/research/ddpm/ddpm-sampling |
 | Noise Schedule | Generate a DDPM noise schedule with beta values and cumulative alpha products used across diffusion timesteps. | https://www.tensortonic.com/research/ddpm/ddpm-schedule |
+| DeepSeek-V3 Transformer Block | Assemble a DeepSeek V3 Transformer block with multi-head latent attention, normalization, and dense or MoE feed-forward paths. | https://www.tensortonic.com/research/deepseekv3/ds3-block |
 | Decoupled RoPE Key Assembly | Apply DeepSeek V3 decoupled RoPE to the positional key and query components outside the compressed content path. | https://www.tensortonic.com/research/deepseekv3/ds3-decoupled-rope |
 | Dense Prefix and Sparse MoE Transition | Route early DeepSeek V3 Transformer layers through dense feed-forward blocks before switching to sparse MoE. | https://www.tensortonic.com/research/deepseekv3/ds3-dense-prefix |
 | KV Latent Compression | Implement DeepSeek V3 KV compression by projecting hidden states into a shared low-rank attention latent. | https://www.tensortonic.com/research/deepseekv3/ds3-kv-compress |
