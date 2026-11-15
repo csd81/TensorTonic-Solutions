@@ -886,6 +886,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | ReLU Activation Function | Implement AlexNet's elementwise ReLU activation, preserving positive values while setting negative values to zero. | https://www.tensortonic.com/research/alexnet/alexnet-relu |
 | Arcee Trinity Transformer Block | Assemble an Arcee Trinity Transformer block with gated attention, sandwich normalization, MoE, and residual scaling. | https://www.tensortonic.com/research/arcee-trinity/at-block |
 | Coarse-Grained MoE Expert Mixture | Implement Arcee Trinity's coarse-grained MoE feed-forward block with top-k routing and expert output aggregation. | https://www.tensortonic.com/research/arcee-trinity/at-coarse-moe |
+| Full Arcee Trinity Forward Pass | Build the full Arcee Trinity forward pass from embeddings through interleaved attention and MoE blocks to logits. | https://www.tensortonic.com/research/arcee-trinity/at-forward |
 | Gated Attention Output | Implement Arcee Trinity gated attention by modulating each attention head's output with learned sigmoid gates. | https://www.tensortonic.com/research/arcee-trinity/at-gated-attn |
 | Interleaved Local and Global Attention Mask | Route Arcee Trinity layers through an interleaved pattern of rotary-position and NoPE attention. | https://www.tensortonic.com/research/arcee-trinity/at-interleaved |
 | NoPE Grouped-Query Attention | Build an Arcee Trinity NoPE causal attention layer that computes masked attention without positional embeddings. | https://www.tensortonic.com/research/arcee-trinity/at-nope |
