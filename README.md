@@ -949,6 +949,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Query-Key RMS Normalization | Apply Gemma 3 query-key normalization independently to attention heads before computing attention scores. | https://www.tensortonic.com/research/gemma3/gemma3-qk-norm |
 | Sliding-Window Causal Attention | Create Gemma 3 sliding-window causal attention masks that restrict each query to recent preceding tokens. | https://www.tensortonic.com/research/gemma3/gemma3-sliding-window |
 | GLM-4.5 Transformer Block | Assemble a GLM-4.5 Transformer block with grouped-query attention, normalization, dense or MoE feed-forward paths, and residuals. | https://www.tensortonic.com/research/glm45/glm-block |
+| Full GLM-4.5 Forward Pass | Build the full GLM-4.5 forward pass from token embeddings through dense and MoE Transformer blocks to vocabulary logits. | https://www.tensortonic.com/research/glm45/glm-forward |
 | GQA Attention with QK-Norm and Partial RoPE | Implement GLM-4.5 grouped-query attention with QK normalization, partial RoPE, repeated KV heads, and causal masking. | https://www.tensortonic.com/research/glm45/glm-gqa-attention |
 | Group-Routed Top-k Router | Implement the GLM-4.5 group-routed top-k router by selecting expert groups, experts, and normalized weights. | https://www.tensortonic.com/research/glm45/glm-group-router |
 | GLM-4.5 MoE Forward Pass | Build the GLM-4.5 MoE forward pass with group routing, expert dispatch, shared-expert computation, and weighted aggregation. | https://www.tensortonic.com/research/glm45/glm-moe-forward |
