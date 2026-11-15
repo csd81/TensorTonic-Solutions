@@ -895,6 +895,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Reverse Diffusion Process | Implement one DDPM reverse-process step using the model's predicted noise and the schedule coefficients. | https://www.tensortonic.com/research/ddpm/ddpm-reverse |
 | DDPM Sampling | Implement iterative DDPM sampling from Gaussian noise by applying the learned reverse process over all timesteps. | https://www.tensortonic.com/research/ddpm/ddpm-sampling |
 | Noise Schedule | Generate a DDPM noise schedule with beta values and cumulative alpha products used across diffusion timesteps. | https://www.tensortonic.com/research/ddpm/ddpm-schedule |
+| Decoupled RoPE Key Assembly | Apply DeepSeek V3 decoupled RoPE to the positional key and query components outside the compressed content path. | https://www.tensortonic.com/research/deepseekv3/ds3-decoupled-rope |
 | KV Latent Compression | Implement DeepSeek V3 KV compression by projecting hidden states into a shared low-rank attention latent. | https://www.tensortonic.com/research/deepseekv3/ds3-kv-compress |
 | Head-Specific KV Reconstruction | Reconstruct DeepSeek V3 key and value representations by up-projecting the compressed KV latent for each head. | https://www.tensortonic.com/research/deepseekv3/ds3-kv-reconstruct |
 | Bottleneck Layer (DenseNet-B) | Build a DenseNet-B bottleneck layer with 1x1 channel reduction before the 3x3 feature-producing convolution. | https://www.tensortonic.com/research/densenet/densenet-bottleneck |
